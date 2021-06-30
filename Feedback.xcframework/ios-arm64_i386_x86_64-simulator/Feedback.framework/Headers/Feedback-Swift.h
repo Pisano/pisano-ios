@@ -212,9 +212,11 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 SWIFT_CLASS("_TtC8Feedback6Pisano")
 @interface Pisano : NSObject
 /// Pisano Boot
-+ (void)bootWithAppId:(NSString * _Nonnull)appId accessKey:(NSString * _Nonnull)accessKey apiUrl:(NSString * _Nonnull)apiUrl feedbackUrl:(NSString * _Nonnull)feedbackUrl;
++ (void)bootWithAppId:(NSString * _Nonnull)appId accessKey:(NSString * _Nonnull)accessKey apiUrl:(NSString * _Nonnull)apiUrl feedbackUrl:(NSString * _Nonnull)feedbackUrl eventUrl:(NSString * _Nullable)eventUrl;
 /// Pisano Show
 + (void)showWithFlowId:(NSString * _Nullable)flowId language:(NSString * _Nullable)language customer:(NSDictionary<NSString *, id> * _Nullable)customer payload:(NSArray<NSDictionary<NSString *, NSString *> *> * _Nullable)payload;
+/// Pisano Track
++ (void)trackWithEvent:(NSString * _Nonnull)event payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload customer:(NSDictionary<NSString *, id> * _Nullable)customer;
 /// Pisano Logout
 + (void)logout;
 /// Debug Mode
@@ -442,9 +444,11 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 SWIFT_CLASS("_TtC8Feedback6Pisano")
 @interface Pisano : NSObject
 /// Pisano Boot
-+ (void)bootWithAppId:(NSString * _Nonnull)appId accessKey:(NSString * _Nonnull)accessKey apiUrl:(NSString * _Nonnull)apiUrl feedbackUrl:(NSString * _Nonnull)feedbackUrl;
++ (void)bootWithAppId:(NSString * _Nonnull)appId accessKey:(NSString * _Nonnull)accessKey apiUrl:(NSString * _Nonnull)apiUrl feedbackUrl:(NSString * _Nonnull)feedbackUrl eventUrl:(NSString * _Nullable)eventUrl;
 /// Pisano Show
 + (void)showWithFlowId:(NSString * _Nullable)flowId language:(NSString * _Nullable)language customer:(NSDictionary<NSString *, id> * _Nullable)customer payload:(NSArray<NSDictionary<NSString *, NSString *> *> * _Nullable)payload;
+/// Pisano Track
++ (void)trackWithEvent:(NSString * _Nonnull)event payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload customer:(NSDictionary<NSString *, id> * _Nullable)customer;
 /// Pisano Logout
 + (void)logout;
 /// Debug Mode
@@ -672,9 +676,11 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 SWIFT_CLASS("_TtC8Feedback6Pisano")
 @interface Pisano : NSObject
 /// Pisano Boot
-+ (void)bootWithAppId:(NSString * _Nonnull)appId accessKey:(NSString * _Nonnull)accessKey apiUrl:(NSString * _Nonnull)apiUrl feedbackUrl:(NSString * _Nonnull)feedbackUrl;
++ (void)bootWithAppId:(NSString * _Nonnull)appId accessKey:(NSString * _Nonnull)accessKey apiUrl:(NSString * _Nonnull)apiUrl feedbackUrl:(NSString * _Nonnull)feedbackUrl eventUrl:(NSString * _Nullable)eventUrl;
 /// Pisano Show
 + (void)showWithFlowId:(NSString * _Nullable)flowId language:(NSString * _Nullable)language customer:(NSDictionary<NSString *, id> * _Nullable)customer payload:(NSArray<NSDictionary<NSString *, NSString *> *> * _Nullable)payload;
+/// Pisano Track
++ (void)trackWithEvent:(NSString * _Nonnull)event payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload customer:(NSDictionary<NSString *, id> * _Nullable)customer;
 /// Pisano Logout
 + (void)logout;
 /// Debug Mode

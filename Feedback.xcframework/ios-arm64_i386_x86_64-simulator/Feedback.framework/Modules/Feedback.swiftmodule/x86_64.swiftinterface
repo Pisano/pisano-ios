@@ -11,8 +11,9 @@ import WebKit
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class Pisano : ObjectiveC.NSObject {
-  @objc public class func boot(appId: Swift.String, accessKey: Swift.String, apiUrl: Swift.String, feedbackUrl: Swift.String)
+  @objc public class func boot(appId: Swift.String, accessKey: Swift.String, apiUrl: Swift.String, feedbackUrl: Swift.String, eventUrl: Swift.String? = nil)
   @objc public class func show(flowId: Swift.String? = nil, language: Swift.String? = nil, customer: [Swift.String : Any]? = nil, payload: [[Swift.String : Swift.String]]? = nil)
+  @objc public class func track(event: Swift.String, payload: [Swift.String : Swift.String]? = nil, customer: [Swift.String : Any]? = nil)
   @objc open class func logout()
   @objc open class func debugMode(_ debug: Swift.Bool)
   @objc deinit
