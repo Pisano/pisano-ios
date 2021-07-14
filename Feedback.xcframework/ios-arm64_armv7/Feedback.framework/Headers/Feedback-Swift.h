@@ -214,11 +214,11 @@ SWIFT_CLASS("_TtC8Feedback6Pisano")
 /// Pisano Boot
 + (void)bootWithAppId:(NSString * _Nonnull)appId accessKey:(NSString * _Nonnull)accessKey apiUrl:(NSString * _Nonnull)apiUrl feedbackUrl:(NSString * _Nonnull)feedbackUrl eventUrl:(NSString * _Nullable)eventUrl;
 /// Pisano Show
-+ (void)showWithFlowId:(NSString * _Nullable)flowId language:(NSString * _Nullable)language customer:(NSDictionary<NSString *, id> * _Nullable)customer payload:(NSArray<NSDictionary<NSString *, NSString *> *> * _Nullable)payload;
++ (void)showWithFlowId:(NSString * _Nullable)flowId language:(NSString * _Nullable)language customer:(NSDictionary<NSString *, id> * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload;
 /// Pisano Track
 + (void)trackWithEvent:(NSString * _Nonnull)event payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload customer:(NSDictionary<NSString *, id> * _Nullable)customer;
-/// Pisano Logout
-+ (void)logout;
+/// Pisano Destroy
++ (void)destroy;
 /// Debug Mode
 + (void)debugMode:(BOOL)debug;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -446,11 +446,11 @@ SWIFT_CLASS("_TtC8Feedback6Pisano")
 /// Pisano Boot
 + (void)bootWithAppId:(NSString * _Nonnull)appId accessKey:(NSString * _Nonnull)accessKey apiUrl:(NSString * _Nonnull)apiUrl feedbackUrl:(NSString * _Nonnull)feedbackUrl eventUrl:(NSString * _Nullable)eventUrl;
 /// Pisano Show
-+ (void)showWithFlowId:(NSString * _Nullable)flowId language:(NSString * _Nullable)language customer:(NSDictionary<NSString *, id> * _Nullable)customer payload:(NSArray<NSDictionary<NSString *, NSString *> *> * _Nullable)payload;
++ (void)showWithFlowId:(NSString * _Nullable)flowId language:(NSString * _Nullable)language customer:(NSDictionary<NSString *, id> * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload;
 /// Pisano Track
 + (void)trackWithEvent:(NSString * _Nonnull)event payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload customer:(NSDictionary<NSString *, id> * _Nullable)customer;
-/// Pisano Logout
-+ (void)logout;
+/// Pisano Destroy
++ (void)destroy;
 /// Debug Mode
 + (void)debugMode:(BOOL)debug;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
