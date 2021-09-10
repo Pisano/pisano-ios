@@ -26,7 +26,7 @@
 		</data>
 		<key>Modules/Feedback.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		vVDZ4FtrEO7OgPNW/0Hl7/d1nDo=
+		UM6bmY+ooILGDahIyVZq1gbEEGc=
 		</data>
 		<key>Modules/Feedback.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/Feedback.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		vVDZ4FtrEO7OgPNW/0Hl7/d1nDo=
+		UM6bmY+ooILGDahIyVZq1gbEEGc=
 		</data>
 		<key>Modules/Feedback.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/Feedback.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<data>
-		aB5MfVkuvSZwYD10HIAUhK5xD/M=
+		eQUuRec3Whg6cIxXcGbkeSHpYdA=
 		</data>
 		<key>Modules/Feedback.swiftmodule/i386.swiftdoc</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Modules/Feedback.swiftmodule/i386.swiftmodule</key>
 		<data>
-		aB5MfVkuvSZwYD10HIAUhK5xD/M=
+		eQUuRec3Whg6cIxXcGbkeSHpYdA=
 		</data>
 		<key>Modules/Feedback.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -74,7 +74,7 @@
 		</data>
 		<key>Modules/Feedback.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		xErwtZ72SY5xzIlZPccnYbFhxGA=
+		oezQTIDD5aIcoMWKRNc7bwYy8nI=
 		</data>
 		<key>Modules/Feedback.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>Modules/Feedback.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		xErwtZ72SY5xzIlZPccnYbFhxGA=
+		oezQTIDD5aIcoMWKRNc7bwYy8nI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>WidgetViewController.nib</key>
 		<data>
-		vP8JeLZGc5D+h3yVUZOKL5tl0AY=
+		FcKNI9JRIF6UhHSIL3IH8GL7Txs=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -147,11 +147,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vVDZ4FtrEO7OgPNW/0Hl7/d1nDo=
+			UM6bmY+ooILGDahIyVZq1gbEEGc=
 			</data>
 			<key>hash2</key>
 			<data>
-			NtC6tDWlwrgZE8cLQW1jgU4/P5S9WF4qyeyyycEoBFc=
+			DvU2Q6hDpo2mnwY+NbpacEaKyRAQP7KUmGq9xJ+/6Ss=
 			</data>
 		</dict>
 		<key>Modules/Feedback.swiftmodule/arm64.swiftdoc</key>
@@ -180,11 +180,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vVDZ4FtrEO7OgPNW/0Hl7/d1nDo=
+			UM6bmY+ooILGDahIyVZq1gbEEGc=
 			</data>
 			<key>hash2</key>
 			<data>
-			NtC6tDWlwrgZE8cLQW1jgU4/P5S9WF4qyeyyycEoBFc=
+			DvU2Q6hDpo2mnwY+NbpacEaKyRAQP7KUmGq9xJ+/6Ss=
 			</data>
 		</dict>
 		<key>Modules/Feedback.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
@@ -213,11 +213,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			aB5MfVkuvSZwYD10HIAUhK5xD/M=
+			eQUuRec3Whg6cIxXcGbkeSHpYdA=
 			</data>
 			<key>hash2</key>
 			<data>
-			K+05HLFLedabf9G6pGStz1M9+YeiG5W1KHtZNRq4e3M=
+			7WtMBged9AdRiuUqaX8erh1VqrMU7K10L8jHwnA0hgU=
 			</data>
 		</dict>
 		<key>Modules/Feedback.swiftmodule/i386.swiftdoc</key>
@@ -246,11 +246,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			aB5MfVkuvSZwYD10HIAUhK5xD/M=
+			eQUuRec3Whg6cIxXcGbkeSHpYdA=
 			</data>
 			<key>hash2</key>
 			<data>
-			K+05HLFLedabf9G6pGStz1M9+YeiG5W1KHtZNRq4e3M=
+			7WtMBged9AdRiuUqaX8erh1VqrMU7K10L8jHwnA0hgU=
 			</data>
 		</dict>
 		<key>Modules/Feedback.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -279,11 +279,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xErwtZ72SY5xzIlZPccnYbFhxGA=
+			oezQTIDD5aIcoMWKRNc7bwYy8nI=
 			</data>
 			<key>hash2</key>
 			<data>
-			Gf2rLKETCxs7gmzW6EG6iA7Pm4TEk1iTMtzWopgKsR4=
+			TZLHJU2zVq3THr7AcN+1GdmloQMWMd+ayhkpak6AdFo=
 			</data>
 		</dict>
 		<key>Modules/Feedback.swiftmodule/x86_64.swiftdoc</key>
@@ -312,11 +312,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xErwtZ72SY5xzIlZPccnYbFhxGA=
+			oezQTIDD5aIcoMWKRNc7bwYy8nI=
 			</data>
 			<key>hash2</key>
 			<data>
-			Gf2rLKETCxs7gmzW6EG6iA7Pm4TEk1iTMtzWopgKsR4=
+			TZLHJU2zVq3THr7AcN+1GdmloQMWMd+ayhkpak6AdFo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -334,11 +334,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vP8JeLZGc5D+h3yVUZOKL5tl0AY=
+			FcKNI9JRIF6UhHSIL3IH8GL7Txs=
 			</data>
 			<key>hash2</key>
 			<data>
-			qJ8MXrAp5RcZYjj3o/ivLXP63XXOXdwccm4Mez+B3lE=
+			tNPRn3FiyatpxF24E+mEhNbyyWAxMB+bzaiBhUBw0JQ=
 			</data>
 		</dict>
 	</dict>
