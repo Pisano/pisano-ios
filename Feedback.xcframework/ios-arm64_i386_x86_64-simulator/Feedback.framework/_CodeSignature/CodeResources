@@ -26,7 +26,7 @@
 		</data>
 		<key>Modules/Feedback.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		UM6bmY+ooILGDahIyVZq1gbEEGc=
+		reUGPcV+rl8sjCXG5Ft6e2ixkrU=
 		</data>
 		<key>Modules/Feedback.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/Feedback.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		UM6bmY+ooILGDahIyVZq1gbEEGc=
+		reUGPcV+rl8sjCXG5Ft6e2ixkrU=
 		</data>
 		<key>Modules/Feedback.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/Feedback.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<data>
-		eQUuRec3Whg6cIxXcGbkeSHpYdA=
+		SmaC38e9p6Z0cmvNaxVB4bPByMs=
 		</data>
 		<key>Modules/Feedback.swiftmodule/i386.swiftdoc</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Modules/Feedback.swiftmodule/i386.swiftmodule</key>
 		<data>
-		eQUuRec3Whg6cIxXcGbkeSHpYdA=
+		SmaC38e9p6Z0cmvNaxVB4bPByMs=
 		</data>
 		<key>Modules/Feedback.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -74,7 +74,7 @@
 		</data>
 		<key>Modules/Feedback.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		oezQTIDD5aIcoMWKRNc7bwYy8nI=
+		FNeKM7B0G0HG+fokR3qCmcWPknA=
 		</data>
 		<key>Modules/Feedback.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>Modules/Feedback.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		oezQTIDD5aIcoMWKRNc7bwYy8nI=
+		FNeKM7B0G0HG+fokR3qCmcWPknA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>WidgetViewController.nib</key>
 		<data>
-		mtmnRkwEC8fvceEx0ZRv3Aopxhg=
+		MzSrAykub5lyrAdzbB46ekBYJcg=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -147,11 +147,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			UM6bmY+ooILGDahIyVZq1gbEEGc=
+			reUGPcV+rl8sjCXG5Ft6e2ixkrU=
 			</data>
 			<key>hash2</key>
 			<data>
-			DvU2Q6hDpo2mnwY+NbpacEaKyRAQP7KUmGq9xJ+/6Ss=
+			x1HQLIFM9IHE+RNdh6rWhwInhfXbfOTOU5LWMWj+/oQ=
 			</data>
 		</dict>
 		<key>Modules/Feedback.swiftmodule/arm64.swiftdoc</key>
@@ -180,11 +180,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			UM6bmY+ooILGDahIyVZq1gbEEGc=
+			reUGPcV+rl8sjCXG5Ft6e2ixkrU=
 			</data>
 			<key>hash2</key>
 			<data>
-			DvU2Q6hDpo2mnwY+NbpacEaKyRAQP7KUmGq9xJ+/6Ss=
+			x1HQLIFM9IHE+RNdh6rWhwInhfXbfOTOU5LWMWj+/oQ=
 			</data>
 		</dict>
 		<key>Modules/Feedback.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
@@ -213,11 +213,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eQUuRec3Whg6cIxXcGbkeSHpYdA=
+			SmaC38e9p6Z0cmvNaxVB4bPByMs=
 			</data>
 			<key>hash2</key>
 			<data>
-			7WtMBged9AdRiuUqaX8erh1VqrMU7K10L8jHwnA0hgU=
+			ong45+e//BulJJlcXp+lSWVrjMit1aeEzKtkUub3T1w=
 			</data>
 		</dict>
 		<key>Modules/Feedback.swiftmodule/i386.swiftdoc</key>
@@ -246,11 +246,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eQUuRec3Whg6cIxXcGbkeSHpYdA=
+			SmaC38e9p6Z0cmvNaxVB4bPByMs=
 			</data>
 			<key>hash2</key>
 			<data>
-			7WtMBged9AdRiuUqaX8erh1VqrMU7K10L8jHwnA0hgU=
+			ong45+e//BulJJlcXp+lSWVrjMit1aeEzKtkUub3T1w=
 			</data>
 		</dict>
 		<key>Modules/Feedback.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -279,11 +279,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oezQTIDD5aIcoMWKRNc7bwYy8nI=
+			FNeKM7B0G0HG+fokR3qCmcWPknA=
 			</data>
 			<key>hash2</key>
 			<data>
-			TZLHJU2zVq3THr7AcN+1GdmloQMWMd+ayhkpak6AdFo=
+			n2o8IZcLR54+NQ7Pp8XxJMOCOXSQA8qromseXhB1NJU=
 			</data>
 		</dict>
 		<key>Modules/Feedback.swiftmodule/x86_64.swiftdoc</key>
@@ -312,11 +312,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oezQTIDD5aIcoMWKRNc7bwYy8nI=
+			FNeKM7B0G0HG+fokR3qCmcWPknA=
 			</data>
 			<key>hash2</key>
 			<data>
-			TZLHJU2zVq3THr7AcN+1GdmloQMWMd+ayhkpak6AdFo=
+			n2o8IZcLR54+NQ7Pp8XxJMOCOXSQA8qromseXhB1NJU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -334,11 +334,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			mtmnRkwEC8fvceEx0ZRv3Aopxhg=
+			MzSrAykub5lyrAdzbB46ekBYJcg=
 			</data>
 			<key>hash2</key>
 			<data>
-			KjameUUEk949OP5uBDP5agdTqGeITJu2V940/GPBzH8=
+			pOyCa8r0Fg1MyB7+/v7uSzZ2zWJlsJDzsBNDZpG488Y=
 			</data>
 		</dict>
 	</dict>
