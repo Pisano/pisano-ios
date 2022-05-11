@@ -4,10 +4,10 @@
 import PackageDescription
 
 let package = Package(
-    name: "Pisano",
+    name: "Feedback",
     products: [
         .library(
-            name: "Pisano",
+            name: "Feedback",
             targets: ["Feedback"]),
     ],
     targets: [
