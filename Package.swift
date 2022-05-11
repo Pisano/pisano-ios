@@ -8,11 +8,11 @@ let package = Package(
     products: [
         .library(
             name: "Pisano",
-            targets: ["Feedback"]),
+            targets: ["Pisano"]),
     ],
     targets: [
         .binaryTarget(
-            name: "Feedback",
+            name: "Pisano",
             path: "Feedback.xcframework"
         ),
     ]
