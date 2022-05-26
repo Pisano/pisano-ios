@@ -26,7 +26,7 @@
 		</data>
 		<key>Modules/Feedback.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		6hRsYr5IwjDVYU+LOy6OPprVVFE=
+		ZU7USkcJKrjgITmE0mZWV7t08qo=
 		</data>
 		<key>Modules/Feedback.swiftmodule/armv7-apple-ios.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/Feedback.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<data>
-		bnbfpz1nH8us8beD62UHZ4veM78=
+		UqN7Js1N5lgFrQEYl4/PqNsaExM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -99,11 +99,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6hRsYr5IwjDVYU+LOy6OPprVVFE=
+			ZU7USkcJKrjgITmE0mZWV7t08qo=
 			</data>
 			<key>hash2</key>
 			<data>
-			1PJ+024CGck33kXFF1iAzKNYtn+GuQ53brDIzIyuFmA=
+			61hWbuIWaO2o5bLvT6x2oPcsVKZl0snkbx9CSot2ZWM=
 			</data>
 		</dict>
 		<key>Modules/Feedback.swiftmodule/armv7-apple-ios.swiftdoc</key>
@@ -132,11 +132,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bnbfpz1nH8us8beD62UHZ4veM78=
+			UqN7Js1N5lgFrQEYl4/PqNsaExM=
 			</data>
 			<key>hash2</key>
 			<data>
-			kRERowkifGlihntVGM99wa832udV1L7DVy8Hz5ua8iA=
+			lA82bonfRbG8N2sb0YTNk8l8rczb3ZKEH5zjR62CEqw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
