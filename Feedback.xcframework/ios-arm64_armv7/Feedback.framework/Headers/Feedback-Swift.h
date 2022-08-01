@@ -216,6 +216,24 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+typedef SWIFT_ENUM(NSInteger, CloseStatus, open) {
+  CloseStatusNone = 0,
+/// Close with button.
+  CloseStatusClosed = 1,
+/// Close after send a feedback.
+  CloseStatusSendFeedback = 2,
+/// Close others way.
+  CloseStatusOutside = 3,
+/// open SDK.
+  CloseStatusOpened = 4,
+/// Survey won’t be shown due to the customer saw it before.
+  CloseStatusDisplayOnce = 5,
+/// Survey won’t be shown due to customer already submitted a feedback in a given time period.
+  CloseStatusPreventMultipleFeedback = 6,
+/// The survey won’t be shown due to the channel quota limit has been exceeded.
+  CloseStatusChannelQuotaExceeded = 7,
+};
+
 @class NSString;
 
 SWIFT_CLASS("_TtC8Feedback6Pisano")
@@ -223,9 +241,9 @@ SWIFT_CLASS("_TtC8Feedback6Pisano")
 /// Pisano Boot
 + (void)bootWithAppId:(NSString * _Nonnull)appId accessKey:(NSString * _Nonnull)accessKey apiUrl:(NSString * _Nonnull)apiUrl feedbackUrl:(NSString * _Nonnull)feedbackUrl eventUrl:(NSString * _Nullable)eventUrl;
 /// Pisano Show
-+ (void)showWithFlowId:(NSString * _Nullable)flowId language:(NSString * _Nullable)language customer:(NSDictionary<NSString *, id> * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload;
++ (void)showWithFlowId:(NSString * _Nullable)flowId language:(NSString * _Nullable)language customer:(NSDictionary<NSString *, id> * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload completion:(void (^ _Nonnull)(enum CloseStatus))completion;
 /// Pisano Track
-+ (void)trackWithEvent:(NSString * _Nonnull)event payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload customer:(NSDictionary<NSString *, id> * _Nullable)customer language:(NSString * _Nullable)language;
++ (void)trackWithEvent:(NSString * _Nonnull)event payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload customer:(NSDictionary<NSString *, id> * _Nullable)customer language:(NSString * _Nullable)language completion:(void (^ _Nonnull)(enum CloseStatus))completion;
 /// Pisano Destroy
 + (void)destroy;
 /// Debug Mode
@@ -457,6 +475,24 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+typedef SWIFT_ENUM(NSInteger, CloseStatus, open) {
+  CloseStatusNone = 0,
+/// Close with button.
+  CloseStatusClosed = 1,
+/// Close after send a feedback.
+  CloseStatusSendFeedback = 2,
+/// Close others way.
+  CloseStatusOutside = 3,
+/// open SDK.
+  CloseStatusOpened = 4,
+/// Survey won’t be shown due to the customer saw it before.
+  CloseStatusDisplayOnce = 5,
+/// Survey won’t be shown due to customer already submitted a feedback in a given time period.
+  CloseStatusPreventMultipleFeedback = 6,
+/// The survey won’t be shown due to the channel quota limit has been exceeded.
+  CloseStatusChannelQuotaExceeded = 7,
+};
+
 @class NSString;
 
 SWIFT_CLASS("_TtC8Feedback6Pisano")
@@ -464,9 +500,9 @@ SWIFT_CLASS("_TtC8Feedback6Pisano")
 /// Pisano Boot
 + (void)bootWithAppId:(NSString * _Nonnull)appId accessKey:(NSString * _Nonnull)accessKey apiUrl:(NSString * _Nonnull)apiUrl feedbackUrl:(NSString * _Nonnull)feedbackUrl eventUrl:(NSString * _Nullable)eventUrl;
 /// Pisano Show
-+ (void)showWithFlowId:(NSString * _Nullable)flowId language:(NSString * _Nullable)language customer:(NSDictionary<NSString *, id> * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload;
++ (void)showWithFlowId:(NSString * _Nullable)flowId language:(NSString * _Nullable)language customer:(NSDictionary<NSString *, id> * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload completion:(void (^ _Nonnull)(enum CloseStatus))completion;
 /// Pisano Track
-+ (void)trackWithEvent:(NSString * _Nonnull)event payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload customer:(NSDictionary<NSString *, id> * _Nullable)customer language:(NSString * _Nullable)language;
++ (void)trackWithEvent:(NSString * _Nonnull)event payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload customer:(NSDictionary<NSString *, id> * _Nullable)customer language:(NSString * _Nullable)language completion:(void (^ _Nonnull)(enum CloseStatus))completion;
 /// Pisano Destroy
 + (void)destroy;
 /// Debug Mode
