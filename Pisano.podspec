@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                = "Pisano"
-  s.version             = "0.1.1"
+  s.version             = "0.1.1.1"
   s.summary             = "The Pisano iOS SDK, for integrating Pisano into your iOS application"
   s.description         = "The Pisano iOS SDK, for integrating Pisano into your iOS application The SDK supports iOS 10+."
   s.homepage            = "https://github.com/Pisano/pisano-ios"

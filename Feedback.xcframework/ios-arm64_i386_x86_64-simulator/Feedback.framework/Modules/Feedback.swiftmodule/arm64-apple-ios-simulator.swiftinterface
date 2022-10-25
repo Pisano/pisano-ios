@@ -1,0 +1,46 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target arm64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Feedback
+@_exported import Feedback
+import Foundation
+import Swift
+import SystemConfiguration
+import UIKit
+import WebKit
+import _Concurrency
+@_hasMissingDesignatedInitializers public class ReachabilityService {
+  @objc deinit
+}
+@objc public enum CloseStatus : Swift.Int {
+  case none = 0
+  case closed
+  case sendFeedback
+  case outside
+  case opened
+  case displayOnce
+  case preventMultipleFeedback
+  case channelQuotaExceeded
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class Pisano : ObjectiveC.NSObject {
+  @objc public class func boot(appId: Swift.String, accessKey: Swift.String, apiUrl: Swift.String, feedbackUrl: Swift.String, eventUrl: Swift.String? = nil)
+  @objc public class func show(flowId: Swift.String? = nil, language: Swift.String? = nil, customer: [Swift.String : Any]? = nil, payload: [Swift.String : Swift.String]? = nil, completion: @escaping (Feedback.CloseStatus) -> Swift.Void)
+  @objc public class func track(event: Swift.String, payload: [Swift.String : Swift.String]? = nil, customer: [Swift.String : Any]? = nil, language: Swift.String? = nil, completion: @escaping (Feedback.CloseStatus) -> Swift.Void)
+  @objc open class func clear()
+  @objc open class func debugMode(_ debug: Swift.Bool)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension Foundation.URLSession {
+  public func requestSynchronousData(request: Foundation.URLRequest) -> (Foundation.Data?, Foundation.HTTPURLResponse?)
+}
+extension Feedback.CloseStatus : Swift.Equatable {}
+extension Feedback.CloseStatus : Swift.Hashable {}
+extension Feedback.CloseStatus : Swift.RawRepresentable {}
