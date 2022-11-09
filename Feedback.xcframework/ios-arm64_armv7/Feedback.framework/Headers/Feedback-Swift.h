@@ -236,12 +236,21 @@ typedef SWIFT_ENUM(NSInteger, CloseStatus, open) {
 
 @class NSString;
 
+SWIFT_CLASS("_TtC8Feedback17CloseStatusHelper")
+@interface CloseStatusHelper : NSObject
++ (NSString * _Nonnull)description:(enum CloseStatus)status SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+enum ViewMode : NSInteger;
+@class NSAttributedString;
+
 SWIFT_CLASS("_TtC8Feedback6Pisano")
 @interface Pisano : NSObject
 /// Pisano Boot
 + (void)bootWithAppId:(NSString * _Nonnull)appId accessKey:(NSString * _Nonnull)accessKey apiUrl:(NSString * _Nonnull)apiUrl feedbackUrl:(NSString * _Nonnull)feedbackUrl eventUrl:(NSString * _Nullable)eventUrl;
 /// Pisano Show
-+ (void)showWithFlowId:(NSString * _Nullable)flowId language:(NSString * _Nullable)language customer:(NSDictionary<NSString *, id> * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload completion:(void (^ _Nonnull)(enum CloseStatus))completion;
++ (void)showWithMode:(enum ViewMode)mode title:(NSAttributedString * _Nullable)title flowId:(NSString * _Nullable)flowId language:(NSString * _Nullable)language customer:(NSDictionary<NSString *, id> * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload completion:(void (^ _Nonnull)(enum CloseStatus))completion;
 /// Pisano Track
 + (void)trackWithEvent:(NSString * _Nonnull)event payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload customer:(NSDictionary<NSString *, id> * _Nullable)customer language:(NSString * _Nullable)language completion:(void (^ _Nonnull)(enum CloseStatus))completion;
 /// Pisano Clear
@@ -251,6 +260,11 @@ SWIFT_CLASS("_TtC8Feedback6Pisano")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+typedef SWIFT_ENUM(NSInteger, ViewMode, open) {
+  ViewModeDefault = 0,
+  ViewModeBottomSheeet = 1,
+};
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
@@ -495,12 +509,21 @@ typedef SWIFT_ENUM(NSInteger, CloseStatus, open) {
 
 @class NSString;
 
+SWIFT_CLASS("_TtC8Feedback17CloseStatusHelper")
+@interface CloseStatusHelper : NSObject
++ (NSString * _Nonnull)description:(enum CloseStatus)status SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+enum ViewMode : NSInteger;
+@class NSAttributedString;
+
 SWIFT_CLASS("_TtC8Feedback6Pisano")
 @interface Pisano : NSObject
 /// Pisano Boot
 + (void)bootWithAppId:(NSString * _Nonnull)appId accessKey:(NSString * _Nonnull)accessKey apiUrl:(NSString * _Nonnull)apiUrl feedbackUrl:(NSString * _Nonnull)feedbackUrl eventUrl:(NSString * _Nullable)eventUrl;
 /// Pisano Show
-+ (void)showWithFlowId:(NSString * _Nullable)flowId language:(NSString * _Nullable)language customer:(NSDictionary<NSString *, id> * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload completion:(void (^ _Nonnull)(enum CloseStatus))completion;
++ (void)showWithMode:(enum ViewMode)mode title:(NSAttributedString * _Nullable)title flowId:(NSString * _Nullable)flowId language:(NSString * _Nullable)language customer:(NSDictionary<NSString *, id> * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload completion:(void (^ _Nonnull)(enum CloseStatus))completion;
 /// Pisano Track
 + (void)trackWithEvent:(NSString * _Nonnull)event payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload customer:(NSDictionary<NSString *, id> * _Nullable)customer language:(NSString * _Nullable)language completion:(void (^ _Nonnull)(enum CloseStatus))completion;
 /// Pisano Clear
@@ -510,6 +533,11 @@ SWIFT_CLASS("_TtC8Feedback6Pisano")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+typedef SWIFT_ENUM(NSInteger, ViewMode, open) {
+  ViewModeDefault = 0,
+  ViewModeBottomSheeet = 1,
+};
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop

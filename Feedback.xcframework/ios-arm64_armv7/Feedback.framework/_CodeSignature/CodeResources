@@ -4,9 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Assets.car</key>
+		<data>
+		k72LSa8idD/ZVJdn0Jj/RBpPA/M=
+		</data>
 		<key>Headers/Feedback-Swift.h</key>
 		<data>
-		O5S2MwZ/SvWmiz1XAYz0LbtZb3g=
+		12FxXOBNmz5x7c7zUAcQtuz/dGM=
 		</data>
 		<key>Headers/Feedback.h</key>
 		<data>
@@ -18,48 +22,63 @@
 		</data>
 		<key>Modules/Feedback.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		iLLZ8VMoD+XslKPhfrLuahcpbfg=
+		5W7tyPm+HUTitkVHn8lRLXRW1fs=
 		</data>
 		<key>Modules/Feedback.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		LuEi05SZvvP90HmIgBAweymKDDU=
+		pj0Nrxh+1wO8v+XAF9+jk/Dst0A=
 		</data>
 		<key>Modules/Feedback.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		0EaYIbbveYhTaUE8cGoY8n7OyOg=
+		ctFpXnoi8/hVdKDyxNc4h5qFBeE=
 		</data>
 		<key>Modules/Feedback.swiftmodule/armv7-apple-ios.swiftdoc</key>
 		<data>
-		9tqJtRs8xahBU+Nf3NyArieamvg=
+		gkSTrs1RYpvwNfM7I+4w3ZYklL4=
 		</data>
 		<key>Modules/Feedback.swiftmodule/armv7-apple-ios.swiftinterface</key>
 		<data>
-		LafBCTC6xLYI3jrO+SkWdlqLee0=
+		uv6JqYGY5No15QsAOfJDIHBWvB8=
 		</data>
 		<key>Modules/Feedback.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<data>
-		9DPPjVnwhnworRqrNkx2JXKrLbU=
+		LijdkoKIP/bzLjE7Jm5B9+5Y7ks=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		Vdzj+INWIMbE3FiDIFgknj2Jlco=
 		</data>
-		<key>WidgetViewController.nib</key>
+		<key>WidgetViewController.nib/objects-11.0+.nib</key>
 		<data>
-		v3cNoIWLmJ02KQY5cXHrWOVOQpo=
+		s/bjT6Ormfu+WOO6Q5UKIRsdpU8=
+		</data>
+		<key>WidgetViewController.nib/runtime.nib</key>
+		<data>
+		HsftyUL7eXBPZUmOnmxlFyh2vKU=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Assets.car</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			k72LSa8idD/ZVJdn0Jj/RBpPA/M=
+			</data>
+			<key>hash2</key>
+			<data>
+			U2Mrr1UhaFtDx2L31laMjfL3iEdztjoMRIwXYRJdcW0=
+			</data>
+		</dict>
 		<key>Headers/Feedback-Swift.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			O5S2MwZ/SvWmiz1XAYz0LbtZb3g=
+			12FxXOBNmz5x7c7zUAcQtuz/dGM=
 			</data>
 			<key>hash2</key>
 			<data>
-			sPoQcIdCkn0JZP6ouBvOGVQCpuDdVsWQpLDjRblmo0M=
+			zWZfcKB4W9N5t8qEIqPshkeo7cguI6DK4fJqEruKtFc=
 			</data>
 		</dict>
 		<key>Headers/Feedback.h</key>
@@ -77,66 +96,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			iLLZ8VMoD+XslKPhfrLuahcpbfg=
+			5W7tyPm+HUTitkVHn8lRLXRW1fs=
 			</data>
 			<key>hash2</key>
 			<data>
-			iCjyAwarGiY6AzYrWveDLPQjaijz2JHcZaXpJHCaCxM=
+			5ACdt0S9nMO9JUJhhltQiTEXMEM7GTvvjFnNOSyVpFM=
 			</data>
 		</dict>
 		<key>Modules/Feedback.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LuEi05SZvvP90HmIgBAweymKDDU=
+			pj0Nrxh+1wO8v+XAF9+jk/Dst0A=
 			</data>
 			<key>hash2</key>
 			<data>
-			d/rM8FH1bqvlCiXdnI6x/FGNsv2j7tjYmk6hxfxqwzE=
+			f//3nJgmzU6H/9qxZ4h3Xd5Cx8dduU+50U6m6lqbPSg=
 			</data>
 		</dict>
 		<key>Modules/Feedback.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0EaYIbbveYhTaUE8cGoY8n7OyOg=
+			ctFpXnoi8/hVdKDyxNc4h5qFBeE=
 			</data>
 			<key>hash2</key>
 			<data>
-			N76FLH+OOvjcJoIg5WgZJFEQXYQfuV20ZG8+ougJZ+I=
+			MpCJA64BM/2dXZduUY0Q9RbBd0aC6MI7NkZuU+jIAmI=
 			</data>
 		</dict>
 		<key>Modules/Feedback.swiftmodule/armv7-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9tqJtRs8xahBU+Nf3NyArieamvg=
+			gkSTrs1RYpvwNfM7I+4w3ZYklL4=
 			</data>
 			<key>hash2</key>
 			<data>
-			cTwUU5FWaLBsDvh6zDXILXAiNTiflmziD+m2HTNSFBc=
+			d9ymXRV2Lo2Cw3McQn9b2w2dvRXLKDghXmZNJ83QQkc=
 			</data>
 		</dict>
 		<key>Modules/Feedback.swiftmodule/armv7-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LafBCTC6xLYI3jrO+SkWdlqLee0=
+			uv6JqYGY5No15QsAOfJDIHBWvB8=
 			</data>
 			<key>hash2</key>
 			<data>
-			rsYjq8ax+iUCZpZ+24GKvE7UZbSvHd0GevcKE2wHXaQ=
+			7PkxYD3G96wLzDxm+288DntcM1y3goXt7oiNYJEi8ik=
 			</data>
 		</dict>
 		<key>Modules/Feedback.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9DPPjVnwhnworRqrNkx2JXKrLbU=
+			LijdkoKIP/bzLjE7Jm5B9+5Y7ks=
 			</data>
 			<key>hash2</key>
 			<data>
-			u3Awyll+sdZaj/lQZAjPQlZDshtIclCGyiNLscT0VpY=
+			aLx0yJghIum9krFPhPfGyB+L0hw7hAFGTAUCdgGIUUk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -150,15 +169,26 @@
 			jZKy8n36UycmpWSMRrrPIOWULLHgGscklgDqkG3CL0U=
 			</data>
 		</dict>
-		<key>WidgetViewController.nib</key>
+		<key>WidgetViewController.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			v3cNoIWLmJ02KQY5cXHrWOVOQpo=
+			s/bjT6Ormfu+WOO6Q5UKIRsdpU8=
 			</data>
 			<key>hash2</key>
 			<data>
-			zst13uKgaOgoHmEaKFoNNLuVVYkIbyzbGh2kplliuaI=
+			I9SwMe7ZusiKplFcuHNCHrzEDIB4sbmVyvhBfNeeg6s=
+			</data>
+		</dict>
+		<key>WidgetViewController.nib/runtime.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			HsftyUL7eXBPZUmOnmxlFyh2vKU=
+			</data>
+			<key>hash2</key>
+			<data>
+			TwH0v8Zxq5rzUg9LCyunpkmaAAPbRXbG7/24ZAugBrs=
 			</data>
 		</dict>
 	</dict>
