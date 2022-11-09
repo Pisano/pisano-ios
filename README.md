@@ -71,14 +71,16 @@ Pisano.boot(appId: "",
 | apiUrl  | String | The URL of API that will be accessed |
 | feedbackUrl  | String | Base URL for survey |
 
-## Show Method
+## Show Method - V0.2.0
 
 ### Swift
 
 ```yaml
 import Feedback
 
-Pisano.show(flowId: "",
+Pisano.show(mode: ViewMode.default
+            title: nil,
+            flowId: "",
             language: "",
             customer: ["email": "",
                        "name": "",
@@ -96,7 +98,9 @@ Pisano.show(flowId: "",
 ```yaml
 #import <Feedback/Feedback-Swift.h>
 
-[Pisano showWithFlowId:@"flow-id-that-can-be-obtained-from-dashboard"
+[Pisano showWithMode:ViewModeDefault
+                   title:NULL
+                   flowId:@"flow-id-that-can-be-obtained-from-dashboard"
                   language:@"TR"
                   customer:@{@"email": @"leo@pisano.co", @"externalId": @"123"}
                    payload:@{@"question": @"transactionAmount", @"answer": @"100.20"}
@@ -108,6 +112,8 @@ Pisano.show(flowId: "",
 
 | Parameter  Name | Type  | Description  |
 | ------- | --- | --- |
+| mode | Enum | View Mode Enum to set presentation style (Default - BottomSheet) |
+| title | NSAttributedString | The Navigation Bar Title |
 | flowId | String | The ID of related flow. Can be obtained from Pisano Dashboard. Can be sent as empty string "" for default flow |
 | language | String | Language code |
 | payload | Dictionary  | Question and related answer in an array (mostly uses for pre-loaded responses to take transactional data(s))  |
@@ -126,7 +132,7 @@ Pisano.show(flowId: "",
 | CloseStatusChannelQuotaExceeded | Survey won’t be shown due to the channel quota limit has been exceeded. |
 | CloseStatusOutside | Others |
 
-## Clear Method (0.1.1)
+## Clear Method - V0.1.1
 Clear all saved data related to feedback flows.
 
 ### Swift
