@@ -1,0 +1,11 @@
+framework module PisanoFeedback {
+  umbrella header "PisanoFeedback.h"
+
+  export *
+  module * { export * }
+}
+
+module PisanoFeedback.Swift {
+    header "PisanoFeedback-Swift.h"
+    requires objc
+}
