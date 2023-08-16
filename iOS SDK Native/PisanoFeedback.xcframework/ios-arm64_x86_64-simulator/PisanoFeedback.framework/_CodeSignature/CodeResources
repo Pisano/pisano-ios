@@ -86,7 +86,7 @@
 		</data>
 		<key>Headers/PisanoFeedback-Swift.h</key>
 		<data>
-		yFOR/2AYJsgn1Syz7B8TOCq8aio=
+		/z1l0sQP7d6xeUdm4YQc3jCXhz8=
 		</data>
 		<key>Headers/PisanoFeedback.h</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		eSKtg/62A5EwDaNqrmtcTxBUI1E=
+		gY6mGf1fi0iw7mKYewhW9lM2skU=
 		</data>
 		<key>LabelTableViewCell.nib</key>
 		<data>
@@ -130,11 +130,11 @@
 		</data>
 		<key>Modules/PisanoFeedback.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		p/Oyv1L/Gint3EFXhk8e3Z1U/vQ=
+		SYw68kpDL+pEdjpeXgHr3AqGOSc=
 		</data>
 		<key>Modules/PisanoFeedback.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Gi14DA9FGA69o4MfCbfzonWpe1U=
+		6/kMZgjVGQmbO4PM0vSdnjTt5lE=
 		</data>
 		<key>Modules/PisanoFeedback.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -142,11 +142,11 @@
 		</data>
 		<key>Modules/PisanoFeedback.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		dNtWbCAFx95zWWR83wy0N4Fo0Y8=
+		luRUx6delk/uFxKu7x7Nt3mEp2Q=
 		</data>
 		<key>Modules/PisanoFeedback.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		12PhKa1HEzQ3knXC3Vb+OJ7HPKU=
+		27MWY6yauJixkVUwlww22ebaHRE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -383,7 +383,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tldoHQoEMkeQAXJwgvEG93RvuFyDuMTb/ikrnme930o=
+			zth6Nu5mxzDTHMc+Zz1qIKtOUg7nXqwoy7VkUzpTs68=
 			</data>
 		</dict>
 		<key>Headers/PisanoFeedback.h</key>
@@ -453,14 +453,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			aPj3L9lngwuB626m06Ni8OowD/E/erztt9PiKrOOs5k=
+			6o3FABGXzca5wl0dZhii5nn6glSoFy0My6PaI9pcXIg=
 			</data>
 		</dict>
 		<key>Modules/PisanoFeedback.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			N6GAbtiK6Th+H6tYkynbHstxbxHGb3sJQA7E3lfjWb4=
+			xPU5V0aVNQDar0vkxYfR/nGR71U6zQwKL2SrE1eJgtU=
 			</data>
 		</dict>
 		<key>Modules/PisanoFeedback.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -474,14 +474,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			S6bfzozEXg3kjv1Um/8Q92hWBaTjNauUk2zvX1QgCIs=
+			7uDBoofb+ORTTudk/1QXc0QccgOItXkTKNVfSGb180w=
 			</data>
 		</dict>
 		<key>Modules/PisanoFeedback.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7YarB7aqOn3wOhTbH/gEFXnUGqEedom3XLq0nSMKWZ0=
+			nlzp8QCsGmJkRkIWxn1ocr/qENlL9gFhIQlYHCTFvF0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

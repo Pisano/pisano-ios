@@ -198,6 +198,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import CoreGraphics;
+@import Foundation;
 @import ObjectiveC;
 @import UIKit;
 #endif
@@ -258,6 +259,13 @@ typedef SWIFT_ENUM(NSInteger, FeedbackCallback, open) {
 };
 
 
+SWIFT_CLASS("_TtC14PisanoFeedback22FeedbackCallbackHelper")
+@interface FeedbackCallbackHelper : NSObject
++ (NSString * _Nonnull)descriptionFrom:(enum FeedbackCallback)from SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 typedef SWIFT_ENUM(NSInteger, FontStyle, open) {
   FontStyleNormal = 0,
   FontStyleBold = 1,
@@ -298,10 +306,21 @@ SWIFT_CLASS("_TtC14PisanoFeedback10LinkStyles")
 
 
 
+@class PisanoCustomer;
 
 SWIFT_CLASS("_TtC14PisanoFeedback6Pisano")
 @interface Pisano : NSObject
 - (nonnull instancetype)initWithAppId:(NSString * _Nonnull)appId accessKey:(NSString * _Nonnull)accessKey apiUrl:(NSString * _Nonnull)apiUrl OBJC_DESIGNATED_INITIALIZER;
+- (void)showWithFlowId:(NSString * _Nullable)flowId customer:(PisanoCustomer * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload feedbackCallback:(void (^ _Nullable)(enum FeedbackCallback))feedbackCallback;
+- (void)trackWithEventUrl:(NSString * _Nonnull)eventUrl event:(NSString * _Nonnull)event customer:(PisanoCustomer * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC14PisanoFeedback14PisanoCustomer")
+@interface PisanoCustomer : NSObject
+- (nonnull instancetype)initWithName:(NSString * _Nullable)name email:(NSString * _Nullable)email phoneNumber:(NSString * _Nullable)phoneNumber gender:(NSString * _Nullable)gender birthYear:(NSString * _Nullable)birthYear externalId:(NSString * _Nullable)externalId customerAttributes:(NSDictionary<NSString *, NSString *> * _Nullable)customerAttributes OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -529,6 +548,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import CoreGraphics;
+@import Foundation;
 @import ObjectiveC;
 @import UIKit;
 #endif
@@ -589,6 +609,13 @@ typedef SWIFT_ENUM(NSInteger, FeedbackCallback, open) {
 };
 
 
+SWIFT_CLASS("_TtC14PisanoFeedback22FeedbackCallbackHelper")
+@interface FeedbackCallbackHelper : NSObject
++ (NSString * _Nonnull)descriptionFrom:(enum FeedbackCallback)from SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 typedef SWIFT_ENUM(NSInteger, FontStyle, open) {
   FontStyleNormal = 0,
   FontStyleBold = 1,
@@ -629,10 +656,21 @@ SWIFT_CLASS("_TtC14PisanoFeedback10LinkStyles")
 
 
 
+@class PisanoCustomer;
 
 SWIFT_CLASS("_TtC14PisanoFeedback6Pisano")
 @interface Pisano : NSObject
 - (nonnull instancetype)initWithAppId:(NSString * _Nonnull)appId accessKey:(NSString * _Nonnull)accessKey apiUrl:(NSString * _Nonnull)apiUrl OBJC_DESIGNATED_INITIALIZER;
+- (void)showWithFlowId:(NSString * _Nullable)flowId customer:(PisanoCustomer * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload feedbackCallback:(void (^ _Nullable)(enum FeedbackCallback))feedbackCallback;
+- (void)trackWithEventUrl:(NSString * _Nonnull)eventUrl event:(NSString * _Nonnull)event customer:(PisanoCustomer * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC14PisanoFeedback14PisanoCustomer")
+@interface PisanoCustomer : NSObject
+- (nonnull instancetype)initWithName:(NSString * _Nullable)name email:(NSString * _Nullable)email phoneNumber:(NSString * _Nullable)phoneNumber gender:(NSString * _Nullable)gender birthYear:(NSString * _Nullable)birthYear externalId:(NSString * _Nullable)externalId customerAttributes:(NSDictionary<NSString *, NSString *> * _Nullable)customerAttributes OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end

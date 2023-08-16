@@ -12,6 +12,11 @@ import UIKit
 import _Concurrency
 import os.log
 import os
+@objc @_inheritsConvenienceInitializers @objcMembers public class FeedbackCallbackHelper : ObjectiveC.NSObject {
+  @objc public static func description(from: PisanoFeedback.FeedbackCallback) -> Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
 public protocol CharacterStyling {
   func isEqualTo(_ other: PisanoFeedback.CharacterStyling) -> Swift.Bool
 }
@@ -61,8 +66,8 @@ public struct Token {
   }
   public init(type: PisanoFeedback.TokenType, inputString: Swift.String, characterStyles: [PisanoFeedback.CharacterStyling] = [])
 }
-public class PisanoCustomer : Swift.Codable {
-  public init(name: Swift.String? = nil, email: Swift.String? = nil, phoneNumber: Swift.String? = nil, gender: Swift.String? = nil, birthYear: Swift.String? = nil, externalId: Swift.String? = nil, customerAttributes: [Swift.String : Swift.String]? = nil)
+@objc @objcMembers public class PisanoCustomer : ObjectiveC.NSObject, Swift.Codable {
+  @objc public init(name: Swift.String? = nil, email: Swift.String? = nil, phoneNumber: Swift.String? = nil, gender: Swift.String? = nil, birthYear: Swift.String? = nil, externalId: Swift.String? = nil, customerAttributes: [Swift.String : Swift.String]? = nil)
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
@@ -119,8 +124,8 @@ public class SwiftyLineProcessor {
 }
 @objc @objcMembers public class Pisano : ObjectiveC.NSObject {
   @objc public init(appId: Swift.String, accessKey: Swift.String, apiUrl: Swift.String)
-  public func show(flowId: Swift.String? = nil, customer: PisanoFeedback.PisanoCustomer? = nil, payload: [Swift.String : Swift.String]? = nil, _ feedbackCallback: ((PisanoFeedback.FeedbackCallback) -> Swift.Void)?)
-  public func track(eventUrl: Swift.String, event: Swift.String, customer: PisanoFeedback.PisanoCustomer? = nil, payload: [Swift.String : Swift.String]? = nil)
+  @objc public func show(flowId: Swift.String? = nil, customer: PisanoFeedback.PisanoCustomer? = nil, payload: [Swift.String : Swift.String]? = nil, feedbackCallback: ((PisanoFeedback.FeedbackCallback) -> Swift.Void)?)
+  @objc public func track(eventUrl: Swift.String, event: Swift.String, customer: PisanoFeedback.PisanoCustomer? = nil, payload: [Swift.String : Swift.String]? = nil)
   @objc deinit
 }
 @objc public enum FeedbackCallback : Swift.Int {
