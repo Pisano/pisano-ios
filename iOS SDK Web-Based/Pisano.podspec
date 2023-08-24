@@ -9,6 +9,6 @@ Pod::Spec.new do |s|
   s.platform            = :ios, "10.0"
   s.swift_version       = "5.0"
   s.source              = { :git => "https://github.com/Pisano/pisano-ios.git", :tag => "#{s.version}" }
-  s.preserve_paths      = 'Feedback.xcframework'
-  s.vendored_frameworks = 'Feedback.xcframework'
+  s.preserve_paths      = 'iOS SDK Web-Based/Feedback.xcframework'
+  s.vendored_frameworks = 'iOS SDK Web-Based/Feedback.xcframework'
 end
