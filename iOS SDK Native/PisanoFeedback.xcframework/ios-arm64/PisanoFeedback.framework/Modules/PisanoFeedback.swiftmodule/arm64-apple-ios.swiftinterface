@@ -124,7 +124,7 @@ public class SwiftyLineProcessor {
 }
 @objc @objcMembers public class Pisano : ObjectiveC.NSObject {
   @objc public init(appId: Swift.String, accessKey: Swift.String, apiUrl: Swift.String)
-  @objc public func show(flowId: Swift.String? = nil, customer: PisanoFeedback.PisanoCustomer? = nil, payload: [Swift.String : Swift.String]? = nil, feedbackCallback: ((PisanoFeedback.FeedbackCallback) -> Swift.Void)?)
+  @objc public func show(viewMode: PisanoFeedback.PSNViewMode = .default, flowId: Swift.String? = nil, customer: PisanoFeedback.PisanoCustomer? = nil, payload: [Swift.String : Swift.String]? = nil, feedbackCallback: ((PisanoFeedback.FeedbackCallback) -> Swift.Void)?)
   @objc public func track(eventUrl: Swift.String, event: Swift.String, customer: PisanoFeedback.PisanoCustomer? = nil, payload: [Swift.String : Swift.String]? = nil)
   @objc deinit
 }
@@ -205,6 +205,15 @@ public struct CharacterRule : Swift.CustomStringConvertible {
   }
   public func tag(for type: PisanoFeedback.CharacterRuleTagType) -> PisanoFeedback.CharacterRuleTag?
   public init(primaryTag: PisanoFeedback.CharacterRuleTag, otherTags: [PisanoFeedback.CharacterRuleTag], escapeCharacters: [Swift.Character] = ["\\"], styles: [Swift.Int : PisanoFeedback.CharacterStyling] = [:], minTags: Swift.Int = 1, maxTags: Swift.Int = 1, metadataLookup: Swift.Bool = false, definesBoundary: Swift.Bool = false, shouldCancelRemainingRules: Swift.Bool = false, balancedTags: Swift.Bool = false)
+}
+@objc public enum PSNViewMode : Swift.Int {
+  case `default`
+  case bottomSheet
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
 }
 public enum CharacterStyle : PisanoFeedback.CharacterStyling {
   case none
@@ -324,6 +333,9 @@ extension PisanoFeedback.Cancel : Swift.Equatable {}
 extension PisanoFeedback.Cancel : Swift.Hashable {}
 extension PisanoFeedback.CharacterRuleTagType : Swift.Equatable {}
 extension PisanoFeedback.CharacterRuleTagType : Swift.Hashable {}
+extension PisanoFeedback.PSNViewMode : Swift.Equatable {}
+extension PisanoFeedback.PSNViewMode : Swift.Hashable {}
+extension PisanoFeedback.PSNViewMode : Swift.RawRepresentable {}
 extension PisanoFeedback.CharacterStyle : Swift.Equatable {}
 extension PisanoFeedback.CharacterStyle : Swift.Hashable {}
 extension PisanoFeedback.FontStyle : Swift.Equatable {}

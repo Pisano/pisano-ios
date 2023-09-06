@@ -306,12 +306,17 @@ SWIFT_CLASS("_TtC14PisanoFeedback10LinkStyles")
 
 
 
+typedef SWIFT_ENUM(NSInteger, PSNViewMode, open) {
+  PSNViewModeDefault = 0,
+  PSNViewModeBottomSheet = 1,
+};
+
 @class PisanoCustomer;
 
 SWIFT_CLASS("_TtC14PisanoFeedback6Pisano")
 @interface Pisano : NSObject
 - (nonnull instancetype)initWithAppId:(NSString * _Nonnull)appId accessKey:(NSString * _Nonnull)accessKey apiUrl:(NSString * _Nonnull)apiUrl OBJC_DESIGNATED_INITIALIZER;
-- (void)showWithFlowId:(NSString * _Nullable)flowId customer:(PisanoCustomer * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload feedbackCallback:(void (^ _Nullable)(enum FeedbackCallback))feedbackCallback;
+- (void)showWithViewMode:(enum PSNViewMode)viewMode flowId:(NSString * _Nullable)flowId customer:(PisanoCustomer * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload feedbackCallback:(void (^ _Nullable)(enum FeedbackCallback))feedbackCallback;
 - (void)trackWithEventUrl:(NSString * _Nonnull)eventUrl event:(NSString * _Nonnull)event customer:(PisanoCustomer * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -656,12 +661,17 @@ SWIFT_CLASS("_TtC14PisanoFeedback10LinkStyles")
 
 
 
+typedef SWIFT_ENUM(NSInteger, PSNViewMode, open) {
+  PSNViewModeDefault = 0,
+  PSNViewModeBottomSheet = 1,
+};
+
 @class PisanoCustomer;
 
 SWIFT_CLASS("_TtC14PisanoFeedback6Pisano")
 @interface Pisano : NSObject
 - (nonnull instancetype)initWithAppId:(NSString * _Nonnull)appId accessKey:(NSString * _Nonnull)accessKey apiUrl:(NSString * _Nonnull)apiUrl OBJC_DESIGNATED_INITIALIZER;
-- (void)showWithFlowId:(NSString * _Nullable)flowId customer:(PisanoCustomer * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload feedbackCallback:(void (^ _Nullable)(enum FeedbackCallback))feedbackCallback;
+- (void)showWithViewMode:(enum PSNViewMode)viewMode flowId:(NSString * _Nullable)flowId customer:(PisanoCustomer * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload feedbackCallback:(void (^ _Nullable)(enum FeedbackCallback))feedbackCallback;
 - (void)trackWithEventUrl:(NSString * _Nonnull)eventUrl event:(NSString * _Nonnull)event customer:(PisanoCustomer * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
