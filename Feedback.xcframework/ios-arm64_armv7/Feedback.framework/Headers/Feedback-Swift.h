@@ -232,6 +232,8 @@ typedef SWIFT_ENUM(NSInteger, CloseStatus, open) {
   CloseStatusPreventMultipleFeedback = 6,
 /// The survey won’t be shown due to the channel quota limit has been exceeded.
   CloseStatusChannelQuotaExceeded = 7,
+/// The SDK Init is failed
+  CloseStatusInitFailed = 8,
 };
 
 @class NSString;
@@ -248,7 +250,7 @@ enum ViewMode : NSInteger;
 SWIFT_CLASS("_TtC8Feedback6Pisano")
 @interface Pisano : NSObject
 /// Pisano Boot
-+ (void)bootWithAppId:(NSString * _Nonnull)appId accessKey:(NSString * _Nonnull)accessKey apiUrl:(NSString * _Nonnull)apiUrl feedbackUrl:(NSString * _Nonnull)feedbackUrl eventUrl:(NSString * _Nullable)eventUrl;
++ (void)bootWithAppId:(NSString * _Nonnull)appId accessKey:(NSString * _Nonnull)accessKey apiUrl:(NSString * _Nonnull)apiUrl feedbackUrl:(NSString * _Nonnull)feedbackUrl eventUrl:(NSString * _Nullable)eventUrl completion:(void (^ _Nullable)(enum CloseStatus))completion;
 /// Pisano Show
 + (void)showWithMode:(enum ViewMode)mode title:(NSAttributedString * _Nullable)title flowId:(NSString * _Nullable)flowId language:(NSString * _Nullable)language customer:(NSDictionary<NSString *, id> * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload completion:(void (^ _Nonnull)(enum CloseStatus))completion;
 /// Pisano Track
@@ -505,6 +507,8 @@ typedef SWIFT_ENUM(NSInteger, CloseStatus, open) {
   CloseStatusPreventMultipleFeedback = 6,
 /// The survey won’t be shown due to the channel quota limit has been exceeded.
   CloseStatusChannelQuotaExceeded = 7,
+/// The SDK Init is failed
+  CloseStatusInitFailed = 8,
 };
 
 @class NSString;
@@ -521,7 +525,7 @@ enum ViewMode : NSInteger;
 SWIFT_CLASS("_TtC8Feedback6Pisano")
 @interface Pisano : NSObject
 /// Pisano Boot
-+ (void)bootWithAppId:(NSString * _Nonnull)appId accessKey:(NSString * _Nonnull)accessKey apiUrl:(NSString * _Nonnull)apiUrl feedbackUrl:(NSString * _Nonnull)feedbackUrl eventUrl:(NSString * _Nullable)eventUrl;
++ (void)bootWithAppId:(NSString * _Nonnull)appId accessKey:(NSString * _Nonnull)accessKey apiUrl:(NSString * _Nonnull)apiUrl feedbackUrl:(NSString * _Nonnull)feedbackUrl eventUrl:(NSString * _Nullable)eventUrl completion:(void (^ _Nullable)(enum CloseStatus))completion;
 /// Pisano Show
 + (void)showWithMode:(enum ViewMode)mode title:(NSAttributedString * _Nullable)title flowId:(NSString * _Nullable)flowId language:(NSString * _Nullable)language customer:(NSDictionary<NSString *, id> * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload completion:(void (^ _Nonnull)(enum CloseStatus))completion;
 /// Pisano Track
