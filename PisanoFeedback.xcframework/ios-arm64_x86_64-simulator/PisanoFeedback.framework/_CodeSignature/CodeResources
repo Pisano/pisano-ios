@@ -94,7 +94,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		5YEAZaYjIyDcQ22C+oIdzRWDIe8=
+		z0XbHy+TRhVwjHaUGDvPazDEQk8=
 		</data>
 		<key>LabelTableViewCell.nib</key>
 		<data>
@@ -134,7 +134,7 @@
 		</data>
 		<key>Modules/PisanoFeedback.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		zCQAXiQNPuNMoN7zdUzHd0DHB8A=
+		o/VLwu6PrpuYY8mJbselfc1+Jw0=
 		</data>
 		<key>Modules/PisanoFeedback.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -146,7 +146,7 @@
 		</data>
 		<key>Modules/PisanoFeedback.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		+OGFTwxoWKa4TzI2+4QBTmvJilc=
+		eg1yV2WhuHrtU66j8shQ/1PULbU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -460,7 +460,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			UUYrXyFg1/tchZpKaj0Jn4QWxKkyeOufZUK8vnAn3Hc=
+			R2yDQlQFGU8Jkhx/MTe/OvjQyBPmVOwBf2MI2zQxQRg=
 			</data>
 		</dict>
 		<key>Modules/PisanoFeedback.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -481,7 +481,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			faveB7Dj3lfBO0NU5Wd5Sxpsot5ZC1C9h6pUdcxgwXg=
+			afwFj+zLgiZbHr2S+MlKaGCBjKaAXx5+06KERU7vexc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
