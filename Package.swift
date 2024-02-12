@@ -4,16 +4,16 @@
 import PackageDescription
 
 let package = Package(
-    name: "PisanoFeedback",
+    name: "Feedback",
     products: [
         .library(
-            name: "PisanoFeedback",
-            targets: ["PisanoFeedback"]),
+            name: "Feedback",
+            targets: ["Feedback"]),
     ],
     targets: [
         .binaryTarget(
-            name: "PisanoFeedback",
-            path: "PisanoFeedback.xcframework"
+            name: "Feedback",
+            path: "Feedback.xcframework"
         ),
     ]
 )

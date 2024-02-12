@@ -1,0 +1,11 @@
+framework module Feedback {
+  umbrella header "Feedback.h"
+
+  export *
+  module * { export * }
+}
+
+module Feedback.Swift {
+  header "Feedback-Swift.h"
+  requires objc
+}
