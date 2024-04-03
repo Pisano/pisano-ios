@@ -24,7 +24,7 @@ import _StringProcessing
 }
 @_inheritsConvenienceInitializers @objc public class Pisano : ObjectiveC.NSObject {
   @objc public class func boot(appId: Swift.String, accessKey: Swift.String, apiUrl: Swift.String, feedbackUrl: Swift.String, eventUrl: Swift.String? = nil, completion: ((Feedback.CloseStatus) -> Swift.Void)? = nil)
-  @objc public class func show(mode: Feedback.ViewMode = .bottomSheeet, title: Foundation.NSAttributedString? = nil, flowId: Swift.String? = nil, language: Swift.String? = nil, customer: [Swift.String : Any]? = nil, payload: [Swift.String : Swift.String]? = nil, completion: @escaping (Feedback.CloseStatus) -> Swift.Void)
+  @objc public class func show(mode: Feedback.ViewMode = .`default`, title: Foundation.NSAttributedString? = nil, flowId: Swift.String? = nil, language: Swift.String? = nil, customer: [Swift.String : Any]? = nil, payload: [Swift.String : Swift.String]? = nil, completion: @escaping (Feedback.CloseStatus) -> Swift.Void)
   @objc public class func track(event: Swift.String, payload: [Swift.String : Swift.String]? = nil, customer: [Swift.String : Any]? = nil, language: Swift.String? = nil, completion: @escaping (Feedback.CloseStatus) -> Swift.Void)
   @objc open class func clear()
   @objc open class func debugMode(_ debug: Swift.Bool)
@@ -49,6 +49,7 @@ extension Foundation.URLSession {
   case preventMultipleFeedback
   case channelQuotaExceeded
   case initFailed
+  case initSucces
   public var description: Swift.String {
     get
   }

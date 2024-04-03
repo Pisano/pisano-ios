@@ -270,6 +270,8 @@ typedef SWIFT_ENUM(NSInteger, CloseStatus, open) {
   CloseStatusChannelQuotaExceeded = 7,
 /// The SDK Init is failed
   CloseStatusInitFailed = 8,
+/// The SDK Init is succesful
+  CloseStatusInitSucces = 9,
 };
 
 @class NSString;
@@ -584,6 +586,8 @@ typedef SWIFT_ENUM(NSInteger, CloseStatus, open) {
   CloseStatusChannelQuotaExceeded = 7,
 /// The SDK Init is failed
   CloseStatusInitFailed = 8,
+/// The SDK Init is succesful
+  CloseStatusInitSucces = 9,
 };
 
 @class NSString;
