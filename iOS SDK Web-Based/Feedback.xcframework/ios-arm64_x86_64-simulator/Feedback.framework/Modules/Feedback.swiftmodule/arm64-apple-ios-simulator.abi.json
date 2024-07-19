@@ -1702,6 +1702,34 @@
         "moduleName": "Feedback"
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Feedback"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "Feedback"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "Feedback"
+      },
+      {
+        "kind": "Import",
+        "name": "DeveloperToolsSupport",
+        "printedName": "DeveloperToolsSupport",
+        "declKind": "Import",
+        "moduleName": "Feedback"
+      },
+      {
         "kind": "TypeDecl",
         "name": "URLSession",
         "printedName": "URLSession",
@@ -1845,480 +1873,1362 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/ViewMode.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
+      "kind": "StringLiteral",
+      "offset": 555,
+      "length": 8,
+      "value": "\"app_id\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
+      "kind": "StringLiteral",
+      "offset": 584,
+      "length": 12,
+      "value": "\"access_key\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
+      "kind": "StringLiteral",
+      "offset": 965,
+      "length": 20,
+      "value": "\"Init is Succesful \""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1118,
+      "length": 19,
+      "value": "\"[Error]: \""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1136,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1888,
+      "length": 8,
+      "value": "\"app_id\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1917,
+      "length": 12,
+      "value": "\"access_key\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1954,
+      "length": 9,
+      "value": "\"flow_id\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1975,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1991,
+      "length": 10,
+      "value": "\"customer\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
+      "kind": "StringLiteral",
+      "offset": 2025,
+      "length": 9,
+      "value": "\"payload\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
+      "kind": "StringLiteral",
+      "offset": 2047,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2622,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
+      "kind": "StringLiteral",
+      "offset": 2921,
+      "length": 22,
+      "value": "\"Detail couldn't find\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
+      "kind": "StringLiteral",
+      "offset": 3133,
+      "length": 20,
+      "value": "\"Boot couldn't find\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
+      "kind": "StringLiteral",
+      "offset": 3974,
+      "length": 19,
+      "value": "\"[Error]: \""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
+      "kind": "StringLiteral",
+      "offset": 3992,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
+      "kind": "StringLiteral",
+      "offset": 4637,
+      "length": 8,
+      "value": "\"app_id\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
+      "kind": "StringLiteral",
+      "offset": 4671,
+      "length": 12,
+      "value": "\"access_key\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
+      "kind": "StringLiteral",
+      "offset": 5811,
+      "length": 19,
+      "value": "\"[Error]: \""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
+      "kind": "StringLiteral",
+      "offset": 5829,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
+      "kind": "StringLiteral",
+      "offset": 6256,
+      "length": 7,
+      "value": "\"event\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
+      "kind": "StringLiteral",
+      "offset": 6328,
+      "length": 10,
+      "value": "\"customer\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
+      "kind": "StringLiteral",
+      "offset": 6407,
+      "length": 9,
+      "value": "\"payload\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
+      "kind": "StringLiteral",
+      "offset": 6952,
+      "length": 12,
+      "value": "\"externalId\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
+      "kind": "StringLiteral",
+      "offset": 8595,
+      "length": 19,
+      "value": "\"[Error]: \""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
+      "kind": "StringLiteral",
+      "offset": 8613,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/ReachabilityManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 538,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/ReachabilityManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 810,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/ReachabilityManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 907,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/ReachabilityManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1003,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/ViewMode.swift",
       "kind": "IntegerLiteral",
       "offset": 159,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/ViewMode.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/ViewMode.swift",
       "kind": "IntegerLiteral",
       "offset": 170,
       "length": 12,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/ViewMode.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/ViewMode.swift",
       "kind": "IntegerLiteral",
       "offset": 159,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/ViewMode.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/ViewMode.swift",
       "kind": "IntegerLiteral",
       "offset": 170,
       "length": 12,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Managers\/PisanoManager.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoLoggerManager.swift",
+      "kind": "StringLiteral",
+      "offset": 711,
+      "length": 69,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoLoggerManager.swift",
+      "kind": "StringLiteral",
+      "offset": 724,
+      "length": 1,
+      "value": "\":\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoLoggerManager.swift",
+      "kind": "StringLiteral",
+      "offset": 732,
+      "length": 1,
+      "value": "\":\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoLoggerManager.swift",
+      "kind": "StringLiteral",
+      "offset": 742,
+      "length": 1,
+      "value": "\":\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoLoggerManager.swift",
+      "kind": "StringLiteral",
+      "offset": 754,
+      "length": 1,
+      "value": "\" - Pisano-Logger -\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoLoggerManager.swift",
+      "kind": "StringLiteral",
+      "offset": 779,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoRequestManager.swift",
+      "kind": "FloatLiteral",
+      "offset": 671,
+      "length": 4,
+      "value": "30.0"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoRequestManager.swift",
+      "kind": "FloatLiteral",
+      "offset": 727,
+      "length": 4,
+      "value": "60.0"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoRequestManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 961,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoRequestManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1350,
+      "length": 18,
+      "value": "\"application\/json\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoRequestManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1390,
+      "length": 14,
+      "value": "\"Content-Type\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoRequestManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1884,
+      "length": 3,
+      "value": "200"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoManager.swift",
       "kind": "BooleanLiteral",
       "offset": 289,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Managers\/PisanoDataStore.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoManager.swift",
+      "kind": "StringLiteral",
+      "offset": 965,
+      "length": 25,
+      "value": "\"No internet connection!\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoManager.swift",
+      "kind": "Dictionary",
+      "offset": 1567,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1665,
+      "length": 25,
+      "value": "\"No internet connection!\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoManager.swift",
+      "kind": "StringLiteral",
+      "offset": 2200,
+      "length": 54,
+      "value": "\"Pisano SDK init Failed before, getting SDK Detail...\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoManager.swift",
+      "kind": "StringLiteral",
+      "offset": 3637,
+      "length": 25,
+      "value": "\"No internet connection!\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoManager.swift",
+      "kind": "StringLiteral",
+      "offset": 4251,
+      "length": 15,
+      "value": "\"No event url.\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
       "kind": "StringLiteral",
       "offset": 176,
       "length": 26,
       "value": "\"PisanoSDKDetailJSONCache\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Managers\/PisanoDataStore.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
       "kind": "StringLiteral",
       "offset": 245,
       "length": 24,
       "value": "\"PisanoTriggerJSONCache\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Managers\/PisanoDataStore.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
       "kind": "StringLiteral",
       "offset": 309,
       "length": 21,
       "value": "\"PisanoBootJSONCache\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Managers\/PisanoDataStore.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
       "kind": "StringLiteral",
       "offset": 366,
       "length": 15,
       "value": "\"display_once_\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Managers\/PisanoDataStore.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
       "kind": "StringLiteral",
       "offset": 452,
       "length": 28,
       "value": "\"display_once_delay_period_\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
+      "kind": "StringLiteral",
+      "offset": 1490,
+      "length": 31,
+      "value": "\"Failed to load embed (Detail)\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
+      "kind": "StringLiteral",
+      "offset": 1843,
+      "length": 32,
+      "value": "\"Failed to load embed (Trigger)\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
+      "kind": "StringLiteral",
+      "offset": 2182,
+      "length": 29,
+      "value": "\"Failed to load embed (Boot)\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3844,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4397,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4965,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5409,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5516,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoPresentationManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 983,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
       "offset": 146,
       "length": 160,
       "value": "\"window.addEventListener('message', function(e) {\n    window.webkit.messageHandlers.eventHandler.postMessage(e.data);\n});\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
       "offset": 339,
       "length": 81,
       "value": "\"    document.getElementsByClassName('components')[0].scrollHeight\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
       "offset": 451,
       "length": 24,
       "value": "\"PSN_FEEDBACK_SUBMITTED\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
       "offset": 503,
       "length": 23,
       "value": "\"PSN_WEB_WIDGET_CLOSED\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
       "offset": 146,
       "length": 160,
       "value": "\"window.addEventListener('message', function(e) {\n    window.webkit.messageHandlers.eventHandler.postMessage(e.data);\n});\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
       "offset": 339,
       "length": 81,
       "value": "\"    document.getElementsByClassName('components')[0].scrollHeight\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
       "offset": 451,
       "length": 24,
       "value": "\"PSN_FEEDBACK_SUBMITTED\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
       "offset": 503,
       "length": 23,
       "value": "\"PSN_WEB_WIDGET_CLOSED\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/Trigger.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Helpers\/PisanoHelper.swift",
+      "kind": "Dictionary",
+      "offset": 399,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Helpers\/PisanoHelper.swift",
+      "kind": "IntegerLiteral",
+      "offset": 878,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Helpers\/PisanoHelper.swift",
+      "kind": "StringLiteral",
+      "offset": 1132,
+      "length": 12,
+      "value": "\"externalId\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/Trigger.swift",
       "kind": "StringLiteral",
       "offset": 366,
       "length": 13,
       "value": "\"customer_id\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/Trigger.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/Trigger.swift",
       "kind": "StringLiteral",
       "offset": 403,
       "length": 9,
       "value": "\"flow_id\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/Trigger.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/Trigger.swift",
       "kind": "StringLiteral",
       "offset": 485,
       "length": 13,
       "value": "\"hide_widget\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/Trigger.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/Trigger.swift",
       "kind": "StringLiteral",
       "offset": 530,
       "length": 18,
       "value": "\"hide_widget_type\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/Trigger.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/Trigger.swift",
       "kind": "StringLiteral",
       "offset": 366,
       "length": 13,
       "value": "\"customer_id\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/Trigger.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/Trigger.swift",
       "kind": "StringLiteral",
       "offset": 403,
       "length": 9,
       "value": "\"flow_id\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/Trigger.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/Trigger.swift",
       "kind": "StringLiteral",
       "offset": 485,
       "length": 13,
       "value": "\"hide_widget\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/Trigger.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/Trigger.swift",
       "kind": "StringLiteral",
       "offset": 530,
       "length": 18,
       "value": "\"hide_widget_type\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Constants\/APIBase.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/URLSession.swift",
+      "kind": "IntegerLiteral",
+      "offset": 288,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
       "kind": "StringLiteral",
       "offset": 150,
       "length": 23,
       "value": "\"http:\/\/localhost:3000\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Constants\/APIBase.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
       "kind": "StringLiteral",
       "offset": 192,
       "length": 36,
       "value": "\"\/public\/v1\/mobile_sdks\/code\/detail\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Constants\/APIBase.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
       "kind": "StringLiteral",
       "offset": 248,
       "length": 37,
       "value": "\"\/public\/v1\/mobile_sdks\/code\/trigger\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Constants\/APIBase.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
       "kind": "StringLiteral",
       "offset": 306,
       "length": 36,
       "value": "\"http:\/\/127.0.0.1:3001\/web_feedback\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Constants\/APIBase.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
       "kind": "StringLiteral",
       "offset": 150,
       "length": 23,
       "value": "\"http:\/\/localhost:3000\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Constants\/APIBase.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
       "kind": "StringLiteral",
       "offset": 192,
       "length": 36,
       "value": "\"\/public\/v1\/mobile_sdks\/code\/detail\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Constants\/APIBase.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
       "kind": "StringLiteral",
       "offset": 248,
       "length": 37,
       "value": "\"\/public\/v1\/mobile_sdks\/code\/trigger\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Constants\/APIBase.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
       "kind": "StringLiteral",
       "offset": 306,
       "length": 36,
       "value": "\"http:\/\/127.0.0.1:3001\/web_feedback\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Constants\/Customer.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/Customer.swift",
       "kind": "Array",
       "offset": 158,
       "length": 61,
       "value": "[\"name\", \"email\", \"phoneNumber\", \"externalId\", \"customAttrs\"]"
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
       "offset": 358,
       "length": 9,
       "value": "\"node_id\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
       "offset": 411,
       "length": 8,
       "value": "\"app_id\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
       "offset": 446,
       "length": 12,
       "value": "\"access_key\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
       "offset": 487,
       "length": 14,
       "value": "\"display_once\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
       "offset": 541,
       "length": 27,
       "value": "\"display_once_delay_period\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
       "offset": 358,
       "length": 9,
       "value": "\"node_id\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
       "offset": 411,
       "length": 8,
       "value": "\"app_id\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
       "offset": 446,
       "length": 12,
       "value": "\"access_key\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
       "offset": 487,
       "length": 14,
       "value": "\"display_once\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
       "offset": 541,
       "length": 27,
       "value": "\"display_once_delay_period\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/String.swift",
+      "kind": "StringLiteral",
+      "offset": 193,
+      "length": 28,
+      "value": "\"([A-Z]+)([A-Z][a-z]|[0-9])\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/String.swift",
+      "kind": "StringLiteral",
+      "offset": 250,
+      "length": 19,
+      "value": "\"([a-z0-9])([A-Z])\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/String.swift",
+      "kind": "Array",
+      "offset": 611,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/String.swift",
+      "kind": "IntegerLiteral",
+      "offset": 653,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/String.swift",
+      "kind": "Array",
+      "offset": 737,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/String.swift",
+      "kind": "StringLiteral",
+      "offset": 769,
+      "length": 7,
+      "value": "\"$1_$2\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 165,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 216,
       "length": 6,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 282,
       "length": 12,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 343,
       "length": 7,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 391,
       "length": 6,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 485,
       "length": 11,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 618,
       "length": 23,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 748,
       "length": 20,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 822,
       "length": 10,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 889,
       "length": 10,
       "value": "9"
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "kind": "StringLiteral",
+      "offset": 1003,
+      "length": 6,
+      "value": "\"None\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "kind": "StringLiteral",
+      "offset": 1051,
+      "length": 20,
+      "value": "\"Close with button.\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "kind": "StringLiteral",
+      "offset": 1119,
+      "length": 30,
+      "value": "\"Close after send a feedback.\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "kind": "StringLiteral",
+      "offset": 1192,
+      "length": 19,
+      "value": "\"Close others way.\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "kind": "StringLiteral",
+      "offset": 1253,
+      "length": 10,
+      "value": "\"Open SDK\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "kind": "StringLiteral",
+      "offset": 1310,
+      "length": 58,
+      "value": "\"Survey won't be shown due to the customer saw it before.\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "kind": "StringLiteral",
+      "offset": 1427,
+      "length": 92,
+      "value": "\"Survey won't be shown due to customer already submitted a feedback in a given time period.\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "kind": "StringLiteral",
+      "offset": 1575,
+      "length": 77,
+      "value": "\"The survey won't be shown due to the channel quota limit has been exceeded.\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "kind": "StringLiteral",
+      "offset": 1698,
+      "length": 25,
+      "value": "\"The SDK init is failed.\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "kind": "StringLiteral",
+      "offset": 1769,
+      "length": 28,
+      "value": "\"The SDK init is succesful.\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "kind": "StringLiteral",
+      "offset": 1971,
+      "length": 27,
+      "value": "\"prevent_multiple_feedback\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "kind": "StringLiteral",
+      "offset": 2057,
+      "length": 24,
+      "value": "\"channel_quota_exceeded\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 165,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 216,
       "length": 6,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 282,
       "length": 12,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 343,
       "length": 7,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 391,
       "length": 6,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 485,
       "length": 11,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 618,
       "length": 23,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 748,
       "length": 20,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 822,
       "length": 10,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 889,
       "length": 10,
       "value": "9"
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
       "kind": "IntegerLiteral",
       "offset": 580,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
       "kind": "StringLiteral",
       "offset": 620,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/bedir\/Desktop\/feedback-ioss\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
       "kind": "StringLiteral",
       "offset": 656,
       "length": 2,
       "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1385,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1493,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 1773,
+      "length": 3,
+      "value": "0.3"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1836,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1996,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 2389,
+      "length": 7,
+      "value": "\"close\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2676,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 3458,
+      "length": 22,
+      "value": "\"WidgetViewController\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3659,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 3988,
+      "length": 3,
+      "value": "\"?\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 3994,
+      "length": 10,
+      "value": "\"node_id=\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 4063,
+      "length": 14,
+      "value": "\"&creator_id=\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 4138,
+      "length": 8,
+      "value": "\"&lang=\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 4201,
+      "length": 11,
+      "value": "\"&flow_id=\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 4275,
+      "length": 13,
+      "value": "\"&responses=\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 4714,
+      "length": 12,
+      "value": "\"PisanoSDK;\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 4729,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 4764,
+      "length": 66,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 4776,
+      "length": 7,
+      "value": "\" Mozilla\/5.0 (iPhone; CPU iPhone OS \""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 4828,
+      "length": 3,
+      "value": "\" \""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 4865,
+      "length": 70,
+      "value": "\"like Mac OS X) AppleWebKit\/605.1.15 (KHTML, like Gecko) Mobile\/16B91\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 5099,
+      "length": 21,
+      "value": "\"navigator.userAgent\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 5221,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 5305,
+      "length": 12,
+      "value": "\"PisanoSDK;\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 5320,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5718,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 5983,
+      "length": 26,
+      "value": "\"Couldn't load Pisano Url\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6161,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6436,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 6578,
+      "length": 14,
+      "value": "\"eventHandler\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7121,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7137,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 7293,
+      "length": 14,
+      "value": "\"eventHandler\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7573,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7589,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7670,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8790,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "Array",
+      "offset": 9662,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 9802,
+      "length": 6,
+      "value": "\"type\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 9824,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 9869,
+      "length": 10,
+      "value": "\"has_chat\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 9893,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 9927,
+      "length": 14,
+      "value": "\"eventHandler\""
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 10110,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 10183,
+      "length": 3,
+      "value": "3.0"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Library\/Developer\/Xcode\/DerivedData\/Feedback-bfzvedbumdzsprhdlkulrqbsjlds\/Build\/Intermediates.noindex\/ArchiveIntermediates\/Feedback\/IntermediateBuildFilesPath\/Feedback.build\/Release-iphonesimulator\/Feedback.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 723,
+      "length": 7,
+      "value": "\"close\""
     }
   ]
 }
