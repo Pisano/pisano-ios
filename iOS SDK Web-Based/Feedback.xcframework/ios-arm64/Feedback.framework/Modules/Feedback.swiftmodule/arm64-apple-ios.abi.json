@@ -2344,7 +2344,14 @@
     {
       "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoPresentationManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 983,
+      "offset": 1053,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoPresentationManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1187,
       "length": 4,
       "value": "true"
     },
@@ -3163,63 +3170,63 @@
     {
       "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 8790,
+      "offset": 8786,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
       "kind": "Array",
-      "offset": 9662,
+      "offset": 9658,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
       "kind": "StringLiteral",
-      "offset": 9802,
+      "offset": 9798,
       "length": 6,
       "value": "\"type\""
     },
     {
       "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
       "kind": "StringLiteral",
-      "offset": 9824,
+      "offset": 9820,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
       "kind": "StringLiteral",
-      "offset": 9869,
+      "offset": 9865,
       "length": 10,
       "value": "\"has_chat\""
     },
     {
       "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9893,
+      "offset": 9889,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
       "kind": "StringLiteral",
-      "offset": 9927,
+      "offset": 9923,
       "length": 14,
       "value": "\"eventHandler\""
     },
     {
       "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 10110,
+      "offset": 10106,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/odcmacbookpro\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 10183,
+      "offset": 10179,
       "length": 3,
       "value": "3.0"
     },
