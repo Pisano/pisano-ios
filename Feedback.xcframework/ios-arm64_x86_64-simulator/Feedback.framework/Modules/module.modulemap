@@ -1,7 +1,7 @@
 framework module Feedback {
   umbrella header "Feedback.h"
-
   export *
+
   module * { export * }
 }
 
