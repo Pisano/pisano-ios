@@ -352,7 +352,7 @@ SWIFT_CLASS("_TtC8Feedback6Pisano")
 
 typedef SWIFT_ENUM(NSInteger, ViewMode, open) {
   ViewModeDefault = 0,
-  ViewModeBottomSheeet = 1,
+  ViewModeBottomSheet = 1,
 };
 
 #endif

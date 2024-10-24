@@ -18,7 +18,7 @@ import _SwiftConcurrencyShims
 }
 @objc public enum ViewMode : Swift.Int {
   case `default` = 0
-  case bottomSheeet
+  case bottomSheet
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
