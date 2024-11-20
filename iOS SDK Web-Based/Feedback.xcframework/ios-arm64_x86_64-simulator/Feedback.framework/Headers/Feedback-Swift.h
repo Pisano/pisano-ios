@@ -350,6 +350,7 @@ SWIFT_CLASS("_TtC8Feedback6Pisano")
 
 
 
+
 typedef SWIFT_ENUM(NSInteger, ViewMode, open) {
   ViewModeDefault = 0,
   ViewModeBottomSheet = 1,
@@ -711,6 +712,7 @@ SWIFT_CLASS("_TtC8Feedback6Pisano")
 + (void)debugMode:(BOOL)debug;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 
