@@ -1535,6 +1535,48 @@
           },
           {
             "kind": "Var",
+            "name": "surveyPassive",
+            "printedName": "surveyPassive",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Feedback.CloseStatus.Type) -> Feedback.CloseStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CloseStatus",
+                    "printedName": "Feedback.CloseStatus",
+                    "usr": "c:@M@Feedback@E@CloseStatus"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Feedback.CloseStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CloseStatus",
+                        "printedName": "Feedback.CloseStatus",
+                        "usr": "c:@M@Feedback@E@CloseStatus"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@Feedback@E@CloseStatus@CloseStatusSurveyPassive",
+            "mangledName": "$s8Feedback11CloseStatusO13surveyPassiveyA2CmF",
+            "moduleName": "Feedback",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 10
+          },
+          {
+            "kind": "Var",
             "name": "description",
             "printedName": "description",
             "children": [
@@ -1883,1680 +1925,588 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
-      "kind": "StringLiteral",
-      "offset": 555,
-      "length": 8,
-      "value": "\"app_id\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
-      "kind": "StringLiteral",
-      "offset": 584,
-      "length": 12,
-      "value": "\"access_key\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
-      "kind": "StringLiteral",
-      "offset": 965,
-      "length": 20,
-      "value": "\"Init is Succesful \""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1118,
-      "length": 19,
-      "value": "\"[Error]: \""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1136,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1888,
-      "length": 8,
-      "value": "\"app_id\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1917,
-      "length": 12,
-      "value": "\"access_key\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1954,
-      "length": 9,
-      "value": "\"flow_id\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1975,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1991,
-      "length": 10,
-      "value": "\"customer\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
-      "kind": "StringLiteral",
-      "offset": 2025,
-      "length": 9,
-      "value": "\"payload\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
-      "kind": "StringLiteral",
-      "offset": 2047,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2622,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
-      "kind": "StringLiteral",
-      "offset": 2921,
-      "length": 22,
-      "value": "\"Detail couldn't find\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
-      "kind": "StringLiteral",
-      "offset": 3133,
-      "length": 20,
-      "value": "\"Boot couldn't find\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
-      "kind": "StringLiteral",
-      "offset": 3974,
-      "length": 19,
-      "value": "\"[Error]: \""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
-      "kind": "StringLiteral",
-      "offset": 3992,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
-      "kind": "StringLiteral",
-      "offset": 4637,
-      "length": 8,
-      "value": "\"app_id\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
-      "kind": "StringLiteral",
-      "offset": 4671,
-      "length": 12,
-      "value": "\"access_key\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
-      "kind": "StringLiteral",
-      "offset": 5811,
-      "length": 19,
-      "value": "\"[Error]: \""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
-      "kind": "StringLiteral",
-      "offset": 5829,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
-      "kind": "StringLiteral",
-      "offset": 6256,
-      "length": 7,
-      "value": "\"event\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
-      "kind": "StringLiteral",
-      "offset": 6328,
-      "length": 10,
-      "value": "\"customer\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
-      "kind": "StringLiteral",
-      "offset": 6407,
-      "length": 9,
-      "value": "\"payload\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
-      "kind": "StringLiteral",
-      "offset": 6952,
-      "length": 12,
-      "value": "\"externalId\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
-      "kind": "StringLiteral",
-      "offset": 8595,
-      "length": 19,
-      "value": "\"[Error]: \""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoAPIManager.swift",
-      "kind": "StringLiteral",
-      "offset": 8613,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/ReachabilityManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 538,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/ReachabilityManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 810,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/ReachabilityManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 907,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/ReachabilityManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1003,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/ViewMode.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/ViewMode.swift",
       "kind": "IntegerLiteral",
       "offset": 159,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/ViewMode.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/ViewMode.swift",
       "kind": "IntegerLiteral",
       "offset": 170,
       "length": 11,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/ViewMode.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/ViewMode.swift",
       "kind": "IntegerLiteral",
       "offset": 159,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/ViewMode.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/ViewMode.swift",
       "kind": "IntegerLiteral",
       "offset": 170,
       "length": 11,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoLoggerManager.swift",
-      "kind": "StringLiteral",
-      "offset": 711,
-      "length": 69,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoLoggerManager.swift",
-      "kind": "StringLiteral",
-      "offset": 724,
-      "length": 1,
-      "value": "\":\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoLoggerManager.swift",
-      "kind": "StringLiteral",
-      "offset": 732,
-      "length": 1,
-      "value": "\":\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoLoggerManager.swift",
-      "kind": "StringLiteral",
-      "offset": 742,
-      "length": 1,
-      "value": "\":\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoLoggerManager.swift",
-      "kind": "StringLiteral",
-      "offset": 754,
-      "length": 1,
-      "value": "\" - Pisano-Logger -\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoLoggerManager.swift",
-      "kind": "StringLiteral",
-      "offset": 779,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoRequestManager.swift",
-      "kind": "FloatLiteral",
-      "offset": 671,
-      "length": 4,
-      "value": "30.0"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoRequestManager.swift",
-      "kind": "FloatLiteral",
-      "offset": 727,
-      "length": 4,
-      "value": "60.0"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoRequestManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 961,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoRequestManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1350,
-      "length": 18,
-      "value": "\"application\/json\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoRequestManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1390,
-      "length": 14,
-      "value": "\"Content-Type\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoRequestManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1884,
-      "length": 3,
-      "value": "200"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoRequestManager.swift",
-      "kind": "StringLiteral",
-      "offset": 2126,
-      "length": 37,
-      "value": "\"JSON Response String: \""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoRequestManager.swift",
-      "kind": "StringLiteral",
-      "offset": 2162,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoRequestManager.swift",
-      "kind": "StringLiteral",
-      "offset": 2214,
-      "length": 40,
-      "value": "\"Failed to convert data to JSON string.\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoManager.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Managers\/PisanoManager.swift",
       "kind": "BooleanLiteral",
       "offset": 289,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoManager.swift",
-      "kind": "StringLiteral",
-      "offset": 965,
-      "length": 25,
-      "value": "\"No internet connection!\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoManager.swift",
-      "kind": "Dictionary",
-      "offset": 1567,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1665,
-      "length": 25,
-      "value": "\"No internet connection!\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoManager.swift",
-      "kind": "StringLiteral",
-      "offset": 2200,
-      "length": 54,
-      "value": "\"Pisano SDK init Failed before, getting SDK Detail...\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoManager.swift",
-      "kind": "StringLiteral",
-      "offset": 3637,
-      "length": 25,
-      "value": "\"No internet connection!\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoManager.swift",
-      "kind": "StringLiteral",
-      "offset": 4251,
-      "length": 15,
-      "value": "\"No event url.\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
       "kind": "StringLiteral",
       "offset": 176,
       "length": 26,
       "value": "\"PisanoSDKDetailJSONCache\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
       "kind": "StringLiteral",
       "offset": 245,
       "length": 24,
       "value": "\"PisanoTriggerJSONCache\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
       "kind": "StringLiteral",
       "offset": 309,
       "length": 21,
       "value": "\"PisanoBootJSONCache\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
       "kind": "StringLiteral",
       "offset": 366,
       "length": 15,
       "value": "\"display_once_\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
       "kind": "StringLiteral",
       "offset": 452,
       "length": 28,
       "value": "\"display_once_delay_period_\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
-      "kind": "StringLiteral",
-      "offset": 1490,
-      "length": 31,
-      "value": "\"Failed to load embed (Detail)\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
-      "kind": "StringLiteral",
-      "offset": 1843,
-      "length": 32,
-      "value": "\"Failed to load embed (Trigger)\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
-      "kind": "StringLiteral",
-      "offset": 2182,
-      "length": 29,
-      "value": "\"Failed to load embed (Boot)\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3844,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4397,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4965,
-      "length": 2,
-      "value": "60"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
-      "kind": "BooleanLiteral",
-      "offset": 5409,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
-      "kind": "BooleanLiteral",
-      "offset": 5516,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
-      "kind": "BooleanLiteral",
-      "offset": 5625,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoPresentationManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1038,
-      "length": 26,
-      "value": "\"Pisano - Presented on VC\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoPresentationManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1121,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoPresentationManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1201,
-      "length": 39,
-      "value": "\"Pisano - Presented on AlertController\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Managers\/PisanoPresentationManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1322,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
       "offset": 146,
       "length": 160,
       "value": "\"window.addEventListener('message', function(e) {\n    window.webkit.messageHandlers.eventHandler.postMessage(e.data);\n});\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
       "offset": 339,
       "length": 81,
       "value": "\"    document.getElementsByClassName('components')[0].scrollHeight\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
       "offset": 451,
       "length": 24,
       "value": "\"PSN_FEEDBACK_SUBMITTED\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
       "offset": 503,
       "length": 23,
       "value": "\"PSN_WEB_WIDGET_CLOSED\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
       "offset": 146,
       "length": 160,
       "value": "\"window.addEventListener('message', function(e) {\n    window.webkit.messageHandlers.eventHandler.postMessage(e.data);\n});\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
       "offset": 339,
       "length": 81,
       "value": "\"    document.getElementsByClassName('components')[0].scrollHeight\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
       "offset": 451,
       "length": 24,
       "value": "\"PSN_FEEDBACK_SUBMITTED\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
       "offset": 503,
       "length": 23,
       "value": "\"PSN_WEB_WIDGET_CLOSED\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Helpers\/PisanoHelper.swift",
-      "kind": "Dictionary",
-      "offset": 399,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Helpers\/PisanoHelper.swift",
-      "kind": "IntegerLiteral",
-      "offset": 878,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Helpers\/PisanoHelper.swift",
-      "kind": "StringLiteral",
-      "offset": 1132,
-      "length": 12,
-      "value": "\"externalId\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/Trigger.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/Trigger.swift",
       "kind": "StringLiteral",
       "offset": 366,
       "length": 13,
       "value": "\"customer_id\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/Trigger.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/Trigger.swift",
       "kind": "StringLiteral",
       "offset": 403,
       "length": 9,
       "value": "\"flow_id\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/Trigger.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/Trigger.swift",
       "kind": "StringLiteral",
       "offset": 485,
       "length": 13,
       "value": "\"hide_widget\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/Trigger.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/Trigger.swift",
       "kind": "StringLiteral",
       "offset": 530,
       "length": 18,
       "value": "\"hide_widget_type\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/Trigger.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/Trigger.swift",
       "kind": "StringLiteral",
       "offset": 366,
       "length": 13,
       "value": "\"customer_id\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/Trigger.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/Trigger.swift",
       "kind": "StringLiteral",
       "offset": 403,
       "length": 9,
       "value": "\"flow_id\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/Trigger.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/Trigger.swift",
       "kind": "StringLiteral",
       "offset": 485,
       "length": 13,
       "value": "\"hide_widget\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/Trigger.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/Trigger.swift",
       "kind": "StringLiteral",
       "offset": 530,
       "length": 18,
       "value": "\"hide_widget_type\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/URLSession.swift",
-      "kind": "IntegerLiteral",
-      "offset": 288,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
       "kind": "StringLiteral",
       "offset": 150,
       "length": 23,
       "value": "\"http:\/\/localhost:3000\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
       "kind": "StringLiteral",
       "offset": 192,
       "length": 36,
       "value": "\"\/public\/v1\/mobile_sdks\/code\/detail\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
       "kind": "StringLiteral",
       "offset": 248,
       "length": 37,
       "value": "\"\/public\/v1\/mobile_sdks\/code\/trigger\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
       "kind": "StringLiteral",
       "offset": 306,
       "length": 36,
       "value": "\"http:\/\/127.0.0.1:3001\/web_feedback\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
       "kind": "StringLiteral",
       "offset": 150,
       "length": 23,
       "value": "\"http:\/\/localhost:3000\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
       "kind": "StringLiteral",
       "offset": 192,
       "length": 36,
       "value": "\"\/public\/v1\/mobile_sdks\/code\/detail\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
       "kind": "StringLiteral",
       "offset": 248,
       "length": 37,
       "value": "\"\/public\/v1\/mobile_sdks\/code\/trigger\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
       "kind": "StringLiteral",
       "offset": 306,
       "length": 36,
       "value": "\"http:\/\/127.0.0.1:3001\/web_feedback\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/Customer.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/Customer.swift",
       "kind": "Array",
       "offset": 158,
       "length": 61,
       "value": "[\"name\", \"email\", \"phoneNumber\", \"externalId\", \"customAttrs\"]"
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/Customer.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/Customer.swift",
       "kind": "StringLiteral",
       "offset": 240,
       "length": 4,
       "value": "\"en\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/Customer.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/Customer.swift",
       "kind": "StringLiteral",
       "offset": 265,
       "length": 4,
       "value": "\"tr\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/Customer.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/Customer.swift",
       "kind": "StringLiteral",
       "offset": 296,
       "length": 7,
       "value": "\"Close\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Constants\/Customer.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/Customer.swift",
       "kind": "StringLiteral",
       "offset": 329,
       "length": 7,
       "value": "\"Kapat\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
       "offset": 431,
       "length": 9,
       "value": "\"node_id\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
       "offset": 484,
       "length": 8,
       "value": "\"app_id\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
       "offset": 519,
       "length": 12,
       "value": "\"access_key\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
       "offset": 560,
       "length": 14,
       "value": "\"display_once\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
       "offset": 614,
       "length": 27,
       "value": "\"display_once_delay_period\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
       "offset": 678,
       "length": 24,
       "value": "\"close_on_outside_click\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
       "offset": 733,
       "length": 16,
       "value": "\"mobile_channel\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
       "offset": 431,
       "length": 9,
       "value": "\"node_id\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
       "offset": 484,
       "length": 8,
       "value": "\"app_id\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
       "offset": 519,
       "length": 12,
       "value": "\"access_key\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
       "offset": 560,
       "length": 14,
       "value": "\"display_once\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
       "offset": 614,
       "length": 27,
       "value": "\"display_once_delay_period\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
       "offset": 678,
       "length": 24,
       "value": "\"close_on_outside_click\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
       "offset": 733,
       "length": 16,
       "value": "\"mobile_channel\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
-      "offset": 891,
+      "offset": 915,
       "length": 15,
       "value": "\"primary_color\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
-      "offset": 891,
+      "offset": 953,
+      "length": 8,
+      "value": "\"status\""
+    },
+    {
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "kind": "StringLiteral",
+      "offset": 915,
       "length": 15,
       "value": "\"primary_color\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/UIColor.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
-      "offset": 317,
-      "length": 3,
-      "value": "\"#\""
+      "offset": 953,
+      "length": 8,
+      "value": "\"status\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/UIColor.swift",
-      "kind": "IntegerLiteral",
-      "offset": 485,
-      "length": 1,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/UIColor.swift",
-      "kind": "IntegerLiteral",
-      "offset": 510,
-      "length": 1,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/UIColor.swift",
-      "kind": "IntegerLiteral",
-      "offset": 617,
-      "length": 1,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/UIColor.swift",
-      "kind": "StringLiteral",
-      "offset": 646,
-      "length": 4,
-      "value": "\"FF\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/UIColor.swift",
-      "kind": "IntegerLiteral",
-      "offset": 747,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/UIColor.swift",
-      "kind": "IntegerLiteral",
-      "offset": 881,
-      "length": 10,
-      "value": "0xFF000000"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/UIColor.swift",
-      "kind": "IntegerLiteral",
-      "offset": 896,
-      "length": 2,
-      "value": "24"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/UIColor.swift",
-      "kind": "FloatLiteral",
-      "offset": 902,
-      "length": 5,
-      "value": "255.0"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/UIColor.swift",
-      "kind": "IntegerLiteral",
-      "offset": 944,
-      "length": 10,
-      "value": "0x00FF0000"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/UIColor.swift",
-      "kind": "IntegerLiteral",
-      "offset": 959,
-      "length": 2,
-      "value": "16"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/UIColor.swift",
-      "kind": "FloatLiteral",
-      "offset": 965,
-      "length": 5,
-      "value": "255.0"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/UIColor.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1007,
-      "length": 10,
-      "value": "0x0000FF00"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/UIColor.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1022,
-      "length": 1,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/UIColor.swift",
-      "kind": "FloatLiteral",
-      "offset": 1027,
-      "length": 5,
-      "value": "255.0"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/UIColor.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1068,
-      "length": 10,
-      "value": "0x000000FF"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/UIColor.swift",
-      "kind": "FloatLiteral",
-      "offset": 1082,
-      "length": 5,
-      "value": "255.0"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/String.swift",
-      "kind": "StringLiteral",
-      "offset": 193,
-      "length": 28,
-      "value": "\"([A-Z]+)([A-Z][a-z]|[0-9])\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/String.swift",
-      "kind": "StringLiteral",
-      "offset": 250,
-      "length": 19,
-      "value": "\"([a-z0-9])([A-Z])\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/String.swift",
-      "kind": "Array",
-      "offset": 611,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/String.swift",
-      "kind": "IntegerLiteral",
-      "offset": 653,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/String.swift",
-      "kind": "Array",
-      "offset": 737,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Extension\/String.swift",
-      "kind": "StringLiteral",
-      "offset": 769,
-      "length": 7,
-      "value": "\"$1_$2\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 165,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 216,
       "length": 6,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 282,
       "length": 12,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 343,
       "length": 7,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 391,
       "length": 6,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 485,
       "length": 11,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 618,
       "length": 23,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 748,
       "length": 20,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 822,
       "length": 10,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 889,
       "length": 10,
       "value": "9"
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "StringLiteral",
-      "offset": 1003,
-      "length": 6,
-      "value": "\"None\""
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "kind": "IntegerLiteral",
+      "offset": 979,
+      "length": 13,
+      "value": "10"
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "StringLiteral",
-      "offset": 1051,
-      "length": 20,
-      "value": "\"Close with button.\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "StringLiteral",
-      "offset": 1119,
-      "length": 30,
-      "value": "\"Close after send a feedback.\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "StringLiteral",
-      "offset": 1192,
-      "length": 19,
-      "value": "\"Close others way.\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "StringLiteral",
-      "offset": 1253,
-      "length": 10,
-      "value": "\"Open SDK\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "StringLiteral",
-      "offset": 1310,
-      "length": 58,
-      "value": "\"Survey won't be shown due to the customer saw it before.\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "StringLiteral",
-      "offset": 1427,
-      "length": 92,
-      "value": "\"Survey won't be shown due to customer already submitted a feedback in a given time period.\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "StringLiteral",
-      "offset": 1575,
-      "length": 77,
-      "value": "\"The survey won't be shown due to the channel quota limit has been exceeded.\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "StringLiteral",
-      "offset": 1698,
-      "length": 25,
-      "value": "\"The SDK init is failed.\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "StringLiteral",
-      "offset": 1769,
-      "length": 28,
-      "value": "\"The SDK init is succesful.\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "StringLiteral",
-      "offset": 1971,
-      "length": 27,
-      "value": "\"prevent_multiple_feedback\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "StringLiteral",
-      "offset": 2057,
-      "length": 24,
-      "value": "\"channel_quota_exceeded\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 165,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 216,
       "length": 6,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 282,
       "length": 12,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 343,
       "length": 7,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 391,
       "length": 6,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 485,
       "length": 11,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 618,
       "length": 23,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 748,
       "length": 20,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 822,
       "length": 10,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 889,
       "length": 10,
       "value": "9"
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "kind": "IntegerLiteral",
+      "offset": 979,
+      "length": 13,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
       "kind": "IntegerLiteral",
       "offset": 748,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
       "kind": "StringLiteral",
       "offset": 788,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
       "kind": "StringLiteral",
       "offset": 824,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1668,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1776,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "FloatLiteral",
-      "offset": 2056,
-      "length": 3,
-      "value": "0.3"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2119,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2279,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 2588,
-      "length": 42,
-      "value": "\"Pisano Widget Controller - View is empty\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 2828,
-      "length": 7,
-      "value": "\"close\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2992,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3141,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 3696,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 3781,
-      "length": 4,
-      "value": "\"tr\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4539,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4584,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4628,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4717,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4981,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 5255,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 5305,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 5968,
-      "length": 22,
-      "value": "\"WidgetViewController\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6197,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 6526,
-      "length": 3,
-      "value": "\"?\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 6532,
-      "length": 10,
-      "value": "\"node_id=\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 6601,
-      "length": 14,
-      "value": "\"&creator_id=\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 6676,
-      "length": 8,
-      "value": "\"&lang=\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 6739,
-      "length": 11,
-      "value": "\"&flow_id=\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 6813,
-      "length": 13,
-      "value": "\"&responses=\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 7252,
-      "length": 12,
-      "value": "\"PisanoSDK;\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 7267,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 7302,
-      "length": 66,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 7314,
-      "length": 7,
-      "value": "\" Mozilla\/5.0 (iPhone; CPU iPhone OS \""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 7366,
-      "length": 3,
-      "value": "\" \""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 7403,
-      "length": 70,
-      "value": "\"like Mac OS X) AppleWebKit\/605.1.15 (KHTML, like Gecko) Mobile\/16B91\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 7637,
-      "length": 21,
-      "value": "\"navigator.userAgent\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 7759,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 7843,
-      "length": 12,
-      "value": "\"PisanoSDK;\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 7858,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 8256,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 8521,
-      "length": 26,
-      "value": "\"Couldn't load Pisano Url\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 8699,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 8974,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 9116,
-      "length": 14,
-      "value": "\"eventHandler\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 9659,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 9675,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 9831,
-      "length": 14,
-      "value": "\"eventHandler\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 10111,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 10127,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 10208,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 11351,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "Array",
-      "offset": 12219,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 12359,
-      "length": 6,
-      "value": "\"type\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 12381,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 12426,
-      "length": 10,
-      "value": "\"has_chat\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 12450,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 12484,
-      "length": 14,
-      "value": "\"eventHandler\""
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 12667,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Documents\/GitHub\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "FloatLiteral",
-      "offset": 12740,
-      "length": 3,
-      "value": "3.0"
-    },
-    {
-      "filePath": "\/Users\/sinan.senturk\/Library\/Developer\/Xcode\/DerivedData\/Feedback-ddlvmttkcqukxpflddfjptrvjuej\/Build\/Intermediates.noindex\/ArchiveIntermediates\/Feedback\/IntermediateBuildFilesPath\/Feedback.build\/Release-iphonesimulator\/Feedback.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/pisano\/Library\/Developer\/Xcode\/DerivedData\/Feedback-eebqabcdhpqaqigufizprvhzktse\/Build\/Intermediates.noindex\/ArchiveIntermediates\/Feedback\/IntermediateBuildFilesPath\/Feedback.build\/Release-iphonesimulator\/Feedback.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 723,
       "length": 7,
       "value": "\"close\""
     },
     {
-      "filePath": "\/Users\/sinan.senturk\/Library\/Developer\/Xcode\/DerivedData\/Feedback-ddlvmttkcqukxpflddfjptrvjuej\/Build\/Intermediates.noindex\/ArchiveIntermediates\/Feedback\/IntermediateBuildFilesPath\/Feedback.build\/Release-iphonesimulator\/Feedback.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/pisano\/Library\/Developer\/Xcode\/DerivedData\/Feedback-eebqabcdhpqaqigufizprvhzktse\/Build\/Intermediates.noindex\/ArchiveIntermediates\/Feedback\/IntermediateBuildFilesPath\/Feedback.build\/Release-iphonesimulator\/Feedback.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 850,
       "length": 7,
