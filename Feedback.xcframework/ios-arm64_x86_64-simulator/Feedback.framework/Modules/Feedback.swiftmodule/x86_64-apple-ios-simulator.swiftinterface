@@ -1,10 +1,10 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
-// swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Feedback
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name Feedback
 import DeveloperToolsSupport
 @_exported import Feedback
 import Foundation
+import StoreKit
 import Swift
 import SwiftUI
 import SystemConfiguration
@@ -27,6 +27,7 @@ import _SwiftConcurrencyShims
 }
 @_inheritsConvenienceInitializers @objc public class Pisano : ObjectiveC.NSObject {
   @objc public class func boot(appId: Swift.String, accessKey: Swift.String, apiUrl: Swift.String, feedbackUrl: Swift.String, eventUrl: Swift.String? = nil, completion: ((Feedback.CloseStatus) -> Swift.Void)? = nil)
+  @objc public class func healthCheck(flowId: Swift.String? = nil, language: Swift.String? = nil, customer: [Swift.String : Any]? = nil, payload: [Swift.String : Swift.String]? = nil, completion: @escaping (Swift.Bool) -> Swift.Void)
   @objc public class func show(mode: Feedback.ViewMode = .`default`, title: Foundation.NSAttributedString? = nil, flowId: Swift.String? = nil, language: Swift.String? = nil, customer: [Swift.String : Any]? = nil, payload: [Swift.String : Swift.String]? = nil, completion: @escaping (Feedback.CloseStatus) -> Swift.Void)
   @objc public class func track(event: Swift.String, payload: [Swift.String : Swift.String]? = nil, customer: [Swift.String : Any]? = nil, language: Swift.String? = nil, completion: @escaping (Feedback.CloseStatus) -> Swift.Void)
   @objc open class func clear()
@@ -53,6 +54,8 @@ extension Foundation.URLSession {
   case channelQuotaExceeded
   case initFailed
   case initSucces
+  case healthCheckSuccessful
+  case healthCheckFailed
   case surveyPassive
   public var description: Swift.String {
     get
