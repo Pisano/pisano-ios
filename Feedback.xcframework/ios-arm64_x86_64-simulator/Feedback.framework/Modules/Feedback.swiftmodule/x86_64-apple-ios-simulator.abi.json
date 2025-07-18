@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "Feedback",
+    "printedName": "Feedback",
     "children": [
       {
         "kind": "Import",
@@ -42,7 +42,23 @@
         "declAttributes": [
           "AccessControl"
         ],
-        "hasMissingDesignatedInitializers": true
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "Import",
@@ -224,6 +240,20 @@
         ],
         "enumRawTypeName": "Int",
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -892,6 +922,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -1067,6 +1111,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -1913,6 +1971,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -2091,6 +2163,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -2144,20 +2230,6 @@
     "json_format_version": 8
   },
   "ConstValues": [
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/ViewMode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 159,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/ViewMode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 170,
-      "length": 11,
-      "value": "1"
-    },
     {
       "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/ViewMode.swift",
       "kind": "IntegerLiteral",
@@ -2250,41 +2322,6 @@
       "value": "\"PSN_REDIRECT_TO_STORE\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/Web.swift",
-      "kind": "StringLiteral",
-      "offset": 146,
-      "length": 160,
-      "value": "\"window.addEventListener('message', function(e) {\n    window.webkit.messageHandlers.eventHandler.postMessage(e.data);\n});\""
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/Web.swift",
-      "kind": "StringLiteral",
-      "offset": 339,
-      "length": 81,
-      "value": "\"    document.getElementsByClassName('components')[0].scrollHeight\""
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/Web.swift",
-      "kind": "StringLiteral",
-      "offset": 451,
-      "length": 24,
-      "value": "\"PSN_FEEDBACK_SUBMITTED\""
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/Web.swift",
-      "kind": "StringLiteral",
-      "offset": 503,
-      "length": 23,
-      "value": "\"PSN_WEB_WIDGET_CLOSED\""
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/Web.swift",
-      "kind": "StringLiteral",
-      "offset": 554,
-      "length": 23,
-      "value": "\"PSN_REDIRECT_TO_STORE\""
-    },
-    {
       "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/Trigger.swift",
       "kind": "StringLiteral",
       "offset": 366,
@@ -2311,62 +2348,6 @@
       "offset": 530,
       "length": 18,
       "value": "\"hide_widget_type\""
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/Trigger.swift",
-      "kind": "StringLiteral",
-      "offset": 366,
-      "length": 13,
-      "value": "\"customer_id\""
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/Trigger.swift",
-      "kind": "StringLiteral",
-      "offset": 403,
-      "length": 9,
-      "value": "\"flow_id\""
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/Trigger.swift",
-      "kind": "StringLiteral",
-      "offset": 485,
-      "length": 13,
-      "value": "\"hide_widget\""
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/Trigger.swift",
-      "kind": "StringLiteral",
-      "offset": 530,
-      "length": 18,
-      "value": "\"hide_widget_type\""
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
-      "kind": "StringLiteral",
-      "offset": 150,
-      "length": 23,
-      "value": "\"http:\/\/localhost:3000\""
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
-      "kind": "StringLiteral",
-      "offset": 192,
-      "length": 36,
-      "value": "\"\/public\/v1\/mobile_sdks\/code\/detail\""
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
-      "kind": "StringLiteral",
-      "offset": 248,
-      "length": 37,
-      "value": "\"\/public\/v1\/mobile_sdks\/code\/trigger\""
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
-      "kind": "StringLiteral",
-      "offset": 306,
-      "length": 36,
-      "value": "\"http:\/\/127.0.0.1:3001\/web_feedback\""
     },
     {
       "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
@@ -2483,55 +2464,6 @@
     {
       "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
-      "offset": 431,
-      "length": 9,
-      "value": "\"node_id\""
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
-      "kind": "StringLiteral",
-      "offset": 484,
-      "length": 8,
-      "value": "\"app_id\""
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
-      "kind": "StringLiteral",
-      "offset": 519,
-      "length": 12,
-      "value": "\"access_key\""
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
-      "kind": "StringLiteral",
-      "offset": 560,
-      "length": 14,
-      "value": "\"display_once\""
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
-      "kind": "StringLiteral",
-      "offset": 614,
-      "length": 27,
-      "value": "\"display_once_delay_period\""
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
-      "kind": "StringLiteral",
-      "offset": 678,
-      "length": 24,
-      "value": "\"close_on_outside_click\""
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
-      "kind": "StringLiteral",
-      "offset": 733,
-      "length": 16,
-      "value": "\"mobile_channel\""
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
-      "kind": "StringLiteral",
       "offset": 915,
       "length": 15,
       "value": "\"primary_color\""
@@ -2542,111 +2474,6 @@
       "offset": 953,
       "length": 8,
       "value": "\"status\""
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
-      "kind": "StringLiteral",
-      "offset": 915,
-      "length": 15,
-      "value": "\"primary_color\""
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
-      "kind": "StringLiteral",
-      "offset": 953,
-      "length": 8,
-      "value": "\"status\""
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 165,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 216,
-      "length": 6,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 282,
-      "length": 12,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 343,
-      "length": 7,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 391,
-      "length": 6,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 485,
-      "length": 11,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 618,
-      "length": 23,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 748,
-      "length": 20,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 822,
-      "length": 10,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 889,
-      "length": 10,
-      "value": "9"
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 964,
-      "length": 21,
-      "value": "10"
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1047,
-      "length": 17,
-      "value": "11"
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1138,
-      "length": 13,
-      "value": "12"
     },
     {
       "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
