@@ -340,12 +340,18 @@
           {
             "kind": "Function",
             "name": "boot",
-            "printedName": "boot(appId:accessKey:apiUrl:feedbackUrl:eventUrl:completion:)",
+            "printedName": "boot(appId:accessKey:code:apiUrl:feedbackUrl:eventUrl:completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -415,11 +421,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@PisanoFeedback@objc(cs)Pisano(cm)bootWithAppId:accessKey:apiUrl:feedbackUrl:eventUrl:completion:",
-            "mangledName": "$s14PisanoFeedback0A0C4boot5appId9accessKey6apiUrl08feedbackI005eventI010completionySS_S4SSgyAA11CloseStatusOcSgtFZ",
+            "usr": "c:@M@PisanoFeedback@objc(cs)Pisano(cm)bootWithAppId:accessKey:code:apiUrl:feedbackUrl:eventUrl:completion:",
+            "mangledName": "$s14PisanoFeedback0A0C4boot5appId9accessKey4code6apiUrl08feedbackJ005eventJ010completionySS_S5SSgyAA11CloseStatusOcSgtFZ",
             "moduleName": "PisanoFeedback",
             "static": true,
-            "objc_name": "bootWithAppId:accessKey:apiUrl:feedbackUrl:eventUrl:completion:",
+            "objc_name": "bootWithAppId:accessKey:code:apiUrl:feedbackUrl:eventUrl:completion:",
             "declAttributes": [
               "AccessControl",
               "ObjC",
@@ -430,27 +436,12 @@
           {
             "kind": "Function",
             "name": "healthCheck",
-            "printedName": "healthCheck(flowId:language:customer:payload:completion:)",
+            "printedName": "healthCheck(language:customer:payload:code:completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -525,6 +516,21 @@
                 "usr": "s:Sq"
               },
               {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
                 "kind": "TypeFunc",
                 "name": "Function",
                 "printedName": "(Swift.Bool) -> ()",
@@ -544,11 +550,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@PisanoFeedback@objc(cs)Pisano(cm)healthCheckWithFlowId:language:customer:payload:completion:",
-            "mangledName": "$s14PisanoFeedback0A0C11healthCheck6flowId8language8customer7payload10completionySSSg_AJSDySSypGSgSDyS2SGSgySbctFZ",
+            "usr": "c:@M@PisanoFeedback@objc(cs)Pisano(cm)healthCheckWithLanguage:customer:payload:code:completion:",
+            "mangledName": "$s14PisanoFeedback0A0C11healthCheck8language8customer7payload4code10completionySSSg_SDySSypGSgSDyS2SGSgAJySbctFZ",
             "moduleName": "PisanoFeedback",
             "static": true,
-            "objc_name": "healthCheckWithFlowId:language:customer:payload:completion:",
+            "objc_name": "healthCheckWithLanguage:customer:payload:code:completion:",
             "declAttributes": [
               "AccessControl",
               "ObjC",
@@ -559,7 +565,7 @@
           {
             "kind": "Function",
             "name": "show",
-            "printedName": "show(mode:title:flowId:language:customer:payload:completion:)",
+            "printedName": "show(mode:title:language:customer:payload:code:completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -606,21 +612,6 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
                 "printedName": "[Swift.String : Any]?",
                 "children": [
                   {
@@ -676,6 +667,21 @@
                 "usr": "s:Sq"
               },
               {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
                 "kind": "TypeFunc",
                 "name": "Function",
                 "printedName": "(PisanoFeedback.CloseStatus) -> ()",
@@ -695,11 +701,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@PisanoFeedback@objc(cs)Pisano(cm)showWithMode:title:flowId:language:customer:payload:completion:",
-            "mangledName": "$s14PisanoFeedback0A0C4show4mode5title6flowId8language8customer7payload10completionyAA8ViewModeO_So18NSAttributedStringCSgSSSgAQSDySSypGSgSDyS2SGSgyAA11CloseStatusOctFZ",
+            "usr": "c:@M@PisanoFeedback@objc(cs)Pisano(cm)showWithMode:title:language:customer:payload:code:completion:",
+            "mangledName": "$s14PisanoFeedback0A0C4show4mode5title8language8customer7payload4code10completionyAA8ViewModeO_So18NSAttributedStringCSgSSSgSDySSypGSgSDyS2SGSgAQyAA11CloseStatusOctFZ",
             "moduleName": "PisanoFeedback",
             "static": true,
-            "objc_name": "showWithMode:title:flowId:language:customer:payload:completion:",
+            "objc_name": "showWithMode:title:language:customer:payload:code:completion:",
             "declAttributes": [
               "AccessControl",
               "ObjC",
@@ -1848,6 +1854,48 @@
           },
           {
             "kind": "Var",
+            "name": "displayRateLimited",
+            "printedName": "displayRateLimited",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PisanoFeedback.CloseStatus.Type) -> PisanoFeedback.CloseStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CloseStatus",
+                    "printedName": "PisanoFeedback.CloseStatus",
+                    "usr": "c:@M@PisanoFeedback@E@CloseStatus"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PisanoFeedback.CloseStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CloseStatus",
+                        "printedName": "PisanoFeedback.CloseStatus",
+                        "usr": "c:@M@PisanoFeedback@E@CloseStatus"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@PisanoFeedback@E@CloseStatus@CloseStatusDisplayRateLimited",
+            "mangledName": "$s14PisanoFeedback11CloseStatusO18displayRateLimitedyA2CmF",
+            "moduleName": "PisanoFeedback",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 13
+          },
+          {
+            "kind": "Var",
             "name": "description",
             "printedName": "description",
             "children": [
@@ -2223,13 +2271,6 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "SendableMetatype",
-            "printedName": "SendableMetatype",
-            "usr": "s:s16SendableMetatypeP",
-            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       }
@@ -2238,378 +2279,413 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/ViewMode.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/ViewMode.swift",
       "kind": "IntegerLiteral",
       "offset": 159,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/ViewMode.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/ViewMode.swift",
       "kind": "IntegerLiteral",
       "offset": 170,
       "length": 11,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Managers\/PisanoManager.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Managers\/PisanoManager.swift",
       "kind": "BooleanLiteral",
       "offset": 289,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
       "kind": "StringLiteral",
       "offset": 176,
       "length": 26,
       "value": "\"PisanoSDKDetailJSONCache\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
       "kind": "StringLiteral",
       "offset": 245,
       "length": 24,
       "value": "\"PisanoTriggerJSONCache\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
       "kind": "StringLiteral",
       "offset": 309,
       "length": 21,
       "value": "\"PisanoBootJSONCache\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
       "kind": "StringLiteral",
       "offset": 366,
       "length": 15,
       "value": "\"display_once_\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
       "kind": "StringLiteral",
       "offset": 452,
       "length": 28,
       "value": "\"display_once_delay_period_\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
+      "kind": "StringLiteral",
+      "offset": 522,
+      "length": 24,
+      "value": "\"display_rate_remainder\""
+    },
+    {
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
+      "kind": "StringLiteral",
+      "offset": 584,
+      "length": 20,
+      "value": "\"display_rate_value\""
+    },
+    {
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
       "offset": 146,
       "length": 160,
       "value": "\"window.addEventListener('message', function(e) {\n    window.webkit.messageHandlers.eventHandler.postMessage(e.data);\n});\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
       "offset": 339,
       "length": 81,
       "value": "\"    document.getElementsByClassName('components')[0].scrollHeight\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
       "offset": 451,
       "length": 24,
       "value": "\"PSN_FEEDBACK_SUBMITTED\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
       "offset": 503,
       "length": 23,
       "value": "\"PSN_WEB_WIDGET_CLOSED\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
       "offset": 554,
       "length": 23,
       "value": "\"PSN_REDIRECT_TO_STORE\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/Trigger.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/Trigger.swift",
       "kind": "StringLiteral",
-      "offset": 366,
+      "offset": 368,
       "length": 13,
       "value": "\"customer_id\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/Trigger.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/Trigger.swift",
       "kind": "StringLiteral",
-      "offset": 403,
-      "length": 9,
-      "value": "\"flow_id\""
-    },
-    {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/Trigger.swift",
-      "kind": "StringLiteral",
-      "offset": 485,
+      "offset": 454,
       "length": 13,
       "value": "\"hide_widget\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/Trigger.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/Trigger.swift",
       "kind": "StringLiteral",
-      "offset": 530,
+      "offset": 499,
       "length": 18,
       "value": "\"hide_widget_type\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/Trigger.swift",
+      "kind": "StringLiteral",
+      "offset": 546,
+      "length": 14,
+      "value": "\"display_rate\""
+    },
+    {
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
       "kind": "StringLiteral",
       "offset": 150,
       "length": 23,
       "value": "\"http:\/\/localhost:3000\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
       "kind": "StringLiteral",
       "offset": 192,
       "length": 36,
       "value": "\"\/public\/v1\/mobile_sdks\/code\/detail\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
       "kind": "StringLiteral",
       "offset": 248,
       "length": 37,
       "value": "\"\/public\/v1\/mobile_sdks\/code\/trigger\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
       "kind": "StringLiteral",
       "offset": 306,
       "length": 36,
       "value": "\"http:\/\/127.0.0.1:3001\/web_feedback\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/Customer.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Constants\/Customer.swift",
       "kind": "Array",
       "offset": 158,
       "length": 61,
       "value": "[\"name\", \"email\", \"phoneNumber\", \"externalId\", \"customAttrs\"]"
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/Customer.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Constants\/Customer.swift",
       "kind": "StringLiteral",
       "offset": 240,
       "length": 4,
       "value": "\"en\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/Customer.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Constants\/Customer.swift",
       "kind": "StringLiteral",
       "offset": 265,
       "length": 4,
       "value": "\"tr\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/Customer.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Constants\/Customer.swift",
       "kind": "StringLiteral",
       "offset": 296,
       "length": 7,
       "value": "\"Close\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Constants\/Customer.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Constants\/Customer.swift",
       "kind": "StringLiteral",
       "offset": 329,
       "length": 7,
       "value": "\"Kapat\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
-      "offset": 431,
+      "offset": 479,
       "length": 9,
       "value": "\"node_id\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
-      "offset": 484,
+      "offset": 532,
       "length": 8,
       "value": "\"app_id\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
-      "offset": 519,
+      "offset": 567,
       "length": 12,
       "value": "\"access_key\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
-      "offset": 560,
+      "offset": 601,
+      "length": 6,
+      "value": "\"code\""
+    },
+    {
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "kind": "StringLiteral",
+      "offset": 636,
       "length": 14,
       "value": "\"display_once\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
-      "offset": 614,
+      "offset": 690,
       "length": 27,
       "value": "\"display_once_delay_period\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
-      "offset": 678,
+      "offset": 746,
+      "length": 14,
+      "value": "\"display_rate\""
+    },
+    {
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "kind": "StringLiteral",
+      "offset": 797,
       "length": 24,
       "value": "\"close_on_outside_click\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
-      "offset": 733,
+      "offset": 852,
       "length": 16,
       "value": "\"mobile_channel\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
-      "offset": 915,
+      "offset": 1034,
       "length": 15,
       "value": "\"primary_color\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
-      "offset": 953,
+      "offset": 1072,
       "length": 8,
       "value": "\"status\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 165,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 216,
       "length": 6,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 282,
       "length": 12,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 343,
       "length": 7,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 391,
       "length": 6,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 485,
       "length": 11,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 618,
       "length": 23,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 748,
       "length": 20,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 822,
       "length": 10,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 889,
       "length": 10,
       "value": "9"
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 964,
       "length": 21,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 1047,
       "length": 17,
       "value": "11"
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 1138,
       "length": 13,
       "value": "12"
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
       "kind": "IntegerLiteral",
-      "offset": 698,
+      "offset": 1236,
+      "length": 18,
+      "value": "13"
+    },
+    {
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 666,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
       "kind": "StringLiteral",
-      "offset": 738,
+      "offset": 706,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
       "kind": "StringLiteral",
-      "offset": 774,
+      "offset": 742,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/pisano\/Source\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 817,
+      "offset": 785,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/pisano\/Library\/Developer\/Xcode\/DerivedData\/Feedback-eebqabcdhpqaqigufizprvhzktse\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PisanoFeedback\/IntermediateBuildFilesPath\/Feedback.build\/Release-iphonesimulator\/PisanoFeedback.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/idrisyildiz\/Library\/Developer\/Xcode\/DerivedData\/Feedback-gdsngeqmpmqregendpwjbeqhyqbp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/Feedback\/IntermediateBuildFilesPath\/Feedback.build\/Release-iphonesimulator\/Feedback.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 723,
       "length": 7,
       "value": "\"close\""
     },
     {
-      "filePath": "\/Users\/pisano\/Library\/Developer\/Xcode\/DerivedData\/Feedback-eebqabcdhpqaqigufizprvhzktse\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PisanoFeedback\/IntermediateBuildFilesPath\/Feedback.build\/Release-iphonesimulator\/PisanoFeedback.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/idrisyildiz\/Library\/Developer\/Xcode\/DerivedData\/Feedback-gdsngeqmpmqregendpwjbeqhyqbp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/Feedback\/IntermediateBuildFilesPath\/Feedback.build\/Release-iphonesimulator\/Feedback.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 850,
       "length": 7,
