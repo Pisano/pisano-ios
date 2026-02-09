@@ -2295,7 +2295,7 @@
     {
       "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Managers\/PisanoManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 289,
+      "offset": 215,
       "length": 5,
       "value": "false"
     },
@@ -2330,23 +2330,30 @@
     {
       "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
       "kind": "StringLiteral",
-      "offset": 452,
+      "offset": 428,
       "length": 28,
       "value": "\"display_once_delay_period_\""
     },
     {
       "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
       "kind": "StringLiteral",
-      "offset": 522,
+      "offset": 762,
       "length": 24,
       "value": "\"display_rate_remainder\""
     },
     {
       "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
       "kind": "StringLiteral",
-      "offset": 584,
+      "offset": 824,
       "length": 20,
       "value": "\"display_rate_value\""
+    },
+    {
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
+      "kind": "StringLiteral",
+      "offset": 940,
+      "length": 25,
+      "value": "\"PisanoSDKLastDetailCode\""
     },
     {
       "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Constants\/Web.swift",
@@ -2672,8 +2679,15 @@
     },
     {
       "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 776,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 785,
+      "offset": 819,
       "length": 5,
       "value": "false"
     },
