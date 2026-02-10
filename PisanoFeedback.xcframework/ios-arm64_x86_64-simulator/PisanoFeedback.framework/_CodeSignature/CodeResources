@@ -6,249 +6,174 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		lHyM6xQ7je4/Ec+Q1CznKHWP9nM=
+		RWXIvQ6TsSj2xFN5kfwSUkpBmk8=
+		</data>
+		<key>Headers/Feedback.h</key>
+		<data>
+		7rm4Qpv8NAPIl4b0tpgZP80WvBo=
 		</data>
 		<key>Headers/PisanoFeedback-Swift.h</key>
 		<data>
-		3zD/HQUNb6fSOj/zjjeYzxP4OxE=
-		</data>
-		<key>Headers/PisanoFeedback.h</key>
-		<data>
-		uLmxKyWnvmM2J4ygPmLKQjVJTPQ=
+		wBxI6w1juHePrhnA3H0SdqhGaIc=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		fZ28Cbc/th2AopWecoTlboUumak=
+		IUAYm50X4YAxtblWmJhQVQsQVVM=
 		</data>
 		<key>Modules/PisanoFeedback.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		rb+hnxJJvnBmHEKUa//qmS7Gjnk=
+		NhLusheLDKsrDecE25RQugaOskI=
 		</data>
 		<key>Modules/PisanoFeedback.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		79EeGzPb11r2KE5mzHMWFVUfJZc=
+		xKdYBMCtEQ6TYSgyeLRTmFkXRss=
 		</data>
 		<key>Modules/PisanoFeedback.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		Qdg8E5l5GGEsLR5HLflVa3ImRPQ=
+		rGGdYhcKwuARTewy7pyhxB6J6o4=
 		</data>
 		<key>Modules/PisanoFeedback.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		79EeGzPb11r2KE5mzHMWFVUfJZc=
+		xKdYBMCtEQ6TYSgyeLRTmFkXRss=
 		</data>
 		<key>Modules/PisanoFeedback.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		o1/WU42vnRDGZgQp4GodT/uk3dc=
+		VMjbcM+PuQgFeCueyRFlzQ3u9yE=
 		</data>
 		<key>Modules/PisanoFeedback.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		rb+hnxJJvnBmHEKUa//qmS7Gjnk=
+		NhLusheLDKsrDecE25RQugaOskI=
 		</data>
 		<key>Modules/PisanoFeedback.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		a8kVrLQ7s13WPdqBUww4KD6idgo=
+		QMfaN13DAwXjssdydsjLFtLavRI=
 		</data>
 		<key>Modules/PisanoFeedback.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		/fxVsaH6FbqGzVxfRtHfw/zdTa4=
+		0HBk0b/EuMF1Ji+vb0pwYwbVPXk=
 		</data>
 		<key>Modules/PisanoFeedback.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		a8kVrLQ7s13WPdqBUww4KD6idgo=
+		QMfaN13DAwXjssdydsjLFtLavRI=
 		</data>
 		<key>Modules/PisanoFeedback.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		PH84rBW90+Os/WKzgLLXjU2yVBo=
+		mWWflicpe488GUXRXO4En8WSbGw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		+9xP5aa5H6ztsh2RNECRIeNSsTo=
+		EN8rq4OHCerxTAoAHLLpAvluI94=
 		</data>
-		<key>WidgetViewController.nib/objects-11.0+.nib</key>
+		<key>WidgetViewController.nib</key>
 		<data>
 		jJxvo7Xjym9O1MMoSmoF80kfZRI=
-		</data>
-		<key>WidgetViewController.nib/runtime.nib</key>
-		<data>
-		gBA39aAxDOrz857zT77S5vbg5uM=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
 		<key>Assets.car</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			lHyM6xQ7je4/Ec+Q1CznKHWP9nM=
-			</data>
 			<key>hash2</key>
 			<data>
-			XT/XKwysjb+V+KlWbaeMs0qrNNwHJrYPEEwWAdKfzKg=
+			YVBlitaHOh33oQS9ihNcia841qJsmC/h7pULy383dr8=
+			</data>
+		</dict>
+		<key>Headers/Feedback.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			PS3v2fG9swEeISHyREGg6/RjJHUcRjUb8kc4XkFMuog=
 			</data>
 		</dict>
 		<key>Headers/PisanoFeedback-Swift.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			3zD/HQUNb6fSOj/zjjeYzxP4OxE=
-			</data>
 			<key>hash2</key>
 			<data>
-			98GoQyBqx8VFHE5uDQfRvPDHz4jImb0cQ1th9SDAR4U=
-			</data>
-		</dict>
-		<key>Headers/PisanoFeedback.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			uLmxKyWnvmM2J4ygPmLKQjVJTPQ=
-			</data>
-			<key>hash2</key>
-			<data>
-			Q1Em8FNEqs+tKhbfuD7nUKkzoy1qYkekHiAM5adUMbc=
+			KQzjSLCDJKMmgK5oS6bH2gA05+d5dxwPBoh0JFlnUKw=
 			</data>
 		</dict>
 		<key>Modules/PisanoFeedback.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			rb+hnxJJvnBmHEKUa//qmS7Gjnk=
-			</data>
 			<key>hash2</key>
 			<data>
-			ARXZ+BH0f/+CrajWLhFgWV2MVVtW+AK47oB9b9u0M0s=
+			Xm1UucLDhgdhPRiw6jMVdLGKT9vMO1q/fvNB0DuLkI8=
 			</data>
 		</dict>
 		<key>Modules/PisanoFeedback.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			79EeGzPb11r2KE5mzHMWFVUfJZc=
-			</data>
 			<key>hash2</key>
 			<data>
-			iBaMtuzvAVcIJGRtH8vwXnZeAzNlt343kgLyRIFXTHQ=
+			dCQFQqg52+HbO40ViFqqKJTmPuDu2PFcMijEp38Y2Zg=
 			</data>
 		</dict>
 		<key>Modules/PisanoFeedback.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Qdg8E5l5GGEsLR5HLflVa3ImRPQ=
-			</data>
 			<key>hash2</key>
 			<data>
-			5EwMYKGd2BZK4nP6IMZAWXyiuXDB1MYx2oGWQERl3Is=
+			zCRHyYs0oObmvzr6b73BSiLKJ8Q/qLLJkOZJ5tT/UcI=
 			</data>
 		</dict>
 		<key>Modules/PisanoFeedback.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			79EeGzPb11r2KE5mzHMWFVUfJZc=
-			</data>
 			<key>hash2</key>
 			<data>
-			iBaMtuzvAVcIJGRtH8vwXnZeAzNlt343kgLyRIFXTHQ=
+			dCQFQqg52+HbO40ViFqqKJTmPuDu2PFcMijEp38Y2Zg=
 			</data>
 		</dict>
 		<key>Modules/PisanoFeedback.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			o1/WU42vnRDGZgQp4GodT/uk3dc=
-			</data>
 			<key>hash2</key>
 			<data>
-			kezG24f/67WQm8JzNZgrrhQwrA1luoq0TvionodO3bU=
+			u19zYzEA4rx7DhvwOyHfxx/P1Dk/AeJH0ronCnzjRYQ=
 			</data>
 		</dict>
 		<key>Modules/PisanoFeedback.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			rb+hnxJJvnBmHEKUa//qmS7Gjnk=
-			</data>
 			<key>hash2</key>
 			<data>
-			ARXZ+BH0f/+CrajWLhFgWV2MVVtW+AK47oB9b9u0M0s=
+			Xm1UucLDhgdhPRiw6jMVdLGKT9vMO1q/fvNB0DuLkI8=
 			</data>
 		</dict>
 		<key>Modules/PisanoFeedback.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			a8kVrLQ7s13WPdqBUww4KD6idgo=
-			</data>
 			<key>hash2</key>
 			<data>
-			UlEkqIbgoi4aP/aI59b5kog3tWxcdnXOYwRYSOhcQdk=
+			OznjJJtC2DiVu80UhMcfUq8S9EEVcwMte/yMezb2Wa0=
 			</data>
 		</dict>
 		<key>Modules/PisanoFeedback.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			/fxVsaH6FbqGzVxfRtHfw/zdTa4=
-			</data>
 			<key>hash2</key>
 			<data>
-			4upnlXEP18GOgAV+HS6/6NWBCMLN1UoWDTpvdF/VKKo=
+			DBYvIVNeJ7k5ES/WqM0cF7HsiiU7STMfKkkhjXjRBkk=
 			</data>
 		</dict>
 		<key>Modules/PisanoFeedback.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			a8kVrLQ7s13WPdqBUww4KD6idgo=
-			</data>
 			<key>hash2</key>
 			<data>
-			UlEkqIbgoi4aP/aI59b5kog3tWxcdnXOYwRYSOhcQdk=
+			OznjJJtC2DiVu80UhMcfUq8S9EEVcwMte/yMezb2Wa0=
 			</data>
 		</dict>
 		<key>Modules/PisanoFeedback.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			PH84rBW90+Os/WKzgLLXjU2yVBo=
-			</data>
 			<key>hash2</key>
 			<data>
-			NXSH1dCSieHYGATqpWhmb8QBnZYz76bS38lb0x1fqt0=
+			BwELD7qshnhqjCXDNMoIJjA4aACXkdWNtVL7WHpSH08=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			+9xP5aa5H6ztsh2RNECRIeNSsTo=
-			</data>
 			<key>hash2</key>
 			<data>
-			NUvB0qHjGd7JMVSOK2FqSQQ1b88awig5V+oSZ2zVSPU=
+			cqu0uAHo3ktY3R7nPh+0cRqUjLAC/fegtGvG9TrcBnk=
 			</data>
 		</dict>
-		<key>WidgetViewController.nib/objects-11.0+.nib</key>
+		<key>WidgetViewController.nib</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			jJxvo7Xjym9O1MMoSmoF80kfZRI=
-			</data>
 			<key>hash2</key>
 			<data>
 			B4KE51gWMP4atJCev75Zn/uniZx8rJMk8Mh9p+7ik6Y=
-			</data>
-		</dict>
-		<key>WidgetViewController.nib/runtime.nib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			gBA39aAxDOrz857zT77S5vbg5uM=
-			</data>
-			<key>hash2</key>
-			<data>
-			degoD2XX2hsiDWWsTkWpcHmLsfg/mFd+SbyCndmzThI=
 			</data>
 		</dict>
 	</dict>

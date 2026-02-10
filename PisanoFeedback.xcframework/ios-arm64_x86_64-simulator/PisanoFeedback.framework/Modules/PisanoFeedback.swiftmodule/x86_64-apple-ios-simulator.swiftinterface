@@ -1,10 +1,9 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
-// swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name PisanoFeedback
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name PisanoFeedback
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
 import DeveloperToolsSupport
 import Foundation
-@_exported import PisanoFeedback
 import StoreKit
 import Swift
 import SwiftUI
@@ -20,27 +19,17 @@ import _SwiftConcurrencyShims
 @objc public enum ViewMode : Swift.Int {
   case `default` = 0
   case bottomSheet
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
 }
 @_inheritsConvenienceInitializers @objc public class Pisano : ObjectiveC.NSObject {
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc public class func boot(appId: Swift.String, accessKey: Swift.String, apiUrl: Swift.String, feedbackUrl: Swift.String, eventUrl: Swift.String? = nil, completion: ((PisanoFeedback.CloseStatus) -> Swift.Void)? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc public class func healthCheck(flowId: Swift.String? = nil, language: Swift.String? = nil, customer: [Swift.String : Any]? = nil, payload: [Swift.String : Swift.String]? = nil, completion: @escaping (Swift.Bool) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc public class func show(mode: PisanoFeedback.ViewMode = .`default`, title: Foundation.NSAttributedString? = nil, flowId: Swift.String? = nil, language: Swift.String? = nil, customer: [Swift.String : Any]? = nil, payload: [Swift.String : Swift.String]? = nil, completion: @escaping (PisanoFeedback.CloseStatus) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public class func boot(appId: Swift.String, accessKey: Swift.String, code: Swift.String, apiUrl: Swift.String, feedbackUrl: Swift.String, eventUrl: Swift.String? = nil, completion: ((PisanoFeedback.CloseStatus) -> Swift.Void)? = nil)
+  @objc public class func healthCheck(language: Swift.String? = nil, customer: [Swift.String : Any]? = nil, payload: [Swift.String : Swift.String]? = nil, code: Swift.String? = nil, completion: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public class func show(mode: PisanoFeedback.ViewMode = .`default`, title: Foundation.NSAttributedString? = nil, language: Swift.String? = nil, customer: [Swift.String : Any]? = nil, payload: [Swift.String : Swift.String]? = nil, code: Swift.String? = nil, completion: @escaping (PisanoFeedback.CloseStatus) -> Swift.Void)
   @objc public class func track(event: Swift.String, payload: [Swift.String : Swift.String]? = nil, customer: [Swift.String : Any]? = nil, language: Swift.String? = nil, completion: @escaping (PisanoFeedback.CloseStatus) -> Swift.Void)
-  #endif
   @objc open class func clear()
   @objc open class func debugMode(_ debug: Swift.Bool)
   @objc override dynamic public init()
@@ -52,9 +41,7 @@ import _SwiftConcurrencyShims
   @objc deinit
 }
 extension Foundation.URLSession {
-  #if compiler(>=5.3) && $NonescapableTypes
   public func requestSynchronousData(request: Foundation.URLRequest) -> (Foundation.Data?, Foundation.HTTPURLResponse?)
-  #endif
 }
 @objc public enum CloseStatus : Swift.Int {
   case none = 0
@@ -70,12 +57,11 @@ extension Foundation.URLSession {
   case healthCheckSuccessful
   case healthCheckFailed
   case surveyPassive
+  case displayRateLimited
   public var description: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get

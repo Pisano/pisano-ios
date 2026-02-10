@@ -1,4 +1,4 @@
-# Feedback iOS SDK
+# Pisano Feedback iOS SDK
 
 Pisano Feedback iOS SDK is an SDK that allows you to easily integrate user feedback collection into your iOS applications. With this SDK, you can collect surveys and feedback from your users and improve the user experience.
 
@@ -7,6 +7,8 @@ Pisano Feedback iOS SDK is an SDK that allows you to easily integrate user feedb
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
+  - [Installation with Swift Package Manager](#installation-with-swift-package-manager)
+  - [Installation with CocoaPods](#installation-with-cocoapods)
 - [Quick Start](#quick-start)
 - [API Reference](#api-reference)
   - [CloseStatus](#closestatus)
@@ -18,9 +20,10 @@ Pisano Feedback iOS SDK is an SDK that allows you to easily integrate user feedb
 ## ✨ Features
 
 - ✅ **Web-Based Feedback Forms**: Modern and flexible web-based form support
-- ✅ **Native iOS Integration**: Fully native iOS SDK
+- ✅ **Native iOS Integration**: Native iOS SDK (Swift/Objective-C) with WebView-based UI
 - ✅ **Objective-C Compatibility**: Can be used in both Swift and Objective-C projects
 - ✅ **Flexible View Modes**: Full-screen and bottom sheet view options
+- ✅ **Event Tracking**: Ability to track events
 - ✅ **Health Check**: Ability to check SDK status
 - ✅ **User Information Support**: Ability to send user data
 - ✅ **Multi-Language Support**: Ability to display surveys in different languages
@@ -28,18 +31,24 @@ Pisano Feedback iOS SDK is an SDK that allows you to easily integrate user feedb
 
 ## 📱 Requirements
 
-- iOS 11.0 or higher
+- iOS 12.0 or higher
 - Xcode 12.0 or higher
 - Swift 5.0 or higher
 
 ## 📦 Installation
+
+### Installation with Swift Package Manager
+
+1. In Xcode, go to **File → Add Package Dependencies...**
+2. Enter the repository URL and choose a version (e.g. `1.0.17`).
+3. Add the `PisanoFeedback` product to your app target.
 
 ### Installation with CocoaPods
 
 1. Create or edit your `Podfile`:
 
 ```ruby
-platform :ios, '11.0'
+platform :ios, '12.0'
 use_frameworks!
 
 target 'YourApp' do
@@ -64,7 +73,7 @@ You must initialize the SDK before using it. The SDK initialization should be do
 #### Swift
 
 ```swift
-import Feedback
+import PisanoFeedback
 
 // In AppDelegate
 func application(_ application: UIApplication, 
@@ -76,8 +85,10 @@ func application(_ application: UIApplication,
     
     Pisano.boot(appId: "YOUR_APP_ID",
                 accessKey: "YOUR_ACCESS_KEY",
+                code: "YOUR_CODE",
                 apiUrl: "https://api.pisano.co",
-                feedbackUrl: "https://web.pisano.co/web_feedback") { status in
+                feedbackUrl: "https://web.pisano.co/web_feedback",
+                eventUrl: "https://event.pisano.co") { status in
         print("Boot status: \(status.description)")
     }
     
@@ -88,7 +99,7 @@ func application(_ application: UIApplication,
 #### Objective-C
 
 ```objc
-#import <Feedback/Feedback-Swift.h>
+#import <PisanoFeedback/PisanoFeedback-Swift.h>
 
 - (BOOL)application:(UIApplication *)application 
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -99,8 +110,10 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [Pisano bootWithAppId:@"YOUR_APP_ID"
                accessKey:@"YOUR_ACCESS_KEY"
+                   code:@"YOUR_CODE"
                   apiUrl:@"https://api.pisano.co"
              feedbackUrl:@"https://web.pisano.co/web_feedback"
+                eventUrl:@"https://event.pisano.co"
               completion:^(enum CloseStatus status) {
         NSLog(@"Boot status: %@", @(status));
     }];
@@ -124,7 +137,6 @@ Pisano.show { status in
 ```swift
 Pisano.show(mode: .bottomSheet,
            title: NSAttributedString(string: "We Value Your Feedback"),
-           flowId: "specific-flow-id",
            language: "en",
            customer: [
                "name": "John Doe",
@@ -133,6 +145,7 @@ Pisano.show(mode: .bottomSheet,
                "externalId": "CRM-12345"
            ],
            payload: ["source": "app", "screen": "home"],
+           code: nil,
            completion: { status in
                print("Status: \(status.description)")
            })
@@ -145,24 +158,34 @@ Pisano.show(mode: .bottomSheet,
 The `CloseStatus` enum is returned by various SDK methods to indicate the result of an operation.
 
 **CloseStatus Values:**
-- `.initSucces`: SDK initialized successfully
-- `.initFailed`: SDK initialization failed
+- `.none`: No status / default value
 - `.closed`: User clicked the close button
+- `.opened`: Widget opened
 - `.sendFeedback`: Feedback was sent
 - `.outside`: Closed by clicking outside
 - `.displayOnce`: Already shown before
+- `.preventMultipleFeedback`: Multiple feedback prevention triggered
+- `.channelQuotaExceeded`: Channel quota exceeded
+- `.initFailed`: SDK initialization failed
+- `.initSucces`: SDK initialized successfully
+- `.healthCheckSuccessful`: Health check passed
 - `.surveyPassive`: Survey is in passive state
 - `.healthCheckFailed`: Health check failed
+- `.displayRateLimited`: Not shown due to `display_rate`
 
 ### `Pisano.boot()`
 
 Initializes the SDK. This method must be called either at application startup (usually in `AppDelegate`) or before calling the `show()` method.
 
+`code` is required and represents the SDK configuration code that will be used by default.
+
 **Parameters:**
 - `appId: String` - Your application's unique ID (required)
 - `accessKey: String` - Your API access key (required)
+- `code: String` - SDK configuration code (required)
 - `apiUrl: String` - API endpoint URL (required)
 - `feedbackUrl: String` - Feedback widget URL (required)
+- `eventUrl: String?` - Event tracking URL (optional)
 - `completion: ((CloseStatus) -> Void)?` - Initialization result callback (optional)
   
   Returns `.initSucces` or `.initFailed`. See [CloseStatus](#closestatus) for all possible values.
@@ -172,8 +195,10 @@ Initializes the SDK. This method must be called either at application startup (u
 ```swift
 Pisano.boot(appId: "app-123",
            accessKey: "key-456",
+           code: "code-789",
            apiUrl: "https://api.pisano.co",
-           feedbackUrl: "https://web.pisano.co/web_feedback") { status in
+           feedbackUrl: "https://web.pisano.co/web_feedback",
+           eventUrl: "https://event.pisano.co") { status in
     switch status {
     case .initSucces:
         print("SDK initialized successfully")
@@ -189,15 +214,19 @@ Pisano.boot(appId: "app-123",
 
 Displays the feedback widget.
 
+`code` is optional. If you don’t pass `code` to `Pisano.show(...)`, the SDK uses the `code` provided during `Pisano.boot(...)`.
+
+If backend configuration prevents the survey from being shown due to `display_rate`, completion returns `.displayRateLimited`.
+
 **Parameters:**
 - `mode: ViewMode` - View mode (default: `.default`)
   - `.default`: Full-screen overlay
   - `.bottomSheet`: Bottom sheet (iOS 13+)
 - `title: NSAttributedString?` - Custom title (optional)
-- `flowId: String?` - Specific flow ID (optional)
 - `language: String?` - Language code (e.g., "en", "tr") (optional)
 - `customer: [String: Any]?` - User information (optional)
 - `payload: [String: String]?` - Extra data (optional)
+- `code: String?` - Override code for this call (optional). If not provided, SDK uses the code passed in `Pisano.boot(...)`.
 - `completion: (CloseStatus) -> Void` - Widget close callback
   
   See [CloseStatus](#closestatus) for all possible return values.
@@ -238,22 +267,44 @@ Pisano.show(mode: .bottomSheet,
            })
 ```
 
+### `Pisano.track()`
+
+Tracks an event.
+
+**Parameters:**
+- `event: String` - Event name (required)
+- `payload: [String: String]?` - Event payload data (optional)
+- `customer: [String: Any]?` - User information (optional)
+- `language: String?` - Language code (optional)
+- `completion: (CloseStatus) -> Void` - Completion callback
+
+**Example:**
+
+```swift
+Pisano.track(event: "purchase_completed",
+            payload: ["order_id": "12345", "amount": "99.99"],
+            customer: ["email": "john@example.com"],
+            language: "en") { status in
+    print("Event tracked: \(status.description)")
+}
+```
+
 ### `Pisano.healthCheck()`
 
 Checks the SDK status. It is recommended to use this before displaying the feedback widget.
 
 **Parameters:**
-- `flowId: String?` - Flow ID (optional)
 - `language: String?` - Language code (optional)
 - `customer: [String: Any]?` - User information (optional)
 - `payload: [String: String]?` - Extra data (optional)
+- `code: String?` - Override code for this call (optional). If not provided, SDK uses the code passed in `Pisano.boot(...)`.
 - `completion: (Bool) -> Void` - Health check result (true: successful, false: failed)
 
 **Example:**
 
 ```swift
-Pisano.healthCheck(flowId: "flow-123",
-                   customer: ["externalId": "USER-789"]) { isHealthy in
+Pisano.healthCheck(customer: ["externalId": "USER-789"],
+                   code: nil) { isHealthy in
     if isHealthy {
         Pisano.show()
     } else {
@@ -274,6 +325,14 @@ Pisano.debugMode(false)
 #endif
 ```
 
+### `Pisano.clear()`
+
+Clears the current session data or cache if needed.
+
+```swift
+Pisano.clear()
+```
+
 ## 💡 Usage Examples
 
 ### Swift Usage
@@ -282,7 +341,7 @@ Pisano.debugMode(false)
 
 ```swift
 import UIKit
-import Feedback
+import PisanoFeedback
 
 class ViewController: UIViewController {
     
@@ -305,7 +364,7 @@ class ViewController: UIViewController {
 
 ```swift
 import SwiftUI
-import Feedback
+import PisanoFeedback
 
 @main
 struct MyApp: App {
@@ -316,6 +375,7 @@ struct MyApp: App {
         
         Pisano.boot(appId: "YOUR_APP_ID",
                    accessKey: "YOUR_ACCESS_KEY",
+                   code: "YOUR_CODE",
                    apiUrl: "https://api.pisano.co",
                    feedbackUrl: "https://web.pisano.co/web_feedback")
     }
@@ -344,7 +404,7 @@ struct ContentView: View {
 ### Objective-C Usage
 
 ```objc
-#import <Feedback/Feedback-Swift.h>
+#import <PisanoFeedback/PisanoFeedback-Swift.h>
 
 @interface ViewController ()
 @end
@@ -358,10 +418,10 @@ struct ContentView: View {
 - (IBAction)showFeedback:(id)sender {
     [Pisano showWithMode:ViewModeBottomSheet
                    title:nil
-                  flowId:nil
                 language:@"en"
                 customer:@{@"externalId": @"USER-123"}
                  payload:nil
+                    code:nil
               completion:^(enum CloseStatus status) {
         NSLog(@"Feedback status: %@", @(status));
     }];
@@ -504,7 +564,7 @@ Pisano.debugMode(true)
 
 ### Objective-C usage error
 
-Make sure you added the `#import <Feedback/Feedback-Swift.h>` import in Objective-C projects.
+Make sure you added the `#import <PisanoFeedback/PisanoFeedback-Swift.h>` import in Objective-C projects.
 
 ### Bottom sheet not working
 
