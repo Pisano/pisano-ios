@@ -2365,28 +2365,35 @@
     {
       "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
-      "offset": 339,
+      "offset": 333,
+      "length": 441,
+      "value": "\"(function() {\n    var meta = document.querySelector('meta[name=\"viewport\"]');\n    if (!meta) {\n        meta = document.createElement('meta');\n        meta.setAttribute('name', 'viewport');\n        document.head.appendChild(meta);\n    }\n    meta.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');\n})();\""
+    },
+    {
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Constants\/Web.swift",
+      "kind": "StringLiteral",
+      "offset": 807,
       "length": 81,
       "value": "\"    document.getElementsByClassName('components')[0].scrollHeight\""
     },
     {
       "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
-      "offset": 451,
+      "offset": 919,
       "length": 24,
       "value": "\"PSN_FEEDBACK_SUBMITTED\""
     },
     {
       "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
-      "offset": 503,
+      "offset": 971,
       "length": 23,
       "value": "\"PSN_WEB_WIDGET_CLOSED\""
     },
     {
       "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
-      "offset": 554,
+      "offset": 1022,
       "length": 23,
       "value": "\"PSN_REDIRECT_TO_STORE\""
     },
