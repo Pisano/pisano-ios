@@ -28,7 +28,7 @@ import _SwiftConcurrencyShims
 @_inheritsConvenienceInitializers @objc public class Pisano : ObjectiveC.NSObject {
   @objc public class func boot(appId: Swift.String, accessKey: Swift.String, code: Swift.String, apiUrl: Swift.String, feedbackUrl: Swift.String, eventUrl: Swift.String? = nil, completion: ((PisanoFeedback.CloseStatus) -> Swift.Void)? = nil)
   @objc public class func healthCheck(language: Swift.String? = nil, customer: [Swift.String : Any]? = nil, payload: [Swift.String : Swift.String]? = nil, code: Swift.String? = nil, completion: @escaping (Swift.Bool) -> Swift.Void)
-  @objc public class func show(mode: PisanoFeedback.ViewMode = .`default`, title: Foundation.NSAttributedString? = nil, language: Swift.String? = nil, customer: [Swift.String : Any]? = nil, payload: [Swift.String : Swift.String]? = nil, code: Swift.String? = nil, completion: @escaping (PisanoFeedback.CloseStatus) -> Swift.Void)
+  @objc public class func show(mode: PisanoFeedback.ViewMode = .`default`, title: Foundation.NSAttributedString? = nil, language: Swift.String? = nil, customer: [Swift.String : Any]? = nil, payload: [Swift.String : Swift.String]? = nil, code: Swift.String? = nil, dismissOnDrag: Swift.Bool = false, completion: @escaping (PisanoFeedback.CloseStatus) -> Swift.Void)
   @objc public class func track(event: Swift.String, payload: [Swift.String : Swift.String]? = nil, customer: [Swift.String : Any]? = nil, language: Swift.String? = nil, completion: @escaping (PisanoFeedback.CloseStatus) -> Swift.Void)
   @objc open class func clear()
   @objc open class func debugMode(_ debug: Swift.Bool)

@@ -355,7 +355,7 @@ SWIFT_CLASS("_TtC14PisanoFeedback6Pisano")
 ///     Pisano Show
 ///   </li>
 /// </ul>
-+ (void)showWithMode:(enum ViewMode)mode title:(NSAttributedString * _Nullable)title language:(NSString * _Nullable)language customer:(NSDictionary<NSString *, id> * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload code:(NSString * _Nullable)code completion:(void (^ _Nonnull)(enum CloseStatus))completion;
++ (void)showWithMode:(enum ViewMode)mode title:(NSAttributedString * _Nullable)title language:(NSString * _Nullable)language customer:(NSDictionary<NSString *, id> * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload code:(NSString * _Nullable)code dismissOnDrag:(BOOL)dismissOnDrag completion:(void (^ _Nonnull)(enum CloseStatus))completion;
 /// Pisano Track
 + (void)trackWithEvent:(NSString * _Nonnull)event payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload customer:(NSDictionary<NSString *, id> * _Nullable)customer language:(NSString * _Nullable)language completion:(void (^ _Nonnull)(enum CloseStatus))completion;
 /// Pisano Clear
@@ -735,7 +735,7 @@ SWIFT_CLASS("_TtC14PisanoFeedback6Pisano")
 ///     Pisano Show
 ///   </li>
 /// </ul>
-+ (void)showWithMode:(enum ViewMode)mode title:(NSAttributedString * _Nullable)title language:(NSString * _Nullable)language customer:(NSDictionary<NSString *, id> * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload code:(NSString * _Nullable)code completion:(void (^ _Nonnull)(enum CloseStatus))completion;
++ (void)showWithMode:(enum ViewMode)mode title:(NSAttributedString * _Nullable)title language:(NSString * _Nullable)language customer:(NSDictionary<NSString *, id> * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload code:(NSString * _Nullable)code dismissOnDrag:(BOOL)dismissOnDrag completion:(void (^ _Nonnull)(enum CloseStatus))completion;
 /// Pisano Track
 + (void)trackWithEvent:(NSString * _Nonnull)event payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload customer:(NSDictionary<NSString *, id> * _Nullable)customer language:(NSString * _Nullable)language completion:(void (^ _Nonnull)(enum CloseStatus))completion;
 /// Pisano Clear

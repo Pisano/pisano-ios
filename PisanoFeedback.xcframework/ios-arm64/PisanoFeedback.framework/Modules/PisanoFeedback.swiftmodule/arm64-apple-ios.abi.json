@@ -565,7 +565,7 @@
           {
             "kind": "Function",
             "name": "show",
-            "printedName": "show(mode:title:language:customer:payload:code:completion:)",
+            "printedName": "show(mode:title:language:customer:payload:code:dismissOnDrag:completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -682,6 +682,13 @@
                 "usr": "s:Sq"
               },
               {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
                 "kind": "TypeFunc",
                 "name": "Function",
                 "printedName": "(PisanoFeedback.CloseStatus) -> ()",
@@ -701,11 +708,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@PisanoFeedback@objc(cs)Pisano(cm)showWithMode:title:language:customer:payload:code:completion:",
-            "mangledName": "$s14PisanoFeedback0A0C4show4mode5title8language8customer7payload4code10completionyAA8ViewModeO_So18NSAttributedStringCSgSSSgSDySSypGSgSDyS2SGSgAQyAA11CloseStatusOctFZ",
+            "usr": "c:@M@PisanoFeedback@objc(cs)Pisano(cm)showWithMode:title:language:customer:payload:code:dismissOnDrag:completion:",
+            "mangledName": "$s14PisanoFeedback0A0C4show4mode5title8language8customer7payload4code13dismissOnDrag10completionyAA8ViewModeO_So18NSAttributedStringCSgSSSgSDySSypGSgSDyS2SGSgARSbyAA11CloseStatusOctFZ",
             "moduleName": "PisanoFeedback",
             "static": true,
-            "objc_name": "showWithMode:title:language:customer:payload:code:completion:",
+            "objc_name": "showWithMode:title:language:customer:payload:code:dismissOnDrag:completion:",
             "declAttributes": [
               "AccessControl",
               "ObjC",
@@ -2300,6 +2307,20 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Managers\/PisanoManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 332,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Public\/Pisano.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2549,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
       "kind": "StringLiteral",
       "offset": 176,
@@ -2694,14 +2715,21 @@
     {
       "filePath": "\/Users\/idrisyildiz\/Library\/Developer\/Xcode\/DerivedData\/Feedback-gdsngeqmpmqregendpwjbeqhyqbp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/Feedback\/IntermediateBuildFilesPath\/Feedback.build\/Release-iphoneos\/Feedback.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 723,
+      "offset": 733,
+      "length": 12,
+      "value": "\"PisanoLogo\""
+    },
+    {
+      "filePath": "\/Users\/idrisyildiz\/Library\/Developer\/Xcode\/DerivedData\/Feedback-gdsngeqmpmqregendpwjbeqhyqbp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/Feedback\/IntermediateBuildFilesPath\/Feedback.build\/Release-iphoneos\/Feedback.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 865,
       "length": 7,
       "value": "\"close\""
     },
     {
       "filePath": "\/Users\/idrisyildiz\/Library\/Developer\/Xcode\/DerivedData\/Feedback-gdsngeqmpmqregendpwjbeqhyqbp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/Feedback\/IntermediateBuildFilesPath\/Feedback.build\/Release-iphoneos\/Feedback.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 850,
+      "offset": 992,
       "length": 7,
       "value": "\"minus\""
     }
