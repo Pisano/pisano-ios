@@ -2386,28 +2386,56 @@
     {
       "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
-      "offset": 339,
+      "offset": 345,
+      "length": 441,
+      "value": "\"(function() {\n    var meta = document.querySelector('meta[name=\"viewport\"]');\n    if (!meta) {\n        meta = document.createElement('meta');\n        meta.setAttribute('name', 'viewport');\n        document.head.appendChild(meta);\n    }\n    meta.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');\n})();\""
+    },
+    {
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Constants\/Web.swift",
+      "kind": "StringLiteral",
+      "offset": 824,
+      "length": 442,
+      "value": "\"(function() {\n    var meta = document.querySelector('meta[name=\"viewport\"]');\n    if (!meta) {\n        meta = document.createElement('meta');\n        meta.setAttribute('name', 'viewport');\n        document.head.appendChild(meta);\n    }\n    meta.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes');\n})();\""
+    },
+    {
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Constants\/Web.swift",
+      "kind": "StringLiteral",
+      "offset": 1297,
+      "length": 296,
+      "value": "\"(function() {\n    var style = document.createElement('style');\n    style.textContent = 'input, textarea, select { font-size: 16px !important; }';\n    if (document.head) {\n        document.head.appendChild(style);\n    }\n})();\""
+    },
+    {
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Constants\/Web.swift",
+      "kind": "StringLiteral",
+      "offset": 1632,
+      "length": 3658,
+      "value": "\"(function() {\n    if (window.__pisanoKeyboardViewportSync) return;\n    window.__pisanoKeyboardViewportSync = true;\n\n    function layoutHeightPx() {\n        return Math.round(window.innerHeight || 0);\n    }\n\n    function visibleHeightPx() {\n        if (window.visualViewport && window.visualViewport.height > 0) {\n            return Math.round(window.visualViewport.height);\n        }\n        return layoutHeightPx();\n    }\n\n    function isKeyboardOpen() {\n        var layoutHeight = layoutHeightPx();\n        var visibleHeight = visibleHeightPx();\n        return layoutHeight > 0 && visibleHeight > 0 && visibleHeight < layoutHeight * 0.85;\n    }\n\n    function widgetSelectors() {\n        return [\n            '#psn-widget-content-frame',\n            '.widget-content-container',\n            '#psn-widget-content-frame.mobile-full-page',\n            '.widget-content-container.mobile-full-page'\n        ];\n    }\n\n    function resetWidgetHeights() {\n        widgetSelectors().forEach(function(selector) {\n            document.querySelectorAll(selector).forEach(function(el) {\n                el.style.removeProperty('height');\n                el.style.removeProperty('max-height');\n                el.style.removeProperty('min-height');\n            });\n        });\n    }\n\n    function ensureInternalScroll() {\n        document.querySelectorAll('.widget-content-container, .widget-content').forEach(function(el) {\n            el.style.setProperty('overflow-y', 'auto', 'important');\n            el.style.setProperty('-webkit-overflow-scrolling', 'touch', 'important');\n            el.style.setProperty('touch-action', 'pan-y', 'important');\n        });\n    }\n\n    function applyLayout() {\n        if (!document.getElementById('psn-widget-content-frame')) {\n            return;\n        }\n\n        ensureInternalScroll();\n\n        if (!isKeyboardOpen()) {\n            resetWidgetHeights();\n            return;\n        }\n\n        var heightPx = visibleHeightPx() + 'px';\n        ['#psn-widget-content-frame', '.widget-content-container'].forEach(function(selector) {\n            document.querySelectorAll(selector).forEach(function(el) {\n                el.style.setProperty('height', heightPx, 'important');\n                el.style.setProperty('max-height', heightPx, 'important');\n            });\n        });\n    }\n\n    window.__pisanoApplyViewportLayout = applyLayout;\n\n    if (window.visualViewport) {\n        window.visualViewport.addEventListener('resize', applyLayout);\n        window.visualViewport.addEventListener('scroll', applyLayout);\n    }\n    window.addEventListener('resize', applyLayout);\n    document.addEventListener('focusin', function(event) {\n        var tag = event.target && event.target.tagName;\n        if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') {\n            setTimeout(applyLayout, 50);\n            setTimeout(applyLayout, 250);\n        }\n    });\n    document.addEventListener('focusout', function() {\n        setTimeout(applyLayout, 50);\n        setTimeout(applyLayout, 250);\n    });\n})();\""
+    },
+    {
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Constants\/Web.swift",
+      "kind": "StringLiteral",
+      "offset": 5497,
       "length": 81,
       "value": "\"    document.getElementsByClassName('components')[0].scrollHeight\""
     },
     {
       "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
-      "offset": 451,
+      "offset": 5609,
       "length": 24,
       "value": "\"PSN_FEEDBACK_SUBMITTED\""
     },
     {
       "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
-      "offset": 503,
+      "offset": 5661,
       "length": 23,
       "value": "\"PSN_WEB_WIDGET_CLOSED\""
     },
     {
       "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
-      "offset": 554,
+      "offset": 5712,
       "length": 23,
       "value": "\"PSN_REDIRECT_TO_STORE\""
     },
@@ -2505,77 +2533,84 @@
     {
       "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
-      "offset": 479,
+      "offset": 506,
       "length": 9,
       "value": "\"node_id\""
     },
     {
       "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
-      "offset": 532,
+      "offset": 559,
       "length": 8,
       "value": "\"app_id\""
     },
     {
       "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
-      "offset": 567,
+      "offset": 594,
       "length": 12,
       "value": "\"access_key\""
     },
     {
       "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
-      "offset": 601,
+      "offset": 628,
       "length": 6,
       "value": "\"code\""
     },
     {
       "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
-      "offset": 636,
+      "offset": 663,
       "length": 14,
       "value": "\"display_once\""
     },
     {
       "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
-      "offset": 690,
+      "offset": 717,
       "length": 27,
       "value": "\"display_once_delay_period\""
     },
     {
       "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
-      "offset": 746,
+      "offset": 773,
       "length": 14,
       "value": "\"display_rate\""
     },
     {
       "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
-      "offset": 797,
+      "offset": 824,
       "length": 24,
       "value": "\"close_on_outside_click\""
     },
     {
       "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
-      "offset": 852,
+      "offset": 877,
+      "length": 14,
+      "value": "\"disable_zoom\""
+    },
+    {
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "kind": "StringLiteral",
+      "offset": 922,
       "length": 16,
       "value": "\"mobile_channel\""
     },
     {
       "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
-      "offset": 1034,
+      "offset": 1104,
       "length": 15,
       "value": "\"primary_color\""
     },
     {
       "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
       "kind": "StringLiteral",
-      "offset": 1072,
+      "offset": 1142,
       "length": 8,
       "value": "\"status\""
     },
@@ -2711,6 +2746,13 @@
       "offset": 819,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/idrisyildiz\/Documents\/pisano-projects\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "Array",
+      "offset": 1086,
+      "length": 2,
+      "value": "[]"
     },
     {
       "filePath": "\/Users\/idrisyildiz\/Library\/Developer\/Xcode\/DerivedData\/Feedback-gdsngeqmpmqregendpwjbeqhyqbp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/Feedback\/IntermediateBuildFilesPath\/Feedback.build\/Release-iphonesimulator\/Feedback.build\/DerivedSources\/GeneratedAssetSymbols.swift",
