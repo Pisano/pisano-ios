@@ -4,20 +4,20 @@ Pisano Feedback iOS SDK is an SDK that allows you to easily integrate user feedb
 
 ## 📋 Table of Contents
 
-- [Features](#features)
-- [Requirements](#requirements)
-- [Installation](#installation)
+- [Features](#-features)
+- [Requirements](#-requirements)
+- [Installation](#-installation)
   - [Installation with Swift Package Manager](#installation-with-swift-package-manager)
   - [Installation with CocoaPods](#installation-with-cocoapods)
-- [Quick Start](#quick-start)
-- [API Reference](#api-reference)
+- [Quick Start](#-quick-start)
+- [API Reference](#-api-reference)
   - [CloseStatus](#closestatus)
-- [Threading, Timeout and Cancellation](#threading-timeout-and-cancellation)
-- [Logout and User / Tenant Switch](#logout-and-user--tenant-switch)
-- [Usage Examples](#usage-examples)
-- [Configuration](#configuration)
-- [Frequently Asked Questions](#frequently-asked-questions)
-- [Troubleshooting](#troubleshooting)
+- [Threading, Timeout and Cancellation](#-threading-timeout-and-cancellation)
+- [Logout and User / Tenant Switch](#-logout-and-user--tenant-switch)
+- [Usage Examples](#-usage-examples)
+- [Configuration](#-configuration)
+- [Frequently Asked Questions](#-frequently-asked-questions)
+- [Troubleshooting](#-troubleshooting)
 
 ## ✨ Features
 
@@ -335,7 +335,7 @@ Pisano.debugMode(false)
 
 ### `Pisano.clear()`
 
-Ends the current session: cancels running calls, closes an open survey and removes all data the SDK stored for this session. Call it on logout and when switching users or tenants, then `boot` again. See [Logout and User / Tenant Switch](#logout-and-user--tenant-switch) for the full list.
+Ends the current session: cancels running calls, closes an open survey and removes all data the SDK stored for this session. Call it on logout and when switching users or tenants, then `boot` again. See [Logout and User / Tenant Switch](#-logout-and-user--tenant-switch) for the full list.
 
 ```swift
 Pisano.clear()
