@@ -4,6 +4,7 @@
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
 import DeveloperToolsSupport
 import Foundation
+import Security
 import StoreKit
 import Swift
 import SwiftUI
@@ -16,7 +17,7 @@ import _SwiftConcurrencyShims
 @_hasMissingDesignatedInitializers public class ReachabilityService {
   @objc deinit
 }
-@objc public enum ViewMode : Swift.Int {
+@objc public enum ViewMode : Swift.Int, Swift.Sendable {
   case `default` = 0
   case bottomSheet
   public init?(rawValue: Swift.Int)
@@ -26,13 +27,28 @@ import _SwiftConcurrencyShims
   }
 }
 @_inheritsConvenienceInitializers @objc public class Pisano : ObjectiveC.NSObject {
-  @objc public class func boot(appId: Swift.String, accessKey: Swift.String, code: Swift.String, apiUrl: Swift.String, feedbackUrl: Swift.String, eventUrl: Swift.String? = nil, completion: ((PisanoFeedback.CloseStatus) -> Swift.Void)? = nil)
-  @objc public class func healthCheck(language: Swift.String? = nil, customer: [Swift.String : Any]? = nil, payload: [Swift.String : Swift.String]? = nil, code: Swift.String? = nil, completion: @escaping (Swift.Bool) -> Swift.Void)
-  @objc public class func show(mode: PisanoFeedback.ViewMode = .`default`, title: Foundation.NSAttributedString? = nil, language: Swift.String? = nil, customer: [Swift.String : Any]? = nil, payload: [Swift.String : Swift.String]? = nil, code: Swift.String? = nil, dismissOnDrag: Swift.Bool = false, completion: @escaping (PisanoFeedback.CloseStatus) -> Swift.Void)
-  @objc public class func track(event: Swift.String, payload: [Swift.String : Swift.String]? = nil, customer: [Swift.String : Any]? = nil, language: Swift.String? = nil, completion: @escaping (PisanoFeedback.CloseStatus) -> Swift.Void)
+  @objc public static var requestTimeout: Foundation.TimeInterval {
+    @objc get
+    @objc set
+  }
+  @discardableResult
+  @objc public class func boot(appId: Swift.String, accessKey: Swift.String, code: Swift.String, apiUrl: Swift.String, feedbackUrl: Swift.String, eventUrl: Swift.String? = nil, completion: (@_Concurrency.MainActor (PisanoFeedback.CloseStatus) -> Swift.Void)? = nil) -> PisanoFeedback.PisanoTask
+  @discardableResult
+  @objc public class func healthCheck(language: Swift.String? = nil, customer: [Swift.String : Any]? = nil, payload: [Swift.String : Swift.String]? = nil, code: Swift.String? = nil, completion: @escaping @_Concurrency.MainActor (Swift.Bool) -> Swift.Void) -> PisanoFeedback.PisanoTask
+  @discardableResult
+  @objc public class func show(mode: PisanoFeedback.ViewMode = .`default`, title: Foundation.NSAttributedString? = nil, language: Swift.String? = nil, customer: [Swift.String : Any]? = nil, payload: [Swift.String : Swift.String]? = nil, code: Swift.String? = nil, dismissOnDrag: Swift.Bool = false, completion: @escaping @_Concurrency.MainActor (PisanoFeedback.CloseStatus) -> Swift.Void) -> PisanoFeedback.PisanoTask
+  @discardableResult
+  @objc public class func track(event: Swift.String, payload: [Swift.String : Swift.String]? = nil, customer: [Swift.String : Any]? = nil, language: Swift.String? = nil, completion: @escaping @_Concurrency.MainActor (PisanoFeedback.CloseStatus) -> Swift.Void) -> PisanoFeedback.PisanoTask
   @objc open class func clear()
   @objc open class func debugMode(_ debug: Swift.Bool)
   @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc final public class PisanoTask : ObjectiveC.NSObject, @unchecked Swift.Sendable {
+  @objc final public var isCancelled: Swift.Bool {
+    @objc get
+  }
+  @objc final public func cancel()
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class CloseStatusHelper : ObjectiveC.NSObject {
@@ -40,10 +56,7 @@ import _SwiftConcurrencyShims
   @objc override dynamic public init()
   @objc deinit
 }
-extension Foundation.URLSession {
-  public func requestSynchronousData(request: Foundation.URLRequest) -> (Foundation.Data?, Foundation.HTTPURLResponse?)
-}
-@objc public enum CloseStatus : Swift.Int {
+@objc public enum CloseStatus : Swift.Int, Swift.Sendable {
   case none = 0
   case closed
   case sendFeedback

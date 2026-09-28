@@ -12,6 +12,8 @@ Pisano Feedback iOS SDK is an SDK that allows you to easily integrate user feedb
 - [Quick Start](#quick-start)
 - [API Reference](#api-reference)
   - [CloseStatus](#closestatus)
+- [Threading, Timeout and Cancellation](#threading-timeout-and-cancellation)
+- [Logout and User / Tenant Switch](#logout-and-user--tenant-switch)
 - [Usage Examples](#usage-examples)
 - [Configuration](#configuration)
 - [Frequently Asked Questions](#frequently-asked-questions)
@@ -28,6 +30,10 @@ Pisano Feedback iOS SDK is an SDK that allows you to easily integrate user feedb
 - ✅ **User Information Support**: Ability to send user data
 - ✅ **Multi-Language Support**: Ability to display surveys in different languages
 - ✅ **Custom Title**: Customizable title support
+- ✅ **Non-Blocking**: Network calls never block the calling thread; callbacks arrive on the main thread
+- ✅ **Timeout and Cancellation**: `Pisano.requestTimeout` and a cancellable `PisanoTask` for every call
+- ✅ **Session Isolation**: `Pisano.clear()` removes all SDK data on logout or user / tenant switch
+- ✅ **Privacy**: Credentials in the Keychain, no cached API responses, privacy manifest included
 
 ## 📱 Requirements
 
@@ -40,7 +46,7 @@ Pisano Feedback iOS SDK is an SDK that allows you to easily integrate user feedb
 ### Installation with Swift Package Manager
 
 1. In Xcode, go to **File → Add Package Dependencies...**
-2. Enter the repository URL and choose a version (e.g. `1.0.17`).
+2. Enter `https://github.com/Pisano/pisano-ios` and choose **Up to Next Major Version** from `1.1.0`.
 3. Add the `PisanoFeedback` product to your app target.
 
 ### Installation with CocoaPods
@@ -52,7 +58,7 @@ platform :ios, '12.0'
 use_frameworks!
 
 target 'YourApp' do
-  pod 'Pisano', '~> [VERSION]'
+  pod 'Pisano', '~> 1.1'
 end
 ```
 
@@ -152,6 +158,8 @@ Pisano.show(mode: .bottomSheet,
 ```
 
 ## 📚 API Reference
+
+`boot`, `healthCheck`, `show` and `track` return a `PisanoTask` that can cancel the call (see [Cancellation](#cancellation)); keeping it is optional. Their `completion` is always called asynchronously on the main thread.
 
 ### CloseStatus
 
@@ -327,11 +335,104 @@ Pisano.debugMode(false)
 
 ### `Pisano.clear()`
 
-Clears the current session data or cache if needed.
+Ends the current session: cancels running calls, closes an open survey and removes all data the SDK stored for this session. Call it on logout and when switching users or tenants, then `boot` again. See [Logout and User / Tenant Switch](#logout-and-user--tenant-switch) for the full list.
 
 ```swift
 Pisano.clear()
 ```
+
+## 🧵 Threading, Timeout and Cancellation
+
+### Threading
+
+| | |
+|---|---|
+| **Calling thread** | Call `boot`, `healthCheck`, `show`, `track` and `clear` from the **main thread** (recommended). |
+| **Blocking** | None of them blocks the calling thread. Network requests run in the background, so calling them at app launch does not freeze the UI. |
+| **Callback thread** | Every `completion` is invoked **asynchronously on the main thread**, so you can update the UI directly in it. |
+
+### Timeout
+
+`Pisano.requestTimeout` sets the network timeout, in seconds, for every SDK request. A request fails when the server sends no data for this long. The default is `60`; values `<= 0` reset it to the default. It applies to requests started after it is set.
+
+```swift
+Pisano.requestTimeout = 15
+```
+
+```objc
+Pisano.requestTimeout = 15;
+```
+
+### Cancellation
+
+`boot`, `healthCheck`, `show` and `track` return a `PisanoTask`. Keeping it is optional. Call `cancel()` to stop a call you no longer need, for example when the screen that started it is closed. `cancel()` can be called from any thread.
+
+If the call has not finished yet, its network request is cancelled and `completion` is called **once**, on the main thread, with:
+
+| Call | Status on cancel |
+|---|---|
+| `boot` | `.initFailed` |
+| `healthCheck` | `false` |
+| `show` | `.none` (widget is not shown) |
+| `track` | `.none` |
+
+If the call has already finished, or `show` has already presented the widget, `cancel()` does nothing. `isCancelled` tells whether the call was cancelled.
+
+```swift
+let task = Pisano.healthCheck { isHealthy in
+    // Main thread
+}
+// Later, e.g. in viewWillDisappear:
+task.cancel()
+```
+
+```objc
+PisanoTask *task = [Pisano healthCheckWithLanguage:nil customer:nil payload:nil code:nil
+                                        completion:^(BOOL isHealthy) { /* main thread */ }];
+[task cancel];
+```
+
+### Known limitations
+
+- `track`'s `completion` is not called when the event is sent or fails yet; it is only called on `cancel()`.
+- Some `show` failures before the widget is presented (for example no boot data or a network error) do not call `completion` yet. Use `cancel()` to end a call you no longer wait for.
+
+## 🔐 Logout and User / Tenant Switch
+
+Call `Pisano.clear()` when a user logs out or when the app switches to another user or tenant (for example another seller in a marketplace app), then call `Pisano.boot(...)` for the new session:
+
+```swift
+Pisano.clear()
+Pisano.boot(appId: newAppId, accessKey: newAccessKey, code: newCode,
+            apiUrl: apiUrl, feedbackUrl: feedbackUrl) { status in /* … */ }
+```
+
+### What `clear()` removes
+
+| Data | Where it is kept | Removed by `clear()` |
+|---|---|---|
+| Boot credentials (app id, access key, code, URLs) | Memory and Keychain (UserDefaults only if the Keychain is unavailable) | ✅ |
+| SDK detail and trigger responses, last used code | Memory and UserDefaults | ✅ |
+| "Display once" and display-rate state | UserDefaults | ✅ |
+| Cookies set by the Pisano API (session, load balancer) | SDK's own in-memory cookie jar | ✅ |
+| API responses | Never stored: requests use an ephemeral session with caching disabled | — |
+| Survey web data: device id, "already answered" guard, incomplete surveys | iOS 17+: SDK's own web data store | ✅ everything in that store (cookies, local / session storage, IndexedDB, caches) |
+| | iOS 12–16: the app's default web data store | ✅ the survey's localStorage entries on the feedback origin |
+
+`clear()` also ends the session's work in progress:
+
+- Calls still running are cancelled; their `completion` is called once with the cancel status (see [Cancellation](#cancellation)). Their responses are dropped, so they cannot write the previous session's data back.
+- An open survey is closed; its `completion` is called once with `.none`.
+- A survey shown right after `clear()` waits until the web data removal has finished.
+
+`clear()` never touches the host app's own data: its UserDefaults keys, Keychain items, `HTTPCookieStorage.shared`, URL cache or its own web views.
+
+### Notes
+
+- **iOS 12–16:** the survey shares the app's default web data store. Only the survey's own localStorage entries are removed, never anything else in that store, because on on-premise installs it can hold the host app's data for the same domain.
+- **Reinstall:** iOS keeps Keychain items when an app is deleted, so boot credentials can survive a reinstall. Call `clear()` (or `boot` with the current user's values) on first launch if that matters for your app.
+- Call `clear()` from the main thread, like the other SDK calls.
+
 
 ## 💡 Usage Examples
 
@@ -430,37 +531,9 @@ struct ContentView: View {
 @end
 ```
 
-### Listening to Events with NotificationCenter
+### Widget events
 
-The SDK also notifies about widget close status through NotificationCenter.
-
-```swift
-override func viewDidLoad() {
-    super.viewDidLoad()
-    
-    NotificationCenter.default.addObserver(
-        self,
-        selector: #selector(pisanoEventReceived(_:)),
-        name: Notification.Name("pisano-actions"),
-        object: nil
-    )
-}
-
-@objc func pisanoEventReceived(_ notification: Notification) {
-    if let closeStatus = notification.userInfo?["closeStatus"] as? String {
-        switch closeStatus {
-        case "button":
-            print("Widget closed with button")
-        case "sendFeedback":
-            print("Feedback sent")
-        case "outside":
-            print("Closed by clicking outside")
-        default:
-            break
-        }
-    }
-}
-```
+Every outcome is reported through the `completion` of the call (`show`, `boot`, `healthCheck`, `track`). The SDK does not post `NotificationCenter` notifications; the `pisano-actions` notification of older versions was replaced by these callbacks.
 
 ## ⚙️ Configuration
 
@@ -526,6 +599,10 @@ Pisano.show(customer: customer)
 ### When should I initialize the SDK?
 
 You must initialize the SDK either at application startup (in `AppDelegate`) or before calling the `show()` method.
+
+### Can I call the SDK at app launch?
+
+Yes. Since 1.1.0 no SDK call blocks the calling thread; network requests run in the background and every `completion` arrives on the main thread. Call the SDK from the main thread.
 
 ### Should I use health check?
 
