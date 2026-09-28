@@ -342,27 +342,107 @@ SWIFT_CLASS("_TtC14PisanoFeedback17CloseStatusHelper")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class PisanoTask;
 enum ViewMode : NSInteger;
 @class NSAttributedString;
 SWIFT_CLASS("_TtC14PisanoFeedback6Pisano")
 @interface Pisano : NSObject
+/// Network timeout in seconds for every SDK request (boot, healthCheck,
+/// show, track): a request fails when the server sends no data for this
+/// long. Defaults to 60; values <= 0 reset it to the default. Applies to
+/// requests started after it is set. Safe to set from any thread.
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) NSTimeInterval requestTimeout;)
++ (NSTimeInterval)requestTimeout SWIFT_WARN_UNUSED_RESULT;
++ (void)setRequestTimeout:(NSTimeInterval)newValue;
 /// Pisano Boot
-+ (void)bootWithAppId:(NSString * _Nonnull)appId accessKey:(NSString * _Nonnull)accessKey code:(NSString * _Nonnull)code apiUrl:(NSString * _Nonnull)apiUrl feedbackUrl:(NSString * _Nonnull)feedbackUrl eventUrl:(NSString * _Nullable)eventUrl completion:(void (^ _Nullable)(enum CloseStatus))completion;
+/// Threading: call from the main thread (recommended). Networking runs off
+/// the calling thread and never blocks it; the <code>completion</code> handler is always
+/// invoked asynchronously on the main thread.
+/// Cancellation: call <code>cancel()</code> on the returned task. If boot has not
+/// finished yet, the request is cancelled and <code>completion</code> is called once
+/// with <code>.initFailed</code>.
++ (PisanoTask * _Nonnull)bootWithAppId:(NSString * _Nonnull)appId accessKey:(NSString * _Nonnull)accessKey code:(NSString * _Nonnull)code apiUrl:(NSString * _Nonnull)apiUrl feedbackUrl:(NSString * _Nonnull)feedbackUrl eventUrl:(NSString * _Nullable)eventUrl completion:(void (^ _Nullable)(enum CloseStatus))completion;
 /// Pisano Health Check
-+ (void)healthCheckWithLanguage:(NSString * _Nullable)language customer:(NSDictionary<NSString *, id> * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload code:(NSString * _Nullable)code completion:(void (^ _Nonnull)(BOOL))completion;
+/// Threading: call from the main thread (recommended). The network
+/// round-trip never blocks the caller. The <code>completion</code> handler is invoked
+/// asynchronously on the main thread.
+/// Cancellation: call <code>cancel()</code> on the returned task. If the check has not
+/// finished yet, its requests are cancelled and <code>completion</code> is called once
+/// with <code>false</code>.
++ (PisanoTask * _Nonnull)healthCheckWithLanguage:(NSString * _Nullable)language customer:(NSDictionary<NSString *, id> * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload code:(NSString * _Nullable)code completion:(void (^ _Nonnull)(BOOL))completion;
+/// Pisano Show
+/// Threading: call from the main thread (recommended). The trigger network
+/// calls never block the caller. The <code>completion</code> handler and the widget
+/// presentation both happen on the main thread.
+/// Known limitation: some failures before the widget is presented (for
+/// example no boot data or a network error) do not call <code>completion</code> yet.
+/// Use the returned task’s <code>cancel()</code> to end a call you no longer wait for.
+/// Cancellation: call <code>cancel()</code> on the returned task. Before the widget is
+/// presented, this cancels the trigger requests, the widget is not shown and
+/// <code>completion</code> is called once with <code>.none</code>. Once the widget is on screen,
+/// <code>cancel()</code> has no effect.
++ (PisanoTask * _Nonnull)showWithMode:(enum ViewMode)mode title:(NSAttributedString * _Nullable)title language:(NSString * _Nullable)language customer:(NSDictionary<NSString *, id> * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload code:(NSString * _Nullable)code dismissOnDrag:(BOOL)dismissOnDrag completion:(void (^ _Nonnull)(enum CloseStatus))completion;
+/// Pisano Track
+/// Threading: call from the main thread (recommended); never blocks the
+/// caller. Any callback is delivered asynchronously on the main thread.
+/// Known limitation: <code>completion</code> is not called when the event is sent or
+/// fails yet; it is only called when the call is cancelled.
+/// Cancellation: call <code>cancel()</code> on the returned task. If the event has not
+/// been sent yet, the request is cancelled and <code>completion</code> is called once
+/// with <code>.none</code>.
++ (PisanoTask * _Nonnull)trackWithEvent:(NSString * _Nonnull)event payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload customer:(NSDictionary<NSString *, id> * _Nullable)customer language:(NSString * _Nullable)language completion:(void (^ _Nonnull)(enum CloseStatus))completion;
+/// Pisano Clear
+/// Ends the current session. Call it on logout and when switching users or
+/// tenants, then <code>boot</code> again for the new session. It:
 /// <ul>
 ///   <li>
-///     Pisano Show
+///     cancels the session’s calls still running (their completion reports the
+///     cancel status) and closes an open survey (its completion reports
+///     <code>.none</code>), so nothing of the ended session is written back afterwards;
+///   </li>
+///   <li>
+///     forgets the boot credentials in memory and on disk (Keychain; the
+///     UserDefaults fallback copy too);
+///   </li>
+///   <li>
+///     deletes the cached SDK detail and trigger, the last code, and the
+///     display-once and display-rate state (UserDefaults);
+///   </li>
+///   <li>
+///     empties the SDK’s in-memory cookie jar used for API requests (API
+///     responses are never cached and cookies never reach shared storage);
+///   </li>
+///   <li>
+///     deletes the survey’s web data: on iOS 17+ everything in the SDK’s own
+///     web data store (cookies, local / session storage, IndexedDB, caches);
+///     before iOS 17 the survey’s localStorage entries on the feedback origin
+///     (device id, “already answered” guard, incomplete surveys). A survey
+///     presented afterwards waits until this has finished.
 ///   </li>
 /// </ul>
-+ (void)showWithMode:(enum ViewMode)mode title:(NSAttributedString * _Nullable)title language:(NSString * _Nullable)language customer:(NSDictionary<NSString *, id> * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload code:(NSString * _Nullable)code dismissOnDrag:(BOOL)dismissOnDrag completion:(void (^ _Nonnull)(enum CloseStatus))completion;
-/// Pisano Track
-+ (void)trackWithEvent:(NSString * _Nonnull)event payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload customer:(NSDictionary<NSString *, id> * _Nullable)customer language:(NSString * _Nullable)language completion:(void (^ _Nonnull)(enum CloseStatus))completion;
-/// Pisano Clear
+/// Not touched: the host app’s own data, cookies and web views.
 + (void)clear;
 /// Debug Mode
 + (void)debugMode:(BOOL)debug;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+/// Handle to a running SDK call, returned by <code>boot</code>, <code>healthCheck</code>, <code>show</code> and
+/// <code>track</code>. Keeping it is optional.
+/// <code>cancel()</code> is safe to call from any thread and at any time. If the call has
+/// not finished, its network requests are cancelled and the call’s <code>completion</code>
+/// is invoked exactly once, asynchronously on the main thread, with the status
+/// documented on that call; any later network result is dropped. If the call
+/// already finished (or <code>show</code> already presented the widget), <code>cancel()</code> does
+/// nothing.
+SWIFT_CLASS("_TtC14PisanoFeedback10PisanoTask")
+@interface PisanoTask : NSObject
+/// Whether <code>cancel()</code> stopped this call before it finished.
+@property (nonatomic, readonly) BOOL isCancelled;
+/// Cancels the call if it has not finished yet. See the type documentation.
+- (void)cancel;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 typedef SWIFT_ENUM(NSInteger, ViewMode, open) {
@@ -722,27 +802,107 @@ SWIFT_CLASS("_TtC14PisanoFeedback17CloseStatusHelper")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class PisanoTask;
 enum ViewMode : NSInteger;
 @class NSAttributedString;
 SWIFT_CLASS("_TtC14PisanoFeedback6Pisano")
 @interface Pisano : NSObject
+/// Network timeout in seconds for every SDK request (boot, healthCheck,
+/// show, track): a request fails when the server sends no data for this
+/// long. Defaults to 60; values <= 0 reset it to the default. Applies to
+/// requests started after it is set. Safe to set from any thread.
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) NSTimeInterval requestTimeout;)
++ (NSTimeInterval)requestTimeout SWIFT_WARN_UNUSED_RESULT;
++ (void)setRequestTimeout:(NSTimeInterval)newValue;
 /// Pisano Boot
-+ (void)bootWithAppId:(NSString * _Nonnull)appId accessKey:(NSString * _Nonnull)accessKey code:(NSString * _Nonnull)code apiUrl:(NSString * _Nonnull)apiUrl feedbackUrl:(NSString * _Nonnull)feedbackUrl eventUrl:(NSString * _Nullable)eventUrl completion:(void (^ _Nullable)(enum CloseStatus))completion;
+/// Threading: call from the main thread (recommended). Networking runs off
+/// the calling thread and never blocks it; the <code>completion</code> handler is always
+/// invoked asynchronously on the main thread.
+/// Cancellation: call <code>cancel()</code> on the returned task. If boot has not
+/// finished yet, the request is cancelled and <code>completion</code> is called once
+/// with <code>.initFailed</code>.
++ (PisanoTask * _Nonnull)bootWithAppId:(NSString * _Nonnull)appId accessKey:(NSString * _Nonnull)accessKey code:(NSString * _Nonnull)code apiUrl:(NSString * _Nonnull)apiUrl feedbackUrl:(NSString * _Nonnull)feedbackUrl eventUrl:(NSString * _Nullable)eventUrl completion:(void (^ _Nullable)(enum CloseStatus))completion;
 /// Pisano Health Check
-+ (void)healthCheckWithLanguage:(NSString * _Nullable)language customer:(NSDictionary<NSString *, id> * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload code:(NSString * _Nullable)code completion:(void (^ _Nonnull)(BOOL))completion;
+/// Threading: call from the main thread (recommended). The network
+/// round-trip never blocks the caller. The <code>completion</code> handler is invoked
+/// asynchronously on the main thread.
+/// Cancellation: call <code>cancel()</code> on the returned task. If the check has not
+/// finished yet, its requests are cancelled and <code>completion</code> is called once
+/// with <code>false</code>.
++ (PisanoTask * _Nonnull)healthCheckWithLanguage:(NSString * _Nullable)language customer:(NSDictionary<NSString *, id> * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload code:(NSString * _Nullable)code completion:(void (^ _Nonnull)(BOOL))completion;
+/// Pisano Show
+/// Threading: call from the main thread (recommended). The trigger network
+/// calls never block the caller. The <code>completion</code> handler and the widget
+/// presentation both happen on the main thread.
+/// Known limitation: some failures before the widget is presented (for
+/// example no boot data or a network error) do not call <code>completion</code> yet.
+/// Use the returned task’s <code>cancel()</code> to end a call you no longer wait for.
+/// Cancellation: call <code>cancel()</code> on the returned task. Before the widget is
+/// presented, this cancels the trigger requests, the widget is not shown and
+/// <code>completion</code> is called once with <code>.none</code>. Once the widget is on screen,
+/// <code>cancel()</code> has no effect.
++ (PisanoTask * _Nonnull)showWithMode:(enum ViewMode)mode title:(NSAttributedString * _Nullable)title language:(NSString * _Nullable)language customer:(NSDictionary<NSString *, id> * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload code:(NSString * _Nullable)code dismissOnDrag:(BOOL)dismissOnDrag completion:(void (^ _Nonnull)(enum CloseStatus))completion;
+/// Pisano Track
+/// Threading: call from the main thread (recommended); never blocks the
+/// caller. Any callback is delivered asynchronously on the main thread.
+/// Known limitation: <code>completion</code> is not called when the event is sent or
+/// fails yet; it is only called when the call is cancelled.
+/// Cancellation: call <code>cancel()</code> on the returned task. If the event has not
+/// been sent yet, the request is cancelled and <code>completion</code> is called once
+/// with <code>.none</code>.
++ (PisanoTask * _Nonnull)trackWithEvent:(NSString * _Nonnull)event payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload customer:(NSDictionary<NSString *, id> * _Nullable)customer language:(NSString * _Nullable)language completion:(void (^ _Nonnull)(enum CloseStatus))completion;
+/// Pisano Clear
+/// Ends the current session. Call it on logout and when switching users or
+/// tenants, then <code>boot</code> again for the new session. It:
 /// <ul>
 ///   <li>
-///     Pisano Show
+///     cancels the session’s calls still running (their completion reports the
+///     cancel status) and closes an open survey (its completion reports
+///     <code>.none</code>), so nothing of the ended session is written back afterwards;
+///   </li>
+///   <li>
+///     forgets the boot credentials in memory and on disk (Keychain; the
+///     UserDefaults fallback copy too);
+///   </li>
+///   <li>
+///     deletes the cached SDK detail and trigger, the last code, and the
+///     display-once and display-rate state (UserDefaults);
+///   </li>
+///   <li>
+///     empties the SDK’s in-memory cookie jar used for API requests (API
+///     responses are never cached and cookies never reach shared storage);
+///   </li>
+///   <li>
+///     deletes the survey’s web data: on iOS 17+ everything in the SDK’s own
+///     web data store (cookies, local / session storage, IndexedDB, caches);
+///     before iOS 17 the survey’s localStorage entries on the feedback origin
+///     (device id, “already answered” guard, incomplete surveys). A survey
+///     presented afterwards waits until this has finished.
 ///   </li>
 /// </ul>
-+ (void)showWithMode:(enum ViewMode)mode title:(NSAttributedString * _Nullable)title language:(NSString * _Nullable)language customer:(NSDictionary<NSString *, id> * _Nullable)customer payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload code:(NSString * _Nullable)code dismissOnDrag:(BOOL)dismissOnDrag completion:(void (^ _Nonnull)(enum CloseStatus))completion;
-/// Pisano Track
-+ (void)trackWithEvent:(NSString * _Nonnull)event payload:(NSDictionary<NSString *, NSString *> * _Nullable)payload customer:(NSDictionary<NSString *, id> * _Nullable)customer language:(NSString * _Nullable)language completion:(void (^ _Nonnull)(enum CloseStatus))completion;
-/// Pisano Clear
+/// Not touched: the host app’s own data, cookies and web views.
 + (void)clear;
 /// Debug Mode
 + (void)debugMode:(BOOL)debug;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+/// Handle to a running SDK call, returned by <code>boot</code>, <code>healthCheck</code>, <code>show</code> and
+/// <code>track</code>. Keeping it is optional.
+/// <code>cancel()</code> is safe to call from any thread and at any time. If the call has
+/// not finished, its network requests are cancelled and the call’s <code>completion</code>
+/// is invoked exactly once, asynchronously on the main thread, with the status
+/// documented on that call; any later network result is dropped. If the call
+/// already finished (or <code>show</code> already presented the widget), <code>cancel()</code> does
+/// nothing.
+SWIFT_CLASS("_TtC14PisanoFeedback10PisanoTask")
+@interface PisanoTask : NSObject
+/// Whether <code>cancel()</code> stopped this call before it finished.
+@property (nonatomic, readonly) BOOL isCancelled;
+/// Cancels the call if it has not finished yet. See the type documentation.
+- (void)cancel;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 typedef SWIFT_ENUM(NSInteger, ViewMode, open) {
