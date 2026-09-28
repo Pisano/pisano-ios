@@ -15,7 +15,7 @@ Pisano Feedback iOS SDK is an SDK that allows you to easily integrate user feedb
 - [Threading, Timeout and Cancellation](#-threading-timeout-and-cancellation)
 - [Logout and User / Tenant Switch](#-logout-and-user--tenant-switch)
 - [Usage Examples](#-usage-examples)
-- [Configuration](#-configuration)
+- [Configuration](#️-configuration)
 - [Frequently Asked Questions](#-frequently-asked-questions)
 - [Troubleshooting](#-troubleshooting)
 
