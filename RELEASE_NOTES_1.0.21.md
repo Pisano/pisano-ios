@@ -1,8 +1,8 @@
-# Release 1.0.21 – MT-38 + MT-41
+# Release 1.0.21
 
-Built from `feedback-ios` branch `MT-38` (includes MT-41 bottom sheet from 1.0.20).
+Includes the bottom sheet changes from 1.0.20.
 
-## MT-38 — WebView zoom (`disable_zoom`)
+## WebView zoom (`disable_zoom`)
 
 Channel config from SDK detail API field `disable_zoom`:
 
@@ -12,12 +12,12 @@ Channel config from SDK detail API field `disable_zoom`:
 
 No app-side API change; controlled from Pisano panel per channel.
 
-## MT-38 — Keyboard + viewport
+## Keyboard + viewport
 
 - Keyboard open: viewport layout sync in web widget
 - Bottom sheet: `prefersScrollingExpandsWhenScrolledToEdge = false` — scroll stays in survey content
 
-## MT-41 — Bottom sheet (from 1.0.20, included)
+## Bottom sheet (from 1.0.20, included)
 
 - Optional `dismissOnDrag` on `Pisano.show()` (default `false`)
 - When `true`: swipe-down dismiss enabled, grabber visible on iOS 15+

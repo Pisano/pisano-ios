@@ -1,4 +1,4 @@
-# Release 1.0.20 – MT-41 Bottom Sheet
+# Release 1.0.20 – Bottom Sheet
 
 ## Improvements
 
@@ -22,5 +22,3 @@ Pisano.show(
     // ...
 }
 ```
-
-See [feedback-ios docs/MT-41_BOTTOM_SHEET.md](https://github.com/Pisano/feedback-ios/blob/main/docs/MT-41_BOTTOM_SHEET.md) for full technical details.
