@@ -6,7 +6,7 @@ This is a **minor** release with behaviour changes (see [Behaviour changes](#beh
 
 ## Highlights
 
-### Non-blocking calls, main-thread callbacks (MT-79, MT-89)
+### Non-blocking calls, main-thread callbacks
 
 - `boot`, `healthCheck`, `show` and `track` no longer block the calling thread. Before, each call waited for the whole network round-trip; called from the main thread (for example at app launch) this froze the UI.
 - Every `completion` is called **asynchronously on the main thread**, including early failures (no network, not booted). Completions are typed `@MainActor`, so UI can be updated directly in them.
@@ -23,7 +23,7 @@ let task = Pisano.healthCheck { isHealthy in /* main thread */ }
 task.cancel()
 ```
 
-### Logout and user / tenant switch: `clear()` (MT-84, MT-82)
+### Logout and user / tenant switch: `clear()`
 
 `Pisano.clear()` now ends the session completely, so nothing of one user or tenant (for example a seller) carries over to the next:
 
@@ -36,18 +36,18 @@ The README section "Logout and User / Tenant Switch" lists every item.
 
 ### Security and privacy
 
-- **MT-82:** boot credentials (including the access key) are stored in the Keychain instead of UserDefaults. Existing caches are moved on first launch.
-- **MT-81:** API responses are never cached, and requests send `Cache-Control: no-store`. Request URLs carry credentials.
-- **MT-84:** API requests use an ephemeral session with an in-memory cookie jar owned by the SDK; nothing is written to `HTTPCookieStorage.shared` or disk. On iOS 17+ the survey runs in a web data store of its own, isolated from the app's web views. Existing survey state is carried over once, on the first presentation after the update.
-- **MT-80:** `PrivacyInfo.xcprivacy` privacy manifest is included in the framework.
-- **MT-83:** widget URL query values are percent-encoded (a `+` in a payload is no longer read as a space).
+- Boot credentials (including the access key) are stored in the Keychain instead of UserDefaults. Existing caches are moved on first launch.
+- API responses are never cached, and requests send `Cache-Control: no-store`. Request URLs carry credentials.
+- API requests use an ephemeral session with an in-memory cookie jar owned by the SDK; nothing is written to `HTTPCookieStorage.shared` or disk. On iOS 17+ the survey runs in a web data store of its own, isolated from the app's web views. Existing survey state is carried over once, on the first presentation after the update.
+- `PrivacyInfo.xcprivacy` privacy manifest is included in the framework.
+- Widget URL query values are percent-encoded (a `+` in a payload is no longer read as a space).
 
 ### Presentation
 
-- **MT-85:** the survey is presented from the active window scene (iPad multi-window, Stage Manager, split view) instead of the deprecated `keyWindow`.
-- **MT-88:** `show()` settings (mode, title, dismiss on drag) belong to that call; overlapping `show()` calls no longer mix them.
+- The survey is presented from the active window scene (iPad multi-window, Stage Manager, split view) instead of the deprecated `keyWindow`.
+- `show()` settings (mode, title, dismiss on drag) belong to that call; overlapping `show()` calls no longer mix them.
 
-### Swift 6 (MT-89)
+### Swift 6
 
 `CloseStatus`, `ViewMode` and `PisanoTask` are `Sendable`, and completions are `@MainActor`, so the public API compiles cleanly in Swift 6 language mode with complete strict concurrency.
 
