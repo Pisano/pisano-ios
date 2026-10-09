@@ -38,7 +38,7 @@ Pisano Feedback iOS SDK is an SDK that allows you to easily integrate user feedb
 - ✅ **Session Isolation**: `Pisano.clear()` removes all SDK data on logout or user / tenant switch
 - ✅ **Privacy**: Credentials in the Keychain, no cached API responses, privacy manifest included
 - ✅ **Events**: `Pisano.subscribe` reports when a survey opens, is submitted and closes (and why)
-- ✅ **Typed customer**: `PisanoCustomer` with the same fields as Android
+- ✅ **Typed customer**: `PisanoCustomer` with fixed fields, the same as Android
 
 ## 📱 Requirements
 
@@ -54,7 +54,15 @@ Pisano Feedback iOS SDK is an SDK that allows you to easily integrate user feedb
 - `CloseStatus.initSucces` is now `.initSuccess` and `.surveyPassive` is now `.channelPassive`. The old Swift names still compile with a deprecation warning (a `switch` listing them without `default` does not); Objective-C names are unchanged.
 - A submitted chat survey reports `.sendFeedback` (was `.closed`). Closing the thank-you screen early reports `.sendFeedback` once (was `.closed`, then `.sendFeedback`).
 - Your app dismissing the widget now ends `show` with `.closed`; a survey page that cannot load ends it with `.none`.
-- Customer: the typed `PisanoCustomer` is new. In dictionaries, `customAttributes` is the canonical key (the old `customAttrs` is still accepted), and common spellings such as `phone` now reach the right field instead of being dropped. `track` now sends the customer in the same format as `show`.
+- Customer: the `customer:` dictionary parameter of `show`, `healthCheck` and `track` is replaced by `pisanoCustomer:`, which takes a typed `PisanoCustomer`. A misspelled key used to be dropped without any sign; a misspelled field now does not compile. `track` now sends the customer in the same format as `show`.
+
+  ```swift
+  // 1.x
+  Pisano.show(customer: ["name": "Ada", "phoneNumber": "+90555", "customAttrs": ["plan": "gold"]]) { _ in }
+  // 2.0
+  Pisano.show(pisanoCustomer: PisanoCustomer(name: "Ada", phoneNumber: "+90555",
+                                             customAttributes: ["plan": "gold"])) { _ in }
+  ```
 - To know the moment feedback is submitted, or how the widget closed, use [`Pisano.subscribe()`](#pisanosubscribe--events).
 
 See [RELEASE_NOTES_2.0.0.md](RELEASE_NOTES_2.0.0.md) for the full list.
@@ -247,7 +255,7 @@ If backend configuration prevents the survey from being shown due to `display_ra
   - `.bottomSheet`: Bottom sheet
 - `title: NSAttributedString?` - Custom title (optional)
 - `language: String?` - Language code (e.g., "en", "tr") (optional)
-- `customer: [String: Any]?` - User information (optional). Or pass a typed `PisanoCustomer` with the `pisanoCustomer:` variant
+- `pisanoCustomer: PisanoCustomer?` - User information (optional), see [User Information](#user-information)
 - `payload: [String: String]?` - Extra data (optional)
 - `code: String?` - Override code for this call (optional). If not provided, SDK uses the code passed in `Pisano.boot(...)`.
 - `dismissOnDrag: Bool` - **Optional (default: `false`).** When `true` and `mode` is `.bottomSheet`, the sheet shows a grabber and the user can dismiss it by dragging down; `completion` is then called with `.closed` (or `.sendFeedback` after a submit). When `false`, swipe dismiss is disabled
@@ -269,11 +277,9 @@ Pisano.show(mode: .bottomSheet,
                ]
            ),
            language: "en",
-           customer: [
-               "name": "John Doe",
-               "email": "john@example.com",
-               "externalId": "USER-123"
-           ],
+           pisanoCustomer: PisanoCustomer(name: "John Doe",
+                                          email: "john@example.com",
+                                          externalId: "USER-123"),
            completion: { status in
                switch status {
                case .sendFeedback:
@@ -293,7 +299,7 @@ Tracks an event.
 **Parameters:**
 - `event: String` - Event name (required)
 - `payload: [String: String]?` - Event payload data (optional)
-- `customer: [String: Any]?` - User information (optional). Or `pisanoCustomer: PisanoCustomer?`
+- `pisanoCustomer: PisanoCustomer?` - User information (optional)
 - `language: String?` - Language code (optional)
 - `completion: (CloseStatus) -> Void` - Completion callback
 
@@ -302,7 +308,7 @@ Tracks an event.
 ```swift
 Pisano.track(event: "purchase_completed",
             payload: ["order_id": "12345", "amount": "99.99"],
-            customer: ["email": "john@example.com"],
+            pisanoCustomer: PisanoCustomer(email: "john@example.com"),
             language: "en") { status in
     print("Event tracked: \(status.description)")
 }
@@ -314,7 +320,7 @@ Checks the SDK status. It is recommended to use this before displaying the feedb
 
 **Parameters:**
 - `language: String?` - Language code (optional)
-- `customer: [String: Any]?` - User information (optional). Or `pisanoCustomer: PisanoCustomer?`
+- `pisanoCustomer: PisanoCustomer?` - User information (optional)
 - `payload: [String: String]?` - Extra data (optional)
 - `code: String?` - Override code for this call (optional). If not provided, SDK uses the code passed in `Pisano.boot(...)`.
 - `completion: (Bool) -> Void` - Health check result (true: successful, false: failed)
@@ -322,7 +328,7 @@ Checks the SDK status. It is recommended to use this before displaying the feedb
 **Example:**
 
 ```swift
-Pisano.healthCheck(customer: ["externalId": "USER-789"],
+Pisano.healthCheck(pisanoCustomer: PisanoCustomer(externalId: "USER-789"),
                    code: nil) { isHealthy in
     if isHealthy {
         Pisano.show()
@@ -462,7 +468,7 @@ task.cancel()
 ```
 
 ```objc
-PisanoTask *task = [Pisano healthCheckWithLanguage:nil customer:nil payload:nil code:nil
+PisanoTask *task = [Pisano healthCheckWithLanguage:nil pisanoCustomer:nil payload:nil code:nil
                                         completion:^(BOOL isHealthy) { /* main thread */ }];
 [task cancel];
 ```
@@ -530,7 +536,7 @@ class ViewController: UIViewController {
     @IBAction func showFeedback(_ sender: Any) {
         Pisano.show(mode: .bottomSheet,
                    language: "en",
-                   customer: ["externalId": "USER-123"],
+                   pisanoCustomer: PisanoCustomer(externalId: "USER-123"),
                    completion: { status in
                        print("Feedback status: \(status.description)")
                    })
@@ -571,7 +577,7 @@ struct ContentView: View {
             Button("Show Feedback") {
                 Pisano.show(mode: .bottomSheet,
                            title: NSAttributedString(string: "Your Feedback"),
-                           customer: ["email": "user@example.com"],
+                           pisanoCustomer: PisanoCustomer(email: "user@example.com"),
                            completion: { _ in })
             }
         }
@@ -597,7 +603,8 @@ struct ContentView: View {
     [Pisano showWithMode:ViewModeBottomSheet
                    title:nil
                 language:@"en"
-                customer:@{@"externalId": @"USER-123"}
+          pisanoCustomer:[[PisanoCustomer alloc] initWithName:nil email:nil phoneNumber:nil
+                                               externalId:@"USER-123" customAttributes:nil]
                  payload:nil
                     code:nil
            dismissOnDrag:NO
@@ -651,7 +658,7 @@ Pisano.show(title: title)
 
 ### User Information
 
-You can provide a personalized experience by sending user information. Prefer the typed `PisanoCustomer`: a misspelled field is then a compile error instead of data that never arrives.
+You can provide a personalized experience by sending user information with `PisanoCustomer`. Its fields are fixed, so a misspelled field is a compile error instead of data that never arrives. Set only the fields you have; the others are not sent.
 
 ```swift
 let customer = PisanoCustomer(
@@ -674,27 +681,7 @@ PisanoCustomer *customer = [[PisanoCustomer alloc] initWithName:@"John Doe" emai
              payload:nil code:nil dismissOnDrag:NO completion:^(enum CloseStatus status) {}];
 ```
 
-The `customer:` dictionary variants keep working:
-
-```swift
-Pisano.show(customer: [
-    "name": "John Doe",
-    "phoneNumber": "+1234567890",
-    "customAttributes": ["city": "New York"]
-]) { status in }
-```
-
-**Customer fields** (same names as Android, React Native and Flutter):
-
-| Field | Also accepted in the dictionary |
-|---|---|
-| `name` | |
-| `email` | |
-| `phoneNumber` | `phone`, `phone_number` |
-| `externalId` | `external_id` |
-| `customAttributes` (Dictionary) | `customAttrs`, `custom_attrs`, `custom_attributes` |
-
-Case and `_` / `-` do not matter in dictionary keys. Other keys are not sent; the SDK then logs `Pisano: Customer keys not supported and not sent: …` to the Xcode console and Console.app, also in release builds and with debug mode off.
+**Customer fields** (same names as Android, React Native and Flutter): `name`, `email`, `phoneNumber`, `externalId`, `customAttributes` (any other attributes, e.g. `["plan": "gold"]`).
 
 ## ❓ Frequently Asked Questions
 
@@ -747,4 +734,4 @@ Make sure you added the `#import <PisanoFeedback/PisanoFeedback-Swift.h>` import
 
 ### Customer data does not show in the panel
 
-Check the Xcode console for `Pisano: Customer keys not supported and not sent: …`: a key the SDK does not know is not sent. Use `PisanoCustomer`, or the keys in [User Information](#user-information).
+Check that the fields are set on the `PisanoCustomer` you pass as `pisanoCustomer:`; fields left `nil` are not sent. Other attributes go in `customAttributes`.
