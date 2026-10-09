@@ -6,12 +6,15 @@ Pisano Feedback iOS SDK is an SDK that allows you to easily integrate user feedb
 
 - [Features](#-features)
 - [Requirements](#-requirements)
+  - [Migrating from 1.x](#migrating-from-1x)
 - [Installation](#-installation)
   - [Installation with Swift Package Manager](#installation-with-swift-package-manager)
   - [Installation with CocoaPods](#installation-with-cocoapods)
 - [Quick Start](#-quick-start)
 - [API Reference](#-api-reference)
   - [CloseStatus](#closestatus)
+  - [Events: `Pisano.subscribe()`](#pisanosubscribe--events)
+  - [App Store review: `Pisano.automaticStoreReview`](#pisanoautomaticstorereview--app-store-review-prompt)
 - [Threading, Timeout and Cancellation](#-threading-timeout-and-cancellation)
 - [Logout and User / Tenant Switch](#-logout-and-user--tenant-switch)
 - [Usage Examples](#-usage-examples)
@@ -34,19 +37,34 @@ Pisano Feedback iOS SDK is an SDK that allows you to easily integrate user feedb
 - ✅ **Timeout and Cancellation**: `Pisano.requestTimeout` and a cancellable `PisanoTask` for every call
 - ✅ **Session Isolation**: `Pisano.clear()` removes all SDK data on logout or user / tenant switch
 - ✅ **Privacy**: Credentials in the Keychain, no cached API responses, privacy manifest included
+- ✅ **Events**: `Pisano.subscribe` reports when a survey opens, is submitted and closes (and why)
+- ✅ **Typed customer**: `PisanoCustomer` with the same fields as Android
 
 ## 📱 Requirements
 
-- iOS 12.0 or higher
-- Xcode 12.0 or higher
+- iOS 15.0 or higher
+- Xcode 16.0 or higher
 - Swift 5.0 or higher
+
+> iOS 12–14 are no longer supported. Apps that still need to run on iOS 12–14 can stay on SDK `1.1.0`.
+
+### Migrating from 1.x
+
+- Minimum iOS is 15.0.
+- `CloseStatus.initSucces` is now `.initSuccess` and `.surveyPassive` is now `.channelPassive`. The old Swift names still compile with a deprecation warning (a `switch` listing them without `default` does not); Objective-C names are unchanged.
+- A submitted chat survey reports `.sendFeedback` (was `.closed`). Closing the thank-you screen early reports `.sendFeedback` once (was `.closed`, then `.sendFeedback`).
+- Your app dismissing the widget now ends `show` with `.closed`; a survey page that cannot load ends it with `.none`.
+- Customer: the typed `PisanoCustomer` is new. In dictionaries, `customAttributes` is the canonical key (the old `customAttrs` is still accepted), and common spellings such as `phone` now reach the right field instead of being dropped. `track` now sends the customer in the same format as `show`.
+- To know the moment feedback is submitted, or how the widget closed, use [`Pisano.subscribe()`](#pisanosubscribe--events).
+
+See [RELEASE_NOTES_2.0.0.md](RELEASE_NOTES_2.0.0.md) for the full list.
 
 ## 📦 Installation
 
 ### Installation with Swift Package Manager
 
 1. In Xcode, go to **File → Add Package Dependencies...**
-2. Enter `https://github.com/Pisano/pisano-ios` and choose **Up to Next Major Version** from `1.1.0`.
+2. Enter `https://github.com/Pisano/pisano-ios` and choose **Up to Next Major Version** from `2.0.0`.
 3. Add the `PisanoFeedback` product to your app target.
 
 ### Installation with CocoaPods
@@ -54,11 +72,11 @@ Pisano Feedback iOS SDK is an SDK that allows you to easily integrate user feedb
 1. Create or edit your `Podfile`:
 
 ```ruby
-platform :ios, '12.0'
+platform :ios, '15.0'
 use_frameworks!
 
 target 'YourApp' do
-  pod 'Pisano', '~> 1.1'
+  pod 'Pisano', '~> 2.0'
 end
 ```
 
@@ -144,14 +162,12 @@ Pisano.show { status in
 Pisano.show(mode: .bottomSheet,
            title: NSAttributedString(string: "We Value Your Feedback"),
            language: "en",
-           customer: [
-               "name": "John Doe",
-               "email": "john@example.com",
-               "phoneNumber": "+1234567890",
-               "externalId": "CRM-12345"
-           ],
+           pisanoCustomer: PisanoCustomer(name: "John Doe",
+                                          email: "john@example.com",
+                                          phoneNumber: "+1234567890",
+                                          externalId: "CRM-12345"),
            payload: ["source": "app", "screen": "home"],
-           code: nil,
+           dismissOnDrag: true,
            completion: { status in
                print("Status: \(status.description)")
            })
@@ -163,23 +179,22 @@ Pisano.show(mode: .bottomSheet,
 
 ### CloseStatus
 
-The `CloseStatus` enum is returned by various SDK methods to indicate the result of an operation.
+The `CloseStatus` enum is the result of a call, reported once. For `show` it says how the call ended; what happened on the way (opened, submitted, how the widget closed) comes through [`Pisano.subscribe()`](#pisanosubscribe--events).
 
-**CloseStatus Values:**
-- `.none`: No status / default value
-- `.closed`: User clicked the close button
-- `.opened`: Widget opened
-- `.sendFeedback`: Feedback was sent
-- `.outside`: Closed by clicking outside
+The survey was shown:
+- `.sendFeedback`: The survey was submitted, however the widget closed afterwards. After a submit the thank-you screen closes itself after 3 seconds; closing it earlier (close button, drag, outside tap) or closing a chat survey later is still `.sendFeedback`
+- `.closed`: Closed without submitting: close button, drag (`dismissOnDrag: true`), or your app dismissing the widget
+- `.outside`: Closed without submitting by a tap outside the bottom sheet
+- `.none`: No result: `clear()` ended the session, the survey page could not be loaded, or the call was cancelled
+
+The survey was not shown:
 - `.displayOnce`: Already shown before
-- `.preventMultipleFeedback`: Multiple feedback prevention triggered
-- `.channelQuotaExceeded`: Channel quota exceeded
-- `.initFailed`: SDK initialization failed
-- `.initSucces`: SDK initialized successfully
-- `.healthCheckSuccessful`: Health check passed
-- `.surveyPassive`: Survey is in passive state
-- `.healthCheckFailed`: Health check failed
+- `.preventMultipleFeedback`: The customer already submitted feedback in the given time period
+- `.channelQuotaExceeded`: The channel quota is exceeded
+- `.channelPassive`: The survey is passive
 - `.displayRateLimited`: Not shown due to `display_rate`
+
+`boot` results: `.initSuccess`, `.initFailed`. `.opened` is never reported (use the `opened` event); `.healthCheckSuccessful` / `.healthCheckFailed` are internal (`healthCheck` reports a `Bool`).
 
 ### `Pisano.boot()`
 
@@ -196,7 +211,7 @@ Initializes the SDK. This method must be called either at application startup (u
 - `eventUrl: String?` - Event tracking URL (optional)
 - `completion: ((CloseStatus) -> Void)?` - Initialization result callback (optional)
   
-  Returns `.initSucces` or `.initFailed`. See [CloseStatus](#closestatus) for all possible values.
+  Returns `.initSuccess` or `.initFailed`. See [CloseStatus](#closestatus) for all possible values.
 
 **Example:**
 
@@ -208,7 +223,7 @@ Pisano.boot(appId: "app-123",
            feedbackUrl: "https://web.pisano.co/web_feedback",
            eventUrl: "https://event.pisano.co") { status in
     switch status {
-    case .initSucces:
+    case .initSuccess:
         print("SDK initialized successfully")
     case .initFailed:
         print("SDK initialization failed")
@@ -229,22 +244,18 @@ If backend configuration prevents the survey from being shown due to `display_ra
 **Parameters:**
 - `mode: ViewMode` - View mode (default: `.default`)
   - `.default`: Full-screen overlay
-  - `.bottomSheet`: Bottom sheet (iOS 13+)
+  - `.bottomSheet`: Bottom sheet
 - `title: NSAttributedString?` - Custom title (optional)
 - `language: String?` - Language code (e.g., "en", "tr") (optional)
-- `customer: [String: Any]?` - User information (optional)
+- `customer: [String: Any]?` - User information (optional). Or pass a typed `PisanoCustomer` with the `pisanoCustomer:` variant
 - `payload: [String: String]?` - Extra data (optional)
 - `code: String?` - Override code for this call (optional). If not provided, SDK uses the code passed in `Pisano.boot(...)`.
-- `completion: (CloseStatus) -> Void` - Widget close callback
+- `dismissOnDrag: Bool` - **Optional (default: `false`).** When `true` and `mode` is `.bottomSheet`, the sheet shows a grabber and the user can dismiss it by dragging down; `completion` is then called with `.closed` (or `.sendFeedback` after a submit). When `false`, swipe dismiss is disabled
+- `completion: (CloseStatus) -> Void` - Called once with the result
   
   See [CloseStatus](#closestatus) for all possible return values.
 
-**User Information Keys:**
-- `name`: User name
-- `email`: Email address
-- `phoneNumber`: Phone number
-- `externalId`: External system ID (CRM, etc.)
-- `customAttrs`: Custom attributes (Dictionary)
+**User Information Keys:** `name`, `email`, `phoneNumber`, `externalId`, `customAttributes` (Dictionary). See [User Information](#user-information) for accepted spellings.
 
 **Example:**
 
@@ -282,7 +293,7 @@ Tracks an event.
 **Parameters:**
 - `event: String` - Event name (required)
 - `payload: [String: String]?` - Event payload data (optional)
-- `customer: [String: Any]?` - User information (optional)
+- `customer: [String: Any]?` - User information (optional). Or `pisanoCustomer: PisanoCustomer?`
 - `language: String?` - Language code (optional)
 - `completion: (CloseStatus) -> Void` - Completion callback
 
@@ -303,7 +314,7 @@ Checks the SDK status. It is recommended to use this before displaying the feedb
 
 **Parameters:**
 - `language: String?` - Language code (optional)
-- `customer: [String: Any]?` - User information (optional)
+- `customer: [String: Any]?` - User information (optional). Or `pisanoCustomer: PisanoCustomer?`
 - `payload: [String: String]?` - Extra data (optional)
 - `code: String?` - Override code for this call (optional). If not provided, SDK uses the code passed in `Pisano.boot(...)`.
 - `completion: (Bool) -> Void` - Health check result (true: successful, false: failed)
@@ -320,6 +331,70 @@ Pisano.healthCheck(customer: ["externalId": "USER-789"],
     }
 }
 ```
+
+### `Pisano.subscribe()` — Events
+
+Subscribe to what happens while a survey is on screen. The `show()` completion still reports the result once; events add the steps on the way.
+
+```swift
+let subscription = Pisano.subscribe { event in
+    switch event.type {
+    case .opened:
+        print("Survey \(event.code) is on screen")
+    case .feedbackSubmitted:
+        print("Feedback submitted (chat: \(event.hasChat))")
+    case .redirectedToStore:
+        print("Survey asked for the store review flow")
+    case .closed:
+        print("Widget closed, reason: \(event.closeReason)")
+    @unknown default:
+        break
+    }
+}
+
+// Later, to stop receiving events:
+subscription.cancel()
+```
+
+```objc
+PisanoSubscription *subscription = [Pisano subscribe:^(PisanoEvent *event) {
+    if (event.type == PisanoEventTypeFeedbackSubmitted) { /* … */ }
+}];
+```
+
+| Event | When | Fields |
+|---|---|---|
+| `.opened` | The survey widget is on screen | `code` |
+| `.feedbackSubmitted` | The user submitted the survey, the moment the survey reports it (also in chat surveys) | `code`, `hasChat` |
+| `.redirectedToStore` | The survey asked for the store review flow | `code`, `handledBySDK` |
+| `.closed` | The widget left the screen, right before the `show()` completion | `code`, `closeReason` |
+
+`closeReason`: `.closeButton`, `.drag`, `.outside`, `.afterSubmit` (the thank-you screen closed itself), `.clear`, `.loadFailed`, `.hostDismissed` (your app dismissed the widget).
+
+- For one survey, events arrive in this order, all before the `show()` completion: `opened`, `feedbackSubmitted`, `redirectedToStore`, `closed`.
+- A survey that is not shown (display once, passive, …) sends no events, only the completion.
+- A widget that closes before it finished appearing (`clear()`, a page that cannot load) may send `closed` without `opened`.
+- Events are delivered on the main thread. A subscription stays active until `cancel()`, whether or not you keep the object.
+
+### `Pisano.automaticStoreReview` — App Store review prompt
+
+When a survey redirects to the store review flow, the SDK asks for the App Store review prompt by default. To run your own flow instead, turn it off and react to the `redirectedToStore` event:
+
+```swift
+import StoreKit
+
+Pisano.automaticStoreReview = false   // default: true
+
+Pisano.subscribe { event in
+    guard event.type == .redirectedToStore, !event.handledBySDK,
+          let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene else { return }
+    SKStoreReviewController.requestReview(in: scene)   // or your own flow
+}
+```
+
+- The `redirectedToStore` event is sent either way; `handledBySDK` is `true` when the SDK asked for the prompt.
+- The system does not tell whether the prompt was actually shown (Apple limits how often it appears), so `handledBySDK` means "asked", not "seen".
+- The setting does not change the `show()` result, applies to the next review request, is safe to set from any thread, and is not stored: it is `true` again on the next app launch.
 
 ### `Pisano.debugMode()`
 
@@ -396,6 +471,8 @@ PisanoTask *task = [Pisano healthCheckWithLanguage:nil customer:nil payload:nil 
 
 - `track`'s `completion` is not called when the event is sent or fails yet; it is only called on `cancel()`.
 - Some `show` failures before the widget is presented (for example no boot data or a network error) do not call `completion` yet. Use `cancel()` to end a call you no longer wait for.
+- If the widget is presented but the survey page cannot load (for example no connection), the widget closes and `completion` is called once with `.none`.
+- The survey shows its thank-you screen 2–3 seconds before it reports the submit. If the user closes it in that time, `show` ends with `.closed` and no `feedbackSubmitted` event is sent.
 
 ## 🔐 Logout and User / Tenant Switch
 
@@ -417,7 +494,7 @@ Pisano.boot(appId: newAppId, accessKey: newAccessKey, code: newCode,
 | Cookies set by the Pisano API (session, load balancer) | SDK's own in-memory cookie jar | ✅ |
 | API responses | Never stored: requests use an ephemeral session with caching disabled | — |
 | Survey web data: device id, "already answered" guard, incomplete surveys | iOS 17+: SDK's own web data store | ✅ everything in that store (cookies, local / session storage, IndexedDB, caches) |
-| | iOS 12–16: the app's default web data store | ✅ the survey's localStorage entries on the feedback origin |
+| | iOS 15–16: the app's default web data store | ✅ the survey's localStorage entries on the feedback origin |
 
 `clear()` also ends the session's work in progress:
 
@@ -429,7 +506,7 @@ Pisano.boot(appId: newAppId, accessKey: newAccessKey, code: newCode,
 
 ### Notes
 
-- **iOS 12–16:** the survey shares the app's default web data store. Only the survey's own localStorage entries are removed, never anything else in that store, because on on-premise installs it can hold the host app's data for the same domain.
+- **iOS 15–16:** the survey shares the app's default web data store. Only the survey's own localStorage entries are removed, never anything else in that store, because on on-premise installs it can hold the host app's data for the same domain.
 - **Reinstall:** iOS keeps Keychain items when an app is deleted, so boot credentials can survive a reinstall. Call `clear()` (or `boot` with the current user's values) on first launch if that matters for your app.
 - Call `clear()` from the main thread, like the other SDK calls.
 
@@ -523,6 +600,7 @@ struct ContentView: View {
                 customer:@{@"externalId": @"USER-123"}
                  payload:nil
                     code:nil
+           dismissOnDrag:NO
               completion:^(enum CloseStatus status) {
         NSLog(@"Feedback status: %@", @(status));
     }];
@@ -533,7 +611,7 @@ struct ContentView: View {
 
 ### Widget events
 
-Every outcome is reported through the `completion` of the call (`show`, `boot`, `healthCheck`, `track`). The SDK does not post `NotificationCenter` notifications; the `pisano-actions` notification of older versions was replaced by these callbacks.
+The result of each call comes through its `completion`; what happens while a survey is on screen comes through [`Pisano.subscribe()`](#pisanosubscribe--events). The SDK does not post `NotificationCenter` notifications; the `pisano-actions` notification of older versions no longer exists.
 
 ## ⚙️ Configuration
 
@@ -545,9 +623,14 @@ You can select the view mode:
 // Full-screen overlay (default)
 Pisano.show(mode: .default)
 
-// Bottom sheet (iOS 13+)
+// Bottom sheet
 Pisano.show(mode: .bottomSheet)
+
+// Bottom sheet with drag-to-dismiss
+Pisano.show(mode: .bottomSheet, dismissOnDrag: true) { _ in }
 ```
+
+**Bottom sheet behaviour:** The sheet opens at half height (`.medium`) and can be expanded to full height (`.large`). By default swipe-down dismiss is disabled. Pass `dismissOnDrag: true` to show a grabber and let the user dismiss the sheet by dragging down; `completion` is called once.
 
 ### Custom Title
 
@@ -568,31 +651,50 @@ Pisano.show(title: title)
 
 ### User Information
 
-You can provide a personalized experience by sending user information:
+You can provide a personalized experience by sending user information. Prefer the typed `PisanoCustomer`: a misspelled field is then a compile error instead of data that never arrives.
 
 ```swift
-let customer: [String: Any] = [
-    "name": "John Doe",
-    "email": "john@example.com",
-    "phoneNumber": "+1234567890",
-    "externalId": "CRM-12345",
-    "customAttrs": [
-        "language": "en",
-        "city": "New York",
-        "gender": "male",
-        "birthday": "1990-01-01"
-    ]
-]
+let customer = PisanoCustomer(
+    name: "John Doe",
+    email: "john@example.com",
+    phoneNumber: "+1234567890",
+    externalId: "CRM-12345",
+    customAttributes: ["language": "en", "city": "New York"]
+)
 
-Pisano.show(customer: customer)
+Pisano.show(mode: .bottomSheet, pisanoCustomer: customer) { status in }
+Pisano.track(event: "purchase", pisanoCustomer: customer) { status in }
 ```
 
-**Valid user keys:**
-- `name`: User name
-- `email`: Email address
-- `phoneNumber`: Phone number
-- `externalId`: External system ID
-- `customAttrs`: Custom attributes (Dictionary)
+```objc
+PisanoCustomer *customer = [[PisanoCustomer alloc] initWithName:@"John Doe" email:@"john@example.com"
+                                                    phoneNumber:@"+1234567890" externalId:@"CRM-12345"
+                                               customAttributes:@{@"city": @"New York"}];
+[Pisano showWithMode:ViewModeBottomSheet title:nil language:nil pisanoCustomer:customer
+             payload:nil code:nil dismissOnDrag:NO completion:^(enum CloseStatus status) {}];
+```
+
+The `customer:` dictionary variants keep working:
+
+```swift
+Pisano.show(customer: [
+    "name": "John Doe",
+    "phoneNumber": "+1234567890",
+    "customAttributes": ["city": "New York"]
+]) { status in }
+```
+
+**Customer fields** (same names as Android, React Native and Flutter):
+
+| Field | Also accepted in the dictionary |
+|---|---|
+| `name` | |
+| `email` | |
+| `phoneNumber` | `phone`, `phone_number` |
+| `externalId` | `external_id` |
+| `customAttributes` (Dictionary) | `customAttrs`, `custom_attrs`, `custom_attributes` |
+
+Case and `_` / `-` do not matter in dictionary keys. Other keys are not sent; the SDK then logs `Pisano: Customer keys not supported and not sent: …` to the Xcode console and Console.app, also in release builds and with debug mode off.
 
 ## ❓ Frequently Asked Questions
 
@@ -643,6 +745,6 @@ Pisano.debugMode(true)
 
 Make sure you added the `#import <PisanoFeedback/PisanoFeedback-Swift.h>` import in Objective-C projects.
 
-### Bottom sheet not working
+### Customer data does not show in the panel
 
-Bottom sheet feature requires iOS 13+. On versions below iOS 13, bottom sheet mode may not work properly, and it is recommended to use `.default` mode in this case.
+Check the Xcode console for `Pisano: Customer keys not supported and not sent: …`: a key the SDK does not know is not sent. Use `PisanoCustomer`, or the keys in [User Information](#user-information).
