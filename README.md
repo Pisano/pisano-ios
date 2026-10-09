@@ -44,7 +44,7 @@ Pisano Feedback iOS SDK is an SDK that allows you to easily integrate user feedb
 
 - iOS 15.0 or higher
 - Xcode 16.0 or higher
-- Swift 5.0 or higher
+- Swift 5.9 or higher. Apps in the **Swift 6 language mode** (complete strict concurrency) use the SDK without warnings: completions and event handlers are `@MainActor`, and `PisanoTask`, `PisanoSubscription`, `PisanoEvent` and the enums are `Sendable`.
 
 > iOS 12–14 are no longer supported. Apps that still need to run on iOS 12–14 can stay on SDK `1.1.0`.
 

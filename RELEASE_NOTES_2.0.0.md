@@ -48,6 +48,10 @@ Pisano.show(mode: .bottomSheet, pisanoCustomer: customer) { status in }
 
 When a survey redirects to the store review flow, the SDK asks for the App Store review prompt by default, as before. Set `Pisano.automaticStoreReview = false` to run your own flow on the `redirectedToStore` event (`handledBySDK` is `false`). The prompt is now asked in the widget's window scene.
 
+### Swift 6 ready
+
+The SDK is built in the Swift 6 language mode with complete strict concurrency checking, and an app in the Swift 6 language mode uses it without warnings. Completions and event handlers are `@MainActor`; `PisanoTask`, `PisanoSubscription`, `PisanoEvent` and the enums are `Sendable`, so they can cross actors and tasks. Nothing changes for Swift 5 or Objective-C apps.
+
 ## Breaking changes
 
 - **Minimum iOS 15.0**, Xcode 16. Apps that still support iOS 12–14 can stay on 1.1.0.
@@ -66,6 +70,7 @@ When a survey redirects to the store review flow, the SDK asks for the App Store
 - The close-on-outside-click recognizer no longer goes on your app's window and no longer turns on `isUserInteractionEnabled` on your view.
 - The widget is released when it closes in any way, including when your app dismisses it.
 - The old drag line image no longer shows above the bottom sheet; the system grabber shows only with `dismissOnDrag: true`.
+- The bottom sheet no longer stays blank while the survey loads: the survey's own loader shows right away, centered in the visible part of the sheet.
 
 ## Migrating from 1.1.0
 

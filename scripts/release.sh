@@ -3,9 +3,10 @@
 # Build PisanoFeedback.xcframework from feedback-ios and stage it in pisano-ios.
 # Usage: ./scripts/release.sh 1.1.0
 #
-# The xcframework must support iOS 12.0, which needs Xcode 16.x (newer Xcode
-# versions build for iOS 15.0 and later only). Point DEVELOPER_DIR at it:
-#   DEVELOPER_DIR=/path/to/Xcode_16.4.app/Contents/Developer ./scripts/release.sh 1.1.0
+# From 2.0.0 the xcframework supports iOS 15.0 and later (the podspec's
+# s.platform and Package.swift's platforms say the same), which Xcode 16 and
+# later build. To use a specific Xcode, point DEVELOPER_DIR at it:
+#   DEVELOPER_DIR=/path/to/Xcode.app/Contents/Developer ./scripts/release.sh 2.0.0
 #
 set -e
 
