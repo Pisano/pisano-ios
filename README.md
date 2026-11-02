@@ -253,7 +253,7 @@ If backend configuration prevents the survey from being shown due to `display_ra
 - `pisanoCustomer: PisanoCustomer?` - User information (optional), see [User Information](#user-information)
 - `payload: [String: String]?` - Extra data (optional)
 - `code: String?` - Override code for this call (optional). If not provided, SDK uses the code passed in `Pisano.boot(...)`.
-- `dismissOnDrag: Bool` - **Optional (default: `false`).** When `true` and `mode` is `.bottomSheet`, the sheet shows a grabber and the user can dismiss it by dragging down; `completion` is then called with `.closed` (or `.sendFeedback` after a submit). When `false`, swipe dismiss is disabled
+- `dismissOnDrag: Bool` - **Optional (default: `false`).** When `true` and `mode` is `.bottomSheet`, the user can dismiss the sheet by dragging down; `completion` is then called with `.closed` (or `.sendFeedback` after a submit). When `false`, swipe dismiss is disabled. Either way the sheet shows a grabber, because it can be dragged between half and full height
 - `completion: (CloseStatus) -> Void` - Called once with the result
   
   See [CloseStatus](#closestatus) for all possible return values.
@@ -629,7 +629,7 @@ Pisano.show(mode: .bottomSheet)
 Pisano.show(mode: .bottomSheet, dismissOnDrag: true) { _ in }
 ```
 
-**Bottom sheet behaviour:** The sheet opens at half height (`.medium`) and can be expanded to full height (`.large`). By default swipe-down dismiss is disabled. Pass `dismissOnDrag: true` to show a grabber and let the user dismiss the sheet by dragging down; `completion` is called once.
+**Bottom sheet behaviour:** The sheet opens at half height (`.medium`) and can be expanded to full height (`.large`). It always shows a grabber. By default swipe-down dismiss is disabled: dragging only resizes the sheet. Pass `dismissOnDrag: true` to let the user dismiss the sheet by dragging down; `completion` is called once.
 
 ### Custom Title
 
