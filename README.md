@@ -51,7 +51,12 @@ Pisano Feedback iOS SDK is an SDK that allows you to easily integrate user feedb
 ### Migrating from 1.x
 
 - Minimum iOS is 15.0.
-- `CloseStatus.initSucces` is now `.initSuccess` and `.surveyPassive` is now `.channelPassive`. The old Swift names still compile with a deprecation warning (a `switch` listing them without `default` does not); Objective-C names are unchanged.
+- `boot` reports a `Bool` (`true` = booted) instead of `.initSuccess` / `.initFailed`.
+- `track` reports a `Bool` (`true` = sent) instead of a `CloseStatus`, and now reports every call (before, only a cancel).
+- `CloseStatus` holds only `show` results. Removed: `.opened` (never reported; use the `opened` event), `.initSucces` / `.initFailed` (`boot` reports a `Bool`), `.healthCheckSuccessful` / `.healthCheckFailed` (internal; `healthCheck` already reported a `Bool`) and `.outside` (an outside tap now ends `show` with `.closed`; the `closed` event's `closeReason` is `.outside`). The raw values of the remaining values are unchanged.
+- `CloseStatus.surveyPassive` is now `.channelPassive`. The old Swift name still compiles with a deprecation warning (a `switch` listing it without `default` does not); the Objective-C name is unchanged.
+- One survey at a time: `show()` while a survey is open or about to open ends with `.none` and shows nothing.
+- `Pisano.requestTimeout` defaults to 30 seconds (was 60).
 - A submitted chat survey reports `.sendFeedback` (was `.closed`). Closing the thank-you screen early reports `.sendFeedback` once (was `.closed`, then `.sendFeedback`).
 - Your app dismissing the widget now ends `show` with `.closed`; a survey page that cannot load ends it with `.none`.
 - Customer: the `customer:` dictionary parameter of `show`, `healthCheck` and `track` is replaced by `pisanoCustomer:`, which takes a typed `PisanoCustomer`. A misspelled key used to be dropped without any sign; a misspelled field now does not compile. `track` now sends the customer in the same format as `show`.
@@ -146,8 +151,8 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
                   apiUrl:@"https://api.pisano.co"
              feedbackUrl:@"https://web.pisano.co/web_feedback"
                 eventUrl:@"https://event.pisano.co"
-              completion:^(enum CloseStatus status) {
-        NSLog(@"Boot status: %@", @(status));
+              completion:^(BOOL succeeded) {
+        NSLog(@"Booted: %d", succeeded);
     }];
     
     return YES;
@@ -187,13 +192,12 @@ Pisano.show(mode: .bottomSheet,
 
 ### CloseStatus
 
-The `CloseStatus` enum is the result of a call, reported once. For `show` it says how the call ended; what happened on the way (opened, submitted, how the widget closed) comes through [`Pisano.subscribe()`](#pisanosubscribe--events).
+The `CloseStatus` enum is the result of `show`, reported once. For `show` it says how the call ended; what happened on the way (opened, submitted, how the widget closed) comes through [`Pisano.subscribe()`](#pisanosubscribe--events).
 
 The survey was shown:
-- `.sendFeedback`: The survey was submitted, however the widget closed afterwards. After a submit the thank-you screen closes itself after 3 seconds; closing it earlier (close button, drag, outside tap) or closing a chat survey later is still `.sendFeedback`
-- `.closed`: Closed without submitting: close button, drag (`dismissOnDrag: true`), or your app dismissing the widget
-- `.outside`: Closed without submitting by a tap outside the bottom sheet
-- `.none`: No result: `clear()` ended the session, the survey page could not be loaded, or the call was cancelled
+- `.sendFeedback`: The survey was submitted, however the widget closed afterwards. After a submit the survey's thank-you screen shows and the widget closes when the survey ends it (a chat survey stays open); closing it earlier (close button, drag, outside tap) or closing a chat survey later is still `.sendFeedback`
+- `.closed`: Closed without submitting: close button, drag (`dismissOnDrag: true`), a tap outside the bottom sheet, or your app dismissing the widget. The `closed` event's `closeReason` tells which
+- `.none`: No result: `clear()` ended the session, the survey page could not be loaded, the call was cancelled, or another survey was already open
 
 The survey was not shown:
 - `.displayOnce`: Already shown before
@@ -202,7 +206,7 @@ The survey was not shown:
 - `.channelPassive`: The survey is passive
 - `.displayRateLimited`: Not shown due to `display_rate`
 
-`boot` results: `.initSuccess`, `.initFailed`. `.opened` is never reported (use the `opened` event); `.healthCheckSuccessful` / `.healthCheckFailed` are internal (`healthCheck` reports a `Bool`).
+`boot`, `healthCheck` and `track` report a `Bool`, not a `CloseStatus`.
 
 ### `Pisano.boot()`
 
@@ -217,9 +221,7 @@ Initializes the SDK. This method must be called either at application startup (u
 - `apiUrl: String` - API endpoint URL (required)
 - `feedbackUrl: String` - Feedback widget URL (required)
 - `eventUrl: String?` - Event tracking URL (optional)
-- `completion: ((CloseStatus) -> Void)?` - Initialization result callback (optional)
-  
-  Returns `.initSuccess` or `.initFailed`. See [CloseStatus](#closestatus) for all possible values.
+- `completion: ((Bool) -> Void)?` - Initialization result callback (optional): `true` when the SDK booted, `false` when boot failed (including no connection) or was cancelled
 
 **Example:**
 
@@ -229,15 +231,8 @@ Pisano.boot(appId: "app-123",
            code: "code-789",
            apiUrl: "https://api.pisano.co",
            feedbackUrl: "https://web.pisano.co/web_feedback",
-           eventUrl: "https://event.pisano.co") { status in
-    switch status {
-    case .initSuccess:
-        print("SDK initialized successfully")
-    case .initFailed:
-        print("SDK initialization failed")
-    default:
-        break
-    }
+           eventUrl: "https://event.pisano.co") { succeeded in
+    print(succeeded ? "SDK initialized successfully" : "SDK initialization failed")
 }
 ```
 
@@ -301,7 +296,7 @@ Tracks an event.
 - `payload: [String: String]?` - Event payload data (optional)
 - `pisanoCustomer: PisanoCustomer?` - User information (optional)
 - `language: String?` - Language code (optional)
-- `completion: (CloseStatus) -> Void` - Completion callback
+- `completion: (Bool) -> Void` - `true` when the event was sent; `false` when it was not (no boot data, no `eventUrl`, no connection, a failed request, or the call was cancelled)
 
 **Example:**
 
@@ -309,8 +304,8 @@ Tracks an event.
 Pisano.track(event: "purchase_completed",
             payload: ["order_id": "12345", "amount": "99.99"],
             pisanoCustomer: PisanoCustomer(email: "john@example.com"),
-            language: "en") { status in
-    print("Event tracked: \(status.description)")
+            language: "en") { sent in
+    print("Event sent: \(sent)")
 }
 ```
 
@@ -434,7 +429,7 @@ Pisano.clear()
 
 ### Timeout
 
-`Pisano.requestTimeout` sets the network timeout, in seconds, for every SDK request. A request fails when the server sends no data for this long. The default is `60`; values `<= 0` reset it to the default. It applies to requests started after it is set.
+`Pisano.requestTimeout` sets the network timeout, in seconds, for every SDK request. A request fails when the server sends no data for this long. The default is `30` (as on Android); values `<= 0` reset it to the default. It applies to requests started after it is set.
 
 ```swift
 Pisano.requestTimeout = 15
@@ -452,10 +447,10 @@ If the call has not finished yet, its network request is cancelled and `completi
 
 | Call | Status on cancel |
 |---|---|
-| `boot` | `.initFailed` |
+| `boot` | `false` |
 | `healthCheck` | `false` |
 | `show` | `.none` (widget is not shown) |
-| `track` | `.none` |
+| `track` | `false` |
 
 If the call has already finished, or `show` has already presented the widget, `cancel()` does nothing. `isCancelled` tells whether the call was cancelled.
 
@@ -475,10 +470,7 @@ PisanoTask *task = [Pisano healthCheckWithLanguage:nil pisanoCustomer:nil payloa
 
 ### Known limitations
 
-- `track`'s `completion` is not called when the event is sent or fails yet; it is only called on `cancel()`.
-- When the survey is not shown (no boot data, no connection, a failed request, nothing to present on), `show` ends with `.none`. `clear()` ends a `show` at any stage with `.none`, including one about to be presented, which is then not shown.
-- If the widget is presented but the survey page cannot load (for example no connection), the widget closes and `completion` is called once with `.none`.
-- The survey shows its thank-you screen 2–3 seconds before it reports the submit. If the user closes it in that time, `show` ends with `.closed` and no `feedbackSubmitted` event is sent.
+- `show` has no overall timeout yet: a request that never answers ends only by `Pisano.requestTimeout`, `cancel()` or `clear()`.
 
 ## 🔐 Logout and User / Tenant Switch
 
