@@ -42,6 +42,27 @@ xcodebuild -create-xcframework \
 /usr/libexec/PlistBuddy -c "Print :MinimumOSVersion" \
   "./xcframework/${FRAMEWORK}.xcframework/ios-arm64/${FRAMEWORK}.framework/Info.plist"
 
+# Names apps depend on: `import PisanoFeedback`, `pod 'Pisano'`, SPM product
+# PisanoFeedback. The Xcode target is still called "Feedback", so stop here if
+# the build no longer produces exactly these names.
+fail() { echo "error: $*" >&2; exit 1; }
+for SLICE in ios-arm64 ios-arm64_x86_64-simulator; do
+  FW="./xcframework/${FRAMEWORK}.xcframework/${SLICE}/${FRAMEWORK}.framework"
+  [ -d "$FW/Modules/${FRAMEWORK}.swiftmodule" ] || fail "$SLICE: no ${FRAMEWORK}.swiftmodule"
+  ls "$FW/Modules/${FRAMEWORK}.swiftmodule/"*.swiftinterface >/dev/null 2>&1 \
+    || fail "$SLICE: no .swiftinterface (BUILD_LIBRARY_FOR_DISTRIBUTION)"
+  grep -q "framework module ${FRAMEWORK} " "$FW/Modules/module.modulemap" \
+    || fail "$SLICE: module map does not define ${FRAMEWORK}"
+  [ "$(/usr/libexec/PlistBuddy -c "Print :MinimumOSVersion" "$FW/Info.plist")" = "15.0" ] \
+    || fail "$SLICE: MinimumOSVersion is not 15.0"
+done
+grep -q 's.name                = "Pisano"' "$PISANO_IOS/Pisano.podspec" || fail "podspec name is not Pisano"
+grep -q "s.vendored_frameworks = '${FRAMEWORK}.xcframework'" "$PISANO_IOS/Pisano.podspec" \
+  || fail "podspec does not vendor ${FRAMEWORK}.xcframework"
+[ "$(grep -c "\"${FRAMEWORK}\"" "$PISANO_IOS/Package.swift")" -ge 3 ] \
+  || fail "Package.swift package / product / target are not all ${FRAMEWORK}"
+echo "Names OK: module ${FRAMEWORK}, pod Pisano, SPM ${FRAMEWORK}"
+
 echo "=== Copy to pisano-ios ==="
 cd "$PISANO_IOS"
 git checkout -b "release/${VERSION}"
