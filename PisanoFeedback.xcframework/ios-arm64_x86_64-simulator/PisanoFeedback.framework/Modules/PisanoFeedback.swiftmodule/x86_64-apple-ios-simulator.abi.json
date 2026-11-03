@@ -16,52 +16,6 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "PisanoFeedback",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "SystemConfiguration",
-        "printedName": "SystemConfiguration",
-        "declKind": "Import",
-        "moduleName": "PisanoFeedback"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "ReachabilityService",
-        "printedName": "ReachabilityService",
-        "declKind": "Class",
-        "usr": "s:14PisanoFeedback19ReachabilityServiceC",
-        "mangledName": "$s14PisanoFeedback19ReachabilityServiceC",
-        "moduleName": "PisanoFeedback",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "hasMissingDesignatedInitializers": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -311,6 +265,13 @@
       },
       {
         "kind": "Import",
+        "name": "os.log",
+        "printedName": "os.log",
+        "declKind": "Import",
+        "moduleName": "PisanoFeedback"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -444,6 +405,105 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "automaticStoreReview",
+            "printedName": "automaticStoreReview",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PisanoFeedback@objc(cs)Pisano(cpy)automaticStoreReview",
+            "mangledName": "$s14PisanoFeedback0A0C20automaticStoreReviewSbvpZ",
+            "moduleName": "PisanoFeedback",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PisanoFeedback@objc(cs)Pisano(cm)automaticStoreReview",
+                "mangledName": "$s14PisanoFeedback0A0C20automaticStoreReviewSbvgZ",
+                "moduleName": "PisanoFeedback",
+                "static": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PisanoFeedback@objc(cs)Pisano(cm)setAutomaticStoreReview:",
+                "mangledName": "$s14PisanoFeedback0A0C20automaticStoreReviewSbvsZ",
+                "moduleName": "PisanoFeedback",
+                "static": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14PisanoFeedback0A0C20automaticStoreReviewSbvMZ",
+                "mangledName": "$s14PisanoFeedback0A0C20automaticStoreReviewSbvMZ",
+                "moduleName": "PisanoFeedback",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Function",
             "name": "boot",
             "printedName": "boot(appId:accessKey:code:apiUrl:feedbackUrl:eventUrl:completion:)",
@@ -502,12 +562,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((PisanoFeedback.CloseStatus) -> ())?",
+                "printedName": "((Swift.Bool) -> ())?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(PisanoFeedback.CloseStatus) -> ()",
+                    "printedName": "(Swift.Bool) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -516,9 +576,9 @@
                       },
                       {
                         "kind": "TypeNominal",
-                        "name": "CloseStatus",
-                        "printedName": "PisanoFeedback.CloseStatus",
-                        "usr": "c:@M@PisanoFeedback@E@CloseStatus"
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
                       }
                     ]
                   }
@@ -529,7 +589,7 @@
             ],
             "declKind": "Func",
             "usr": "c:@M@PisanoFeedback@objc(cs)Pisano(cm)bootWithAppId:accessKey:code:apiUrl:feedbackUrl:eventUrl:completion:",
-            "mangledName": "$s14PisanoFeedback0A0C4boot5appId9accessKey4code6apiUrl08feedbackJ005eventJ010completionAA0A4TaskCSS_S5SSgyAA11CloseStatusOScMYccSgtFZ",
+            "mangledName": "$s14PisanoFeedback0A0C4boot5appId9accessKey4code6apiUrl08feedbackJ005eventJ010completionAA0A4TaskCSS_S5SSgySbYbScMYccSgtFZ",
             "moduleName": "PisanoFeedback",
             "static": true,
             "objc_name": "bootWithAppId:accessKey:code:apiUrl:feedbackUrl:eventUrl:completion:",
@@ -544,7 +604,7 @@
           {
             "kind": "Function",
             "name": "healthCheck",
-            "printedName": "healthCheck(language:customer:payload:code:completion:)",
+            "printedName": "healthCheck(language:pisanoCustomer:payload:code:completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -570,26 +630,13 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "[Swift.String : Any]?",
+                "printedName": "PisanoFeedback.PisanoCustomer?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Dictionary",
-                    "printedName": "[Swift.String : Any]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ProtocolComposition",
-                        "printedName": "Any"
-                      }
-                    ],
-                    "usr": "s:SD"
+                    "name": "PisanoCustomer",
+                    "printedName": "PisanoFeedback.PisanoCustomer",
+                    "usr": "c:@M@PisanoFeedback@objc(cs)PisanoCustomer"
                   }
                 ],
                 "hasDefaultArg": true,
@@ -659,11 +706,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@PisanoFeedback@objc(cs)Pisano(cm)healthCheckWithLanguage:customer:payload:code:completion:",
-            "mangledName": "$s14PisanoFeedback0A0C11healthCheck8language8customer7payload4code10completionAA0A4TaskCSSSg_SDySSypGSgSDyS2SGSgALySbScMYcctFZ",
+            "usr": "c:@M@PisanoFeedback@objc(cs)Pisano(cm)healthCheckWithLanguage:pisanoCustomer:payload:code:completion:",
+            "mangledName": "$s14PisanoFeedback0A0C11healthCheck8language14pisanoCustomer7payload4code10completionAA0A4TaskCSSSg_AA0aG0CSgSDyS2SGSgALySbYbScMYcctFZ",
             "moduleName": "PisanoFeedback",
             "static": true,
-            "objc_name": "healthCheckWithLanguage:customer:payload:code:completion:",
+            "objc_name": "healthCheckWithLanguage:pisanoCustomer:payload:code:completion:",
             "declAttributes": [
               "AccessControl",
               "ObjC",
@@ -675,7 +722,7 @@
           {
             "kind": "Function",
             "name": "show",
-            "printedName": "show(mode:title:language:customer:payload:code:dismissOnDrag:completion:)",
+            "printedName": "show(mode:title:language:pisanoCustomer:payload:code:dismissOnDrag:completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -723,26 +770,13 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "[Swift.String : Any]?",
+                "printedName": "PisanoFeedback.PisanoCustomer?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Dictionary",
-                    "printedName": "[Swift.String : Any]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ProtocolComposition",
-                        "printedName": "Any"
-                      }
-                    ],
-                    "usr": "s:SD"
+                    "name": "PisanoCustomer",
+                    "printedName": "PisanoFeedback.PisanoCustomer",
+                    "usr": "c:@M@PisanoFeedback@objc(cs)PisanoCustomer"
                   }
                 ],
                 "hasDefaultArg": true,
@@ -819,11 +853,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@PisanoFeedback@objc(cs)Pisano(cm)showWithMode:title:language:customer:payload:code:dismissOnDrag:completion:",
-            "mangledName": "$s14PisanoFeedback0A0C4show4mode5title8language8customer7payload4code13dismissOnDrag10completionAA0A4TaskCAA8ViewModeO_So18NSAttributedStringCSgSSSgSDySSypGSgSDyS2SGSgATSbyAA11CloseStatusOScMYcctFZ",
+            "usr": "c:@M@PisanoFeedback@objc(cs)Pisano(cm)showWithMode:title:language:pisanoCustomer:payload:code:dismissOnDrag:completion:",
+            "mangledName": "$s14PisanoFeedback0A0C4show4mode5title8language14pisanoCustomer7payload4code13dismissOnDrag10completionAA0A4TaskCAA8ViewModeO_So18NSAttributedStringCSgSSSgAA0aH0CSgSDyS2SGSgATSbyAA11CloseStatusOYbScMYcctFZ",
             "moduleName": "PisanoFeedback",
             "static": true,
-            "objc_name": "showWithMode:title:language:customer:payload:code:dismissOnDrag:completion:",
+            "objc_name": "showWithMode:title:language:pisanoCustomer:payload:code:dismissOnDrag:completion:",
             "declAttributes": [
               "AccessControl",
               "ObjC",
@@ -835,7 +869,7 @@
           {
             "kind": "Function",
             "name": "track",
-            "printedName": "track(event:payload:customer:language:completion:)",
+            "printedName": "track(event:payload:pisanoCustomer:language:completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -881,26 +915,13 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "[Swift.String : Any]?",
+                "printedName": "PisanoFeedback.PisanoCustomer?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Dictionary",
-                    "printedName": "[Swift.String : Any]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ProtocolComposition",
-                        "printedName": "Any"
-                      }
-                    ],
-                    "usr": "s:SD"
+                    "name": "PisanoCustomer",
+                    "printedName": "PisanoFeedback.PisanoCustomer",
+                    "usr": "c:@M@PisanoFeedback@objc(cs)PisanoCustomer"
                   }
                 ],
                 "hasDefaultArg": true,
@@ -924,7 +945,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(PisanoFeedback.CloseStatus) -> ()",
+                "printedName": "(Swift.Bool) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -933,19 +954,19 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "CloseStatus",
-                    "printedName": "PisanoFeedback.CloseStatus",
-                    "usr": "c:@M@PisanoFeedback@E@CloseStatus"
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
                   }
                 ]
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@PisanoFeedback@objc(cs)Pisano(cm)trackWithEvent:payload:customer:language:completion:",
-            "mangledName": "$s14PisanoFeedback0A0C5track5event7payload8customer8language10completionAA0A4TaskCSS_SDyS2SGSgSDySSypGSgSSSgyAA11CloseStatusOScMYcctFZ",
+            "usr": "c:@M@PisanoFeedback@objc(cs)Pisano(cm)trackWithEvent:payload:pisanoCustomer:language:completion:",
+            "mangledName": "$s14PisanoFeedback0A0C5track5event7payload14pisanoCustomer8language10completionAA0A4TaskCSS_SDyS2SGSgAA0aG0CSgSSSgySbYbScMYcctFZ",
             "moduleName": "PisanoFeedback",
             "static": true,
-            "objc_name": "trackWithEvent:payload:customer:language:completion:",
+            "objc_name": "trackWithEvent:payload:pisanoCustomer:language:completion:",
             "declAttributes": [
               "AccessControl",
               "ObjC",
@@ -1031,6 +1052,51 @@
               "Override"
             ],
             "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "subscribe",
+            "printedName": "subscribe(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PisanoSubscription",
+                "printedName": "PisanoFeedback.PisanoSubscription",
+                "usr": "c:@M@PisanoFeedback@objc(cs)PisanoSubscription"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PisanoFeedback.PisanoEvent) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PisanoEvent",
+                    "printedName": "PisanoFeedback.PisanoEvent",
+                    "usr": "c:@M@PisanoFeedback@objc(cs)PisanoEvent"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@PisanoFeedback@objc(cs)Pisano(cm)subscribe:",
+            "mangledName": "$s14PisanoFeedback0A0C9subscribeyAA0A12SubscriptionCyAA0A5EventCYbScMYccFZ",
+            "moduleName": "PisanoFeedback",
+            "static": true,
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "ObjC",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -1237,6 +1303,2273 @@
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
           },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PisanoFeedback",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PisanoEventType",
+        "printedName": "PisanoEventType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "opened",
+            "printedName": "opened",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PisanoFeedback.PisanoEventType.Type) -> PisanoFeedback.PisanoEventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PisanoEventType",
+                    "printedName": "PisanoFeedback.PisanoEventType",
+                    "usr": "c:@M@PisanoFeedback@E@PisanoEventType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PisanoFeedback.PisanoEventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PisanoEventType",
+                        "printedName": "PisanoFeedback.PisanoEventType",
+                        "usr": "c:@M@PisanoFeedback@E@PisanoEventType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@PisanoFeedback@E@PisanoEventType@PisanoEventTypeOpened",
+            "mangledName": "$s14PisanoFeedback0A9EventTypeO6openedyA2CmF",
+            "moduleName": "PisanoFeedback",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "feedbackSubmitted",
+            "printedName": "feedbackSubmitted",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PisanoFeedback.PisanoEventType.Type) -> PisanoFeedback.PisanoEventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PisanoEventType",
+                    "printedName": "PisanoFeedback.PisanoEventType",
+                    "usr": "c:@M@PisanoFeedback@E@PisanoEventType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PisanoFeedback.PisanoEventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PisanoEventType",
+                        "printedName": "PisanoFeedback.PisanoEventType",
+                        "usr": "c:@M@PisanoFeedback@E@PisanoEventType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@PisanoFeedback@E@PisanoEventType@PisanoEventTypeFeedbackSubmitted",
+            "mangledName": "$s14PisanoFeedback0A9EventTypeO17feedbackSubmittedyA2CmF",
+            "moduleName": "PisanoFeedback",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "redirectedToStore",
+            "printedName": "redirectedToStore",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PisanoFeedback.PisanoEventType.Type) -> PisanoFeedback.PisanoEventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PisanoEventType",
+                    "printedName": "PisanoFeedback.PisanoEventType",
+                    "usr": "c:@M@PisanoFeedback@E@PisanoEventType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PisanoFeedback.PisanoEventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PisanoEventType",
+                        "printedName": "PisanoFeedback.PisanoEventType",
+                        "usr": "c:@M@PisanoFeedback@E@PisanoEventType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@PisanoFeedback@E@PisanoEventType@PisanoEventTypeRedirectedToStore",
+            "mangledName": "$s14PisanoFeedback0A9EventTypeO17redirectedToStoreyA2CmF",
+            "moduleName": "PisanoFeedback",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "closed",
+            "printedName": "closed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PisanoFeedback.PisanoEventType.Type) -> PisanoFeedback.PisanoEventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PisanoEventType",
+                    "printedName": "PisanoFeedback.PisanoEventType",
+                    "usr": "c:@M@PisanoFeedback@E@PisanoEventType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PisanoFeedback.PisanoEventType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PisanoEventType",
+                        "printedName": "PisanoFeedback.PisanoEventType",
+                        "usr": "c:@M@PisanoFeedback@E@PisanoEventType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@PisanoFeedback@E@PisanoEventType@PisanoEventTypeClosed",
+            "mangledName": "$s14PisanoFeedback0A9EventTypeO6closedyA2CmF",
+            "moduleName": "PisanoFeedback",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 3
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "PisanoFeedback.PisanoEventType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PisanoEventType",
+                    "printedName": "PisanoFeedback.PisanoEventType",
+                    "usr": "c:@M@PisanoFeedback@E@PisanoEventType"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14PisanoFeedback0A9EventTypeO8rawValueACSgSi_tcfc",
+            "mangledName": "$s14PisanoFeedback0A9EventTypeO8rawValueACSgSi_tcfc",
+            "moduleName": "PisanoFeedback",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14PisanoFeedback0A9EventTypeO8rawValueSivp",
+            "mangledName": "$s14PisanoFeedback0A9EventTypeO8rawValueSivp",
+            "moduleName": "PisanoFeedback",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14PisanoFeedback0A9EventTypeO8rawValueSivg",
+                "mangledName": "$s14PisanoFeedback0A9EventTypeO8rawValueSivg",
+                "moduleName": "PisanoFeedback",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@PisanoFeedback@E@PisanoEventType",
+        "mangledName": "$s14PisanoFeedback0A9EventTypeO",
+        "moduleName": "PisanoFeedback",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PisanoCloseReason",
+        "printedName": "PisanoCloseReason",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "none",
+            "printedName": "none",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PisanoFeedback.PisanoCloseReason.Type) -> PisanoFeedback.PisanoCloseReason",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PisanoCloseReason",
+                    "printedName": "PisanoFeedback.PisanoCloseReason",
+                    "usr": "c:@M@PisanoFeedback@E@PisanoCloseReason"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PisanoFeedback.PisanoCloseReason.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PisanoCloseReason",
+                        "printedName": "PisanoFeedback.PisanoCloseReason",
+                        "usr": "c:@M@PisanoFeedback@E@PisanoCloseReason"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@PisanoFeedback@E@PisanoCloseReason@PisanoCloseReasonNone",
+            "mangledName": "$s14PisanoFeedback0A11CloseReasonO4noneyA2CmF",
+            "moduleName": "PisanoFeedback",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "closeButton",
+            "printedName": "closeButton",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PisanoFeedback.PisanoCloseReason.Type) -> PisanoFeedback.PisanoCloseReason",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PisanoCloseReason",
+                    "printedName": "PisanoFeedback.PisanoCloseReason",
+                    "usr": "c:@M@PisanoFeedback@E@PisanoCloseReason"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PisanoFeedback.PisanoCloseReason.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PisanoCloseReason",
+                        "printedName": "PisanoFeedback.PisanoCloseReason",
+                        "usr": "c:@M@PisanoFeedback@E@PisanoCloseReason"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@PisanoFeedback@E@PisanoCloseReason@PisanoCloseReasonCloseButton",
+            "mangledName": "$s14PisanoFeedback0A11CloseReasonO11closeButtonyA2CmF",
+            "moduleName": "PisanoFeedback",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "drag",
+            "printedName": "drag",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PisanoFeedback.PisanoCloseReason.Type) -> PisanoFeedback.PisanoCloseReason",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PisanoCloseReason",
+                    "printedName": "PisanoFeedback.PisanoCloseReason",
+                    "usr": "c:@M@PisanoFeedback@E@PisanoCloseReason"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PisanoFeedback.PisanoCloseReason.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PisanoCloseReason",
+                        "printedName": "PisanoFeedback.PisanoCloseReason",
+                        "usr": "c:@M@PisanoFeedback@E@PisanoCloseReason"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@PisanoFeedback@E@PisanoCloseReason@PisanoCloseReasonDrag",
+            "mangledName": "$s14PisanoFeedback0A11CloseReasonO4dragyA2CmF",
+            "moduleName": "PisanoFeedback",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "outside",
+            "printedName": "outside",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PisanoFeedback.PisanoCloseReason.Type) -> PisanoFeedback.PisanoCloseReason",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PisanoCloseReason",
+                    "printedName": "PisanoFeedback.PisanoCloseReason",
+                    "usr": "c:@M@PisanoFeedback@E@PisanoCloseReason"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PisanoFeedback.PisanoCloseReason.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PisanoCloseReason",
+                        "printedName": "PisanoFeedback.PisanoCloseReason",
+                        "usr": "c:@M@PisanoFeedback@E@PisanoCloseReason"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@PisanoFeedback@E@PisanoCloseReason@PisanoCloseReasonOutside",
+            "mangledName": "$s14PisanoFeedback0A11CloseReasonO7outsideyA2CmF",
+            "moduleName": "PisanoFeedback",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 3
+          },
+          {
+            "kind": "Var",
+            "name": "afterSubmit",
+            "printedName": "afterSubmit",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PisanoFeedback.PisanoCloseReason.Type) -> PisanoFeedback.PisanoCloseReason",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PisanoCloseReason",
+                    "printedName": "PisanoFeedback.PisanoCloseReason",
+                    "usr": "c:@M@PisanoFeedback@E@PisanoCloseReason"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PisanoFeedback.PisanoCloseReason.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PisanoCloseReason",
+                        "printedName": "PisanoFeedback.PisanoCloseReason",
+                        "usr": "c:@M@PisanoFeedback@E@PisanoCloseReason"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@PisanoFeedback@E@PisanoCloseReason@PisanoCloseReasonAfterSubmit",
+            "mangledName": "$s14PisanoFeedback0A11CloseReasonO11afterSubmityA2CmF",
+            "moduleName": "PisanoFeedback",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 4
+          },
+          {
+            "kind": "Var",
+            "name": "clear",
+            "printedName": "clear",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PisanoFeedback.PisanoCloseReason.Type) -> PisanoFeedback.PisanoCloseReason",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PisanoCloseReason",
+                    "printedName": "PisanoFeedback.PisanoCloseReason",
+                    "usr": "c:@M@PisanoFeedback@E@PisanoCloseReason"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PisanoFeedback.PisanoCloseReason.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PisanoCloseReason",
+                        "printedName": "PisanoFeedback.PisanoCloseReason",
+                        "usr": "c:@M@PisanoFeedback@E@PisanoCloseReason"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@PisanoFeedback@E@PisanoCloseReason@PisanoCloseReasonClear",
+            "mangledName": "$s14PisanoFeedback0A11CloseReasonO5clearyA2CmF",
+            "moduleName": "PisanoFeedback",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 5
+          },
+          {
+            "kind": "Var",
+            "name": "loadFailed",
+            "printedName": "loadFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PisanoFeedback.PisanoCloseReason.Type) -> PisanoFeedback.PisanoCloseReason",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PisanoCloseReason",
+                    "printedName": "PisanoFeedback.PisanoCloseReason",
+                    "usr": "c:@M@PisanoFeedback@E@PisanoCloseReason"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PisanoFeedback.PisanoCloseReason.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PisanoCloseReason",
+                        "printedName": "PisanoFeedback.PisanoCloseReason",
+                        "usr": "c:@M@PisanoFeedback@E@PisanoCloseReason"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@PisanoFeedback@E@PisanoCloseReason@PisanoCloseReasonLoadFailed",
+            "mangledName": "$s14PisanoFeedback0A11CloseReasonO10loadFailedyA2CmF",
+            "moduleName": "PisanoFeedback",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 6
+          },
+          {
+            "kind": "Var",
+            "name": "hostDismissed",
+            "printedName": "hostDismissed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PisanoFeedback.PisanoCloseReason.Type) -> PisanoFeedback.PisanoCloseReason",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PisanoCloseReason",
+                    "printedName": "PisanoFeedback.PisanoCloseReason",
+                    "usr": "c:@M@PisanoFeedback@E@PisanoCloseReason"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PisanoFeedback.PisanoCloseReason.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PisanoCloseReason",
+                        "printedName": "PisanoFeedback.PisanoCloseReason",
+                        "usr": "c:@M@PisanoFeedback@E@PisanoCloseReason"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@PisanoFeedback@E@PisanoCloseReason@PisanoCloseReasonHostDismissed",
+            "mangledName": "$s14PisanoFeedback0A11CloseReasonO13hostDismissedyA2CmF",
+            "moduleName": "PisanoFeedback",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 7
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "PisanoFeedback.PisanoCloseReason?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PisanoCloseReason",
+                    "printedName": "PisanoFeedback.PisanoCloseReason",
+                    "usr": "c:@M@PisanoFeedback@E@PisanoCloseReason"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14PisanoFeedback0A11CloseReasonO8rawValueACSgSi_tcfc",
+            "mangledName": "$s14PisanoFeedback0A11CloseReasonO8rawValueACSgSi_tcfc",
+            "moduleName": "PisanoFeedback",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14PisanoFeedback0A11CloseReasonO8rawValueSivp",
+            "mangledName": "$s14PisanoFeedback0A11CloseReasonO8rawValueSivp",
+            "moduleName": "PisanoFeedback",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14PisanoFeedback0A11CloseReasonO8rawValueSivg",
+                "mangledName": "$s14PisanoFeedback0A11CloseReasonO8rawValueSivg",
+                "moduleName": "PisanoFeedback",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@PisanoFeedback@E@PisanoCloseReason",
+        "mangledName": "$s14PisanoFeedback0A11CloseReasonO",
+        "moduleName": "PisanoFeedback",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PisanoEvent",
+        "printedName": "PisanoEvent",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "type",
+            "printedName": "type",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PisanoEventType",
+                "printedName": "PisanoFeedback.PisanoEventType",
+                "usr": "c:@M@PisanoFeedback@E@PisanoEventType"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PisanoFeedback@objc(cs)PisanoEvent(py)type",
+            "mangledName": "$s14PisanoFeedback0A5EventC4typeAA0aC4TypeOvp",
+            "moduleName": "PisanoFeedback",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PisanoEventType",
+                    "printedName": "PisanoFeedback.PisanoEventType",
+                    "usr": "c:@M@PisanoFeedback@E@PisanoEventType"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PisanoFeedback@objc(cs)PisanoEvent(im)type",
+                "mangledName": "$s14PisanoFeedback0A5EventC4typeAA0aC4TypeOvg",
+                "moduleName": "PisanoFeedback",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "code",
+            "printedName": "code",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PisanoFeedback@objc(cs)PisanoEvent(py)code",
+            "mangledName": "$s14PisanoFeedback0A5EventC4codeSSvp",
+            "moduleName": "PisanoFeedback",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PisanoFeedback@objc(cs)PisanoEvent(im)code",
+                "mangledName": "$s14PisanoFeedback0A5EventC4codeSSvg",
+                "moduleName": "PisanoFeedback",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "hasChat",
+            "printedName": "hasChat",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PisanoFeedback@objc(cs)PisanoEvent(py)hasChat",
+            "mangledName": "$s14PisanoFeedback0A5EventC7hasChatSbvp",
+            "moduleName": "PisanoFeedback",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PisanoFeedback@objc(cs)PisanoEvent(im)hasChat",
+                "mangledName": "$s14PisanoFeedback0A5EventC7hasChatSbvg",
+                "moduleName": "PisanoFeedback",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "closeReason",
+            "printedName": "closeReason",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PisanoCloseReason",
+                "printedName": "PisanoFeedback.PisanoCloseReason",
+                "usr": "c:@M@PisanoFeedback@E@PisanoCloseReason"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PisanoFeedback@objc(cs)PisanoEvent(py)closeReason",
+            "mangledName": "$s14PisanoFeedback0A5EventC11closeReasonAA0a5CloseE0Ovp",
+            "moduleName": "PisanoFeedback",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PisanoCloseReason",
+                    "printedName": "PisanoFeedback.PisanoCloseReason",
+                    "usr": "c:@M@PisanoFeedback@E@PisanoCloseReason"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PisanoFeedback@objc(cs)PisanoEvent(im)closeReason",
+                "mangledName": "$s14PisanoFeedback0A5EventC11closeReasonAA0a5CloseE0Ovg",
+                "moduleName": "PisanoFeedback",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "handledBySDK",
+            "printedName": "handledBySDK",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PisanoFeedback@objc(cs)PisanoEvent(py)handledBySDK",
+            "mangledName": "$s14PisanoFeedback0A5EventC12handledBySDKSbvp",
+            "moduleName": "PisanoFeedback",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PisanoFeedback@objc(cs)PisanoEvent(im)handledBySDK",
+                "mangledName": "$s14PisanoFeedback0A5EventC12handledBySDKSbvg",
+                "moduleName": "PisanoFeedback",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PisanoFeedback@objc(cs)PisanoEvent(py)description",
+            "mangledName": "$s14PisanoFeedback0A5EventC11descriptionSSvp",
+            "moduleName": "PisanoFeedback",
+            "overriding": true,
+            "objc_name": "description",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PisanoFeedback@objc(cs)PisanoEvent(im)description",
+                "mangledName": "$s14PisanoFeedback0A5EventC11descriptionSSvg",
+                "moduleName": "PisanoFeedback",
+                "overriding": true,
+                "objc_name": "description",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PisanoEvent",
+                "printedName": "PisanoFeedback.PisanoEvent",
+                "usr": "c:@M@PisanoFeedback@objc(cs)PisanoEvent"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PisanoFeedback@objc(cs)PisanoEvent(im)init",
+            "mangledName": "$s14PisanoFeedback0A5EventCACycfc",
+            "moduleName": "PisanoFeedback",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@PisanoFeedback@objc(cs)PisanoEvent",
+        "mangledName": "$s14PisanoFeedback0A5EventC",
+        "moduleName": "PisanoFeedback",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PisanoSubscription",
+        "printedName": "PisanoSubscription",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "cancel",
+            "printedName": "cancel()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@PisanoFeedback@objc(cs)PisanoSubscription(im)cancel",
+            "mangledName": "$s14PisanoFeedback0A12SubscriptionC6cancelyyF",
+            "moduleName": "PisanoFeedback",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PisanoSubscription",
+                "printedName": "PisanoFeedback.PisanoSubscription",
+                "usr": "c:@M@PisanoFeedback@objc(cs)PisanoSubscription"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PisanoFeedback@objc(cs)PisanoSubscription(im)init",
+            "mangledName": "$s14PisanoFeedback0A12SubscriptionCACycfc",
+            "moduleName": "PisanoFeedback",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@PisanoFeedback@objc(cs)PisanoSubscription",
+        "mangledName": "$s14PisanoFeedback0A12SubscriptionC",
+        "moduleName": "PisanoFeedback",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PisanoFeedback",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PisanoCustomer",
+        "printedName": "PisanoCustomer",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PisanoFeedback@objc(cs)PisanoCustomer(py)name",
+            "mangledName": "$s14PisanoFeedback0A8CustomerC4nameSSSgvp",
+            "moduleName": "PisanoFeedback",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PisanoFeedback@objc(cs)PisanoCustomer(im)name",
+                "mangledName": "$s14PisanoFeedback0A8CustomerC4nameSSSgvg",
+                "moduleName": "PisanoFeedback",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PisanoFeedback@objc(cs)PisanoCustomer(im)setName:",
+                "mangledName": "$s14PisanoFeedback0A8CustomerC4nameSSSgvs",
+                "moduleName": "PisanoFeedback",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14PisanoFeedback0A8CustomerC4nameSSSgvM",
+                "mangledName": "$s14PisanoFeedback0A8CustomerC4nameSSSgvM",
+                "moduleName": "PisanoFeedback",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "email",
+            "printedName": "email",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PisanoFeedback@objc(cs)PisanoCustomer(py)email",
+            "mangledName": "$s14PisanoFeedback0A8CustomerC5emailSSSgvp",
+            "moduleName": "PisanoFeedback",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PisanoFeedback@objc(cs)PisanoCustomer(im)email",
+                "mangledName": "$s14PisanoFeedback0A8CustomerC5emailSSSgvg",
+                "moduleName": "PisanoFeedback",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PisanoFeedback@objc(cs)PisanoCustomer(im)setEmail:",
+                "mangledName": "$s14PisanoFeedback0A8CustomerC5emailSSSgvs",
+                "moduleName": "PisanoFeedback",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14PisanoFeedback0A8CustomerC5emailSSSgvM",
+                "mangledName": "$s14PisanoFeedback0A8CustomerC5emailSSSgvM",
+                "moduleName": "PisanoFeedback",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "phoneNumber",
+            "printedName": "phoneNumber",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PisanoFeedback@objc(cs)PisanoCustomer(py)phoneNumber",
+            "mangledName": "$s14PisanoFeedback0A8CustomerC11phoneNumberSSSgvp",
+            "moduleName": "PisanoFeedback",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PisanoFeedback@objc(cs)PisanoCustomer(im)phoneNumber",
+                "mangledName": "$s14PisanoFeedback0A8CustomerC11phoneNumberSSSgvg",
+                "moduleName": "PisanoFeedback",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PisanoFeedback@objc(cs)PisanoCustomer(im)setPhoneNumber:",
+                "mangledName": "$s14PisanoFeedback0A8CustomerC11phoneNumberSSSgvs",
+                "moduleName": "PisanoFeedback",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14PisanoFeedback0A8CustomerC11phoneNumberSSSgvM",
+                "mangledName": "$s14PisanoFeedback0A8CustomerC11phoneNumberSSSgvM",
+                "moduleName": "PisanoFeedback",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "externalId",
+            "printedName": "externalId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PisanoFeedback@objc(cs)PisanoCustomer(py)externalId",
+            "mangledName": "$s14PisanoFeedback0A8CustomerC10externalIdSSSgvp",
+            "moduleName": "PisanoFeedback",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PisanoFeedback@objc(cs)PisanoCustomer(im)externalId",
+                "mangledName": "$s14PisanoFeedback0A8CustomerC10externalIdSSSgvg",
+                "moduleName": "PisanoFeedback",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PisanoFeedback@objc(cs)PisanoCustomer(im)setExternalId:",
+                "mangledName": "$s14PisanoFeedback0A8CustomerC10externalIdSSSgvs",
+                "moduleName": "PisanoFeedback",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14PisanoFeedback0A8CustomerC10externalIdSSSgvM",
+                "mangledName": "$s14PisanoFeedback0A8CustomerC10externalIdSSSgvM",
+                "moduleName": "PisanoFeedback",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "customAttributes",
+            "printedName": "customAttributes",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PisanoFeedback@objc(cs)PisanoCustomer(py)customAttributes",
+            "mangledName": "$s14PisanoFeedback0A8CustomerC16customAttributesSDySSypGSgvp",
+            "moduleName": "PisanoFeedback",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String : Any]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Any]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PisanoFeedback@objc(cs)PisanoCustomer(im)customAttributes",
+                "mangledName": "$s14PisanoFeedback0A8CustomerC16customAttributesSDySSypGSgvg",
+                "moduleName": "PisanoFeedback",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String : Any]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Any]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PisanoFeedback@objc(cs)PisanoCustomer(im)setCustomAttributes:",
+                "mangledName": "$s14PisanoFeedback0A8CustomerC16customAttributesSDySSypGSgvs",
+                "moduleName": "PisanoFeedback",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14PisanoFeedback0A8CustomerC16customAttributesSDySSypGSgvM",
+                "mangledName": "$s14PisanoFeedback0A8CustomerC16customAttributesSDySSypGSgvM",
+                "moduleName": "PisanoFeedback",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(name:email:phoneNumber:externalId:customAttributes:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PisanoCustomer",
+                "printedName": "PisanoFeedback.PisanoCustomer",
+                "usr": "c:@M@PisanoFeedback@objc(cs)PisanoCustomer"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PisanoFeedback@objc(cs)PisanoCustomer(im)initWithName:email:phoneNumber:externalId:customAttributes:",
+            "mangledName": "$s14PisanoFeedback0A8CustomerC4name5email11phoneNumber10externalId16customAttributesACSSSg_A3ISDySSypGSgtcfc",
+            "moduleName": "PisanoFeedback",
+            "objc_name": "initWithName:email:phoneNumber:externalId:customAttributes:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PisanoCustomer",
+                "printedName": "PisanoFeedback.PisanoCustomer",
+                "usr": "c:@M@PisanoFeedback@objc(cs)PisanoCustomer"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PisanoFeedback@objc(cs)PisanoCustomer(im)init",
+            "mangledName": "$s14PisanoFeedback0A8CustomerCACycfc",
+            "moduleName": "PisanoFeedback",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@PisanoFeedback@objc(cs)PisanoCustomer",
+        "mangledName": "$s14PisanoFeedback0A8CustomerC",
+        "moduleName": "PisanoFeedback",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
           {
             "kind": "Conformance",
             "name": "Copyable",
@@ -1552,6 +3885,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PisanoFeedback",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -1679,6 +4022,7 @@
             "mangledName": "$s14PisanoFeedback11CloseStatusO4noneyA2CmF",
             "moduleName": "PisanoFeedback",
             "declAttributes": [
+              "RawDocComment",
               "ObjC"
             ],
             "fixedbinaryorder": 0
@@ -1769,90 +4113,6 @@
           },
           {
             "kind": "Var",
-            "name": "outside",
-            "printedName": "outside",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(PisanoFeedback.CloseStatus.Type) -> PisanoFeedback.CloseStatus",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CloseStatus",
-                    "printedName": "PisanoFeedback.CloseStatus",
-                    "usr": "c:@M@PisanoFeedback@E@CloseStatus"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "PisanoFeedback.CloseStatus.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CloseStatus",
-                        "printedName": "PisanoFeedback.CloseStatus",
-                        "usr": "c:@M@PisanoFeedback@E@CloseStatus"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@PisanoFeedback@E@CloseStatus@CloseStatusOutside",
-            "mangledName": "$s14PisanoFeedback11CloseStatusO7outsideyA2CmF",
-            "moduleName": "PisanoFeedback",
-            "declAttributes": [
-              "RawDocComment",
-              "ObjC"
-            ],
-            "fixedbinaryorder": 3
-          },
-          {
-            "kind": "Var",
-            "name": "opened",
-            "printedName": "opened",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(PisanoFeedback.CloseStatus.Type) -> PisanoFeedback.CloseStatus",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CloseStatus",
-                    "printedName": "PisanoFeedback.CloseStatus",
-                    "usr": "c:@M@PisanoFeedback@E@CloseStatus"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "PisanoFeedback.CloseStatus.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CloseStatus",
-                        "printedName": "PisanoFeedback.CloseStatus",
-                        "usr": "c:@M@PisanoFeedback@E@CloseStatus"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@PisanoFeedback@E@CloseStatus@CloseStatusOpened",
-            "mangledName": "$s14PisanoFeedback11CloseStatusO6openedyA2CmF",
-            "moduleName": "PisanoFeedback",
-            "declAttributes": [
-              "RawDocComment",
-              "ObjC"
-            ],
-            "fixedbinaryorder": 4
-          },
-          {
-            "kind": "Var",
             "name": "displayOnce",
             "printedName": "displayOnce",
             "children": [
@@ -1891,7 +4151,7 @@
               "RawDocComment",
               "ObjC"
             ],
-            "fixedbinaryorder": 5
+            "fixedbinaryorder": 3
           },
           {
             "kind": "Var",
@@ -1933,7 +4193,7 @@
               "RawDocComment",
               "ObjC"
             ],
-            "fixedbinaryorder": 6
+            "fixedbinaryorder": 4
           },
           {
             "kind": "Var",
@@ -1975,180 +4235,12 @@
               "RawDocComment",
               "ObjC"
             ],
-            "fixedbinaryorder": 7
+            "fixedbinaryorder": 5
           },
           {
             "kind": "Var",
-            "name": "initFailed",
-            "printedName": "initFailed",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(PisanoFeedback.CloseStatus.Type) -> PisanoFeedback.CloseStatus",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CloseStatus",
-                    "printedName": "PisanoFeedback.CloseStatus",
-                    "usr": "c:@M@PisanoFeedback@E@CloseStatus"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "PisanoFeedback.CloseStatus.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CloseStatus",
-                        "printedName": "PisanoFeedback.CloseStatus",
-                        "usr": "c:@M@PisanoFeedback@E@CloseStatus"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@PisanoFeedback@E@CloseStatus@CloseStatusInitFailed",
-            "mangledName": "$s14PisanoFeedback11CloseStatusO10initFailedyA2CmF",
-            "moduleName": "PisanoFeedback",
-            "declAttributes": [
-              "RawDocComment",
-              "ObjC"
-            ],
-            "fixedbinaryorder": 8
-          },
-          {
-            "kind": "Var",
-            "name": "initSucces",
-            "printedName": "initSucces",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(PisanoFeedback.CloseStatus.Type) -> PisanoFeedback.CloseStatus",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CloseStatus",
-                    "printedName": "PisanoFeedback.CloseStatus",
-                    "usr": "c:@M@PisanoFeedback@E@CloseStatus"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "PisanoFeedback.CloseStatus.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CloseStatus",
-                        "printedName": "PisanoFeedback.CloseStatus",
-                        "usr": "c:@M@PisanoFeedback@E@CloseStatus"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@PisanoFeedback@E@CloseStatus@CloseStatusInitSucces",
-            "mangledName": "$s14PisanoFeedback11CloseStatusO10initSuccesyA2CmF",
-            "moduleName": "PisanoFeedback",
-            "declAttributes": [
-              "RawDocComment",
-              "ObjC"
-            ],
-            "fixedbinaryorder": 9
-          },
-          {
-            "kind": "Var",
-            "name": "healthCheckSuccessful",
-            "printedName": "healthCheckSuccessful",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(PisanoFeedback.CloseStatus.Type) -> PisanoFeedback.CloseStatus",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CloseStatus",
-                    "printedName": "PisanoFeedback.CloseStatus",
-                    "usr": "c:@M@PisanoFeedback@E@CloseStatus"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "PisanoFeedback.CloseStatus.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CloseStatus",
-                        "printedName": "PisanoFeedback.CloseStatus",
-                        "usr": "c:@M@PisanoFeedback@E@CloseStatus"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@PisanoFeedback@E@CloseStatus@CloseStatusHealthCheckSuccessful",
-            "mangledName": "$s14PisanoFeedback11CloseStatusO21healthCheckSuccessfulyA2CmF",
-            "moduleName": "PisanoFeedback",
-            "declAttributes": [
-              "RawDocComment",
-              "ObjC"
-            ],
-            "fixedbinaryorder": 10
-          },
-          {
-            "kind": "Var",
-            "name": "healthCheckFailed",
-            "printedName": "healthCheckFailed",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(PisanoFeedback.CloseStatus.Type) -> PisanoFeedback.CloseStatus",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CloseStatus",
-                    "printedName": "PisanoFeedback.CloseStatus",
-                    "usr": "c:@M@PisanoFeedback@E@CloseStatus"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "PisanoFeedback.CloseStatus.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CloseStatus",
-                        "printedName": "PisanoFeedback.CloseStatus",
-                        "usr": "c:@M@PisanoFeedback@E@CloseStatus"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@PisanoFeedback@E@CloseStatus@CloseStatusHealthCheckFailed",
-            "mangledName": "$s14PisanoFeedback11CloseStatusO17healthCheckFailedyA2CmF",
-            "moduleName": "PisanoFeedback",
-            "declAttributes": [
-              "RawDocComment",
-              "ObjC"
-            ],
-            "fixedbinaryorder": 11
-          },
-          {
-            "kind": "Var",
-            "name": "surveyPassive",
-            "printedName": "surveyPassive",
+            "name": "channelPassive",
+            "printedName": "channelPassive",
             "children": [
               {
                 "kind": "TypeFunc",
@@ -2179,13 +4271,14 @@
             ],
             "declKind": "EnumElement",
             "usr": "c:@M@PisanoFeedback@E@CloseStatus@CloseStatusSurveyPassive",
-            "mangledName": "$s14PisanoFeedback11CloseStatusO13surveyPassiveyA2CmF",
+            "mangledName": "$s14PisanoFeedback11CloseStatusO14channelPassiveyA2CmF",
             "moduleName": "PisanoFeedback",
+            "objc_name": "CloseStatusSurveyPassive",
             "declAttributes": [
-              "RawDocComment",
-              "ObjC"
+              "ObjC",
+              "RawDocComment"
             ],
-            "fixedbinaryorder": 12
+            "fixedbinaryorder": 6
           },
           {
             "kind": "Var",
@@ -2227,7 +4320,7 @@
               "RawDocComment",
               "ObjC"
             ],
-            "fixedbinaryorder": 13
+            "fixedbinaryorder": 7
           },
           {
             "kind": "Var",
@@ -2340,6 +4433,51 @@
                 "accessorKind": "get"
               }
             ]
+          },
+          {
+            "kind": "Var",
+            "name": "surveyPassive",
+            "printedName": "surveyPassive",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CloseStatus",
+                "printedName": "PisanoFeedback.CloseStatus",
+                "usr": "c:@M@PisanoFeedback@E@CloseStatus"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14PisanoFeedback11CloseStatusO13surveyPassiveACvpZ",
+            "mangledName": "$s14PisanoFeedback11CloseStatusO13surveyPassiveACvpZ",
+            "moduleName": "PisanoFeedback",
+            "static": true,
+            "deprecated": true,
+            "declAttributes": [
+              "Available"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CloseStatus",
+                    "printedName": "PisanoFeedback.CloseStatus",
+                    "usr": "c:@M@PisanoFeedback@E@CloseStatus"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14PisanoFeedback11CloseStatusO13surveyPassiveACvgZ",
+                "mangledName": "$s14PisanoFeedback11CloseStatusO13surveyPassiveACvgZ",
+                "moduleName": "PisanoFeedback",
+                "static": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
           }
         ],
         "declKind": "Enum",
@@ -2348,7 +4486,8 @@
         "moduleName": "PisanoFeedback",
         "declAttributes": [
           "AccessControl",
-          "ObjC"
+          "ObjC",
+          "RawDocComment"
         ],
         "enumRawTypeName": "Int",
         "conformances": [
@@ -2437,6 +4576,33 @@
       },
       {
         "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "PisanoFeedback",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "PisanoFeedback",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "PisanoFeedback"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -2468,627 +4634,746 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/ViewMode.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Model\/ViewMode.swift",
       "kind": "IntegerLiteral",
       "offset": 169,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/ViewMode.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Model\/ViewMode.swift",
       "kind": "IntegerLiteral",
       "offset": 180,
       "length": 11,
       "value": "1"
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Managers\/PisanoManager.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Managers\/PisanoRequestManager.swift",
+      "kind": "Array",
+      "offset": 2652,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Managers\/PisanoManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 215,
+      "offset": 1027,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Public\/Pisano.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Public\/Pisano.swift",
       "kind": "IntegerLiteral",
       "offset": 193,
       "length": 2,
-      "value": "60"
+      "value": "30"
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Public\/Pisano.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Public\/Pisano.swift",
       "kind": "BooleanLiteral",
-      "offset": 5047,
+      "offset": 884,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Public\/Pisano.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5998,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Managers\/PisanoDataStore.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Public\/PisanoEvent.swift",
+      "kind": "IntegerLiteral",
+      "offset": 398,
+      "length": 17,
+      "value": "1"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Public\/PisanoEvent.swift",
+      "kind": "IntegerLiteral",
+      "offset": 582,
+      "length": 17,
+      "value": "2"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Public\/PisanoEvent.swift",
+      "kind": "IntegerLiteral",
+      "offset": 720,
+      "length": 6,
+      "value": "3"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Public\/PisanoEvent.swift",
+      "kind": "IntegerLiteral",
+      "offset": 937,
+      "length": 11,
+      "value": "1"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Public\/PisanoEvent.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1025,
+      "length": 4,
+      "value": "2"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Public\/PisanoEvent.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1079,
+      "length": 7,
+      "value": "3"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Public\/PisanoEvent.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1155,
+      "length": 11,
+      "value": "4"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Public\/PisanoEvent.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1220,
+      "length": 5,
+      "value": "5"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Public\/PisanoEvent.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1280,
+      "length": 10,
+      "value": "6"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Public\/PisanoEvent.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1350,
+      "length": 13,
+      "value": "7"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Public\/PisanoEvent.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2238,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Public\/PisanoEvent.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2315,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Public\/PisanoEvent.swift",
       "kind": "StringLiteral",
-      "offset": 176,
+      "offset": 2546,
+      "length": 74,
+      "value": "\"PisanoEvent(type: \""
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Public\/PisanoEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 2581,
+      "length": 1,
+      "value": "\", code: \""
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Public\/PisanoEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 2596,
+      "length": 1,
+      "value": "\", hasChat: \""
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Public\/PisanoEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 2617,
+      "length": 1,
+      "value": "\", \""
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Public\/PisanoEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 2635,
+      "length": 70,
+      "value": "\"closeReason: \""
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Public\/PisanoEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 2672,
+      "length": 1,
+      "value": "\", handledBySDK: \""
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Public\/PisanoEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 2703,
+      "length": 1,
+      "value": "\")\""
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Public\/PisanoEvent.swift",
+      "kind": "Dictionary",
+      "offset": 4487,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
+      "kind": "StringLiteral",
+      "offset": 419,
       "length": 26,
       "value": "\"PisanoSDKDetailJSONCache\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Managers\/PisanoDataStore.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
       "kind": "StringLiteral",
-      "offset": 245,
+      "offset": 488,
       "length": 24,
       "value": "\"PisanoTriggerJSONCache\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Managers\/PisanoDataStore.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
       "kind": "StringLiteral",
-      "offset": 309,
+      "offset": 552,
       "length": 21,
       "value": "\"PisanoBootJSONCache\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Managers\/PisanoDataStore.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
       "kind": "StringLiteral",
-      "offset": 451,
+      "offset": 694,
       "length": 22,
       "value": "\"PisanoBootCredential\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Managers\/PisanoDataStore.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
       "kind": "StringLiteral",
-      "offset": 509,
+      "offset": 752,
       "length": 15,
       "value": "\"display_once_\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Managers\/PisanoDataStore.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
       "kind": "StringLiteral",
-      "offset": 571,
+      "offset": 814,
       "length": 28,
       "value": "\"display_once_delay_period_\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Managers\/PisanoDataStore.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
       "kind": "StringLiteral",
-      "offset": 905,
+      "offset": 1148,
       "length": 24,
       "value": "\"display_rate_remainder\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Managers\/PisanoDataStore.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
       "kind": "StringLiteral",
-      "offset": 967,
+      "offset": 1210,
       "length": 20,
       "value": "\"display_rate_value\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Managers\/PisanoDataStore.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Managers\/PisanoDataStore.swift",
       "kind": "StringLiteral",
-      "offset": 1083,
+      "offset": 1595,
       "length": 25,
       "value": "\"PisanoSDKLastDetailCode\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Managers\/PisanoPresentationManager.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Managers\/PisanoPresentationManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 482,
+      "offset": 751,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Managers\/PisanoPresentationManager.swift",
+      "kind": "Dictionary",
+      "offset": 1692,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Managers\/PisanoPresentationManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2374,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
       "offset": 146,
       "length": 160,
       "value": "\"window.addEventListener('message', function(e) {\n    window.webkit.messageHandlers.eventHandler.postMessage(e.data);\n});\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
       "offset": 345,
       "length": 441,
       "value": "\"(function() {\n    var meta = document.querySelector('meta[name=\"viewport\"]');\n    if (!meta) {\n        meta = document.createElement('meta');\n        meta.setAttribute('name', 'viewport');\n        document.head.appendChild(meta);\n    }\n    meta.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');\n})();\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
       "offset": 824,
       "length": 442,
       "value": "\"(function() {\n    var meta = document.querySelector('meta[name=\"viewport\"]');\n    if (!meta) {\n        meta = document.createElement('meta');\n        meta.setAttribute('name', 'viewport');\n        document.head.appendChild(meta);\n    }\n    meta.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes');\n})();\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
       "offset": 1297,
       "length": 296,
       "value": "\"(function() {\n    var style = document.createElement('style');\n    style.textContent = 'input, textarea, select { font-size: 16px !important; }';\n    if (document.head) {\n        document.head.appendChild(style);\n    }\n})();\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
       "offset": 1632,
       "length": 3658,
       "value": "\"(function() {\n    if (window.__pisanoKeyboardViewportSync) return;\n    window.__pisanoKeyboardViewportSync = true;\n\n    function layoutHeightPx() {\n        return Math.round(window.innerHeight || 0);\n    }\n\n    function visibleHeightPx() {\n        if (window.visualViewport && window.visualViewport.height > 0) {\n            return Math.round(window.visualViewport.height);\n        }\n        return layoutHeightPx();\n    }\n\n    function isKeyboardOpen() {\n        var layoutHeight = layoutHeightPx();\n        var visibleHeight = visibleHeightPx();\n        return layoutHeight > 0 && visibleHeight > 0 && visibleHeight < layoutHeight * 0.85;\n    }\n\n    function widgetSelectors() {\n        return [\n            '#psn-widget-content-frame',\n            '.widget-content-container',\n            '#psn-widget-content-frame.mobile-full-page',\n            '.widget-content-container.mobile-full-page'\n        ];\n    }\n\n    function resetWidgetHeights() {\n        widgetSelectors().forEach(function(selector) {\n            document.querySelectorAll(selector).forEach(function(el) {\n                el.style.removeProperty('height');\n                el.style.removeProperty('max-height');\n                el.style.removeProperty('min-height');\n            });\n        });\n    }\n\n    function ensureInternalScroll() {\n        document.querySelectorAll('.widget-content-container, .widget-content').forEach(function(el) {\n            el.style.setProperty('overflow-y', 'auto', 'important');\n            el.style.setProperty('-webkit-overflow-scrolling', 'touch', 'important');\n            el.style.setProperty('touch-action', 'pan-y', 'important');\n        });\n    }\n\n    function applyLayout() {\n        if (!document.getElementById('psn-widget-content-frame')) {\n            return;\n        }\n\n        ensureInternalScroll();\n\n        if (!isKeyboardOpen()) {\n            resetWidgetHeights();\n            return;\n        }\n\n        var heightPx = visibleHeightPx() + 'px';\n        ['#psn-widget-content-frame', '.widget-content-container'].forEach(function(selector) {\n            document.querySelectorAll(selector).forEach(function(el) {\n                el.style.setProperty('height', heightPx, 'important');\n                el.style.setProperty('max-height', heightPx, 'important');\n            });\n        });\n    }\n\n    window.__pisanoApplyViewportLayout = applyLayout;\n\n    if (window.visualViewport) {\n        window.visualViewport.addEventListener('resize', applyLayout);\n        window.visualViewport.addEventListener('scroll', applyLayout);\n    }\n    window.addEventListener('resize', applyLayout);\n    document.addEventListener('focusin', function(event) {\n        var tag = event.target && event.target.tagName;\n        if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') {\n            setTimeout(applyLayout, 50);\n            setTimeout(applyLayout, 250);\n        }\n    });\n    document.addEventListener('focusout', function() {\n        setTimeout(applyLayout, 50);\n        setTimeout(applyLayout, 250);\n    });\n})();\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
       "offset": 5497,
       "length": 81,
       "value": "\"    document.getElementsByClassName('components')[0].scrollHeight\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
-      "offset": 5609,
+      "offset": 5715,
+      "length": 17,
+      "value": "\"PSN_END_OF_FLOW\""
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Constants\/Web.swift",
+      "kind": "StringLiteral",
+      "offset": 5944,
       "length": 24,
       "value": "\"PSN_FEEDBACK_SUBMITTED\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
-      "offset": 5661,
+      "offset": 5996,
       "length": 23,
       "value": "\"PSN_WEB_WIDGET_CLOSED\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Constants\/Web.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Constants\/Web.swift",
       "kind": "StringLiteral",
-      "offset": 5712,
+      "offset": 6047,
       "length": 23,
       "value": "\"PSN_REDIRECT_TO_STORE\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Helpers\/KeychainStore.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Helpers\/KeychainStore.swift",
       "kind": "StringLiteral",
       "offset": 281,
       "length": 32,
       "value": "\"co.pisano.feedback.credentials\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/Trigger.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Model\/Trigger.swift",
       "kind": "StringLiteral",
-      "offset": 368,
+      "offset": 379,
       "length": 13,
       "value": "\"customer_id\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/Trigger.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Model\/Trigger.swift",
       "kind": "StringLiteral",
-      "offset": 454,
+      "offset": 465,
       "length": 13,
       "value": "\"hide_widget\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/Trigger.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Model\/Trigger.swift",
       "kind": "StringLiteral",
-      "offset": 499,
+      "offset": 510,
       "length": 18,
       "value": "\"hide_widget_type\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/Trigger.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Model\/Trigger.swift",
       "kind": "StringLiteral",
-      "offset": 546,
+      "offset": 557,
       "length": 14,
       "value": "\"display_rate\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Constants\/APIBase.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
       "kind": "StringLiteral",
       "offset": 150,
       "length": 23,
       "value": "\"http:\/\/localhost:3000\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Constants\/APIBase.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
       "kind": "StringLiteral",
       "offset": 192,
       "length": 36,
       "value": "\"\/public\/v1\/mobile_sdks\/code\/detail\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Constants\/APIBase.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
       "kind": "StringLiteral",
       "offset": 248,
       "length": 37,
       "value": "\"\/public\/v1\/mobile_sdks\/code\/trigger\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Constants\/APIBase.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Constants\/APIBase.swift",
       "kind": "StringLiteral",
       "offset": 306,
       "length": 36,
       "value": "\"http:\/\/127.0.0.1:3001\/web_feedback\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Constants\/Customer.swift",
-      "kind": "Array",
-      "offset": 158,
-      "length": 61,
-      "value": "[\"name\", \"email\", \"phoneNumber\", \"externalId\", \"customAttrs\"]"
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Constants\/Customer.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Helpers\/SurveyWebDataStore.swift",
       "kind": "StringLiteral",
-      "offset": 240,
-      "length": 4,
-      "value": "\"en\""
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Constants\/Customer.swift",
-      "kind": "StringLiteral",
-      "offset": 265,
-      "length": 4,
-      "value": "\"tr\""
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Constants\/Customer.swift",
-      "kind": "StringLiteral",
-      "offset": 296,
-      "length": 7,
-      "value": "\"Close\""
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Constants\/Customer.swift",
-      "kind": "StringLiteral",
-      "offset": 329,
-      "length": 7,
-      "value": "\"Kapat\""
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Helpers\/SurveyWebDataStore.swift",
-      "kind": "StringLiteral",
-      "offset": 1041,
+      "offset": 1052,
       "length": 38,
       "value": "\"6B0E5C2A-3F4D-4C1B-9E8A-5D7F2A1C9B34\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Helpers\/SurveyWebDataStore.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Helpers\/SurveyWebDataStore.swift",
       "kind": "StringLiteral",
-      "offset": 1242,
+      "offset": 1265,
       "length": 29,
       "value": "\"PisanoSurveyWebDataMigrated\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Helpers\/SurveyWebDataStore.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Helpers\/SurveyWebDataStore.swift",
       "kind": "Array",
-      "offset": 1386,
+      "offset": 1409,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Helpers\/SurveyWebDataStore.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Helpers\/SurveyWebDataStore.swift",
       "kind": "IntegerLiteral",
-      "offset": 1583,
+      "offset": 1606,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Helpers\/SurveyWebDataStore.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Helpers\/SurveyWebDataStore.swift",
       "kind": "Array",
-      "offset": 1639,
+      "offset": 1662,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Helpers\/SurveyWebDataStore.swift",
-      "kind": "Array",
-      "offset": 1698,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Helpers\/SurveyWebDataStore.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1915,
-      "length": 2,
-      "value": "10"
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Helpers\/SurveyWebDataStore.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1972,
-      "length": 2,
-      "value": "12"
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Helpers\/SurveyWebDataStore.swift",
-      "kind": "StringLiteral",
-      "offset": 2176,
-      "length": 35,
-      "value": "\"PisanoPendingWebDataRemovalOrigin\""
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Helpers\/SurveyWebDataStore.swift",
-      "kind": "StringLiteral",
-      "offset": 2313,
-      "length": 16,
-      "value": "\"PisanoCacher::\""
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Helpers\/SurveyWebDataStore.swift",
-      "kind": "StringLiteral",
-      "offset": 7805,
-      "length": 238,
-      "value": "\"(function(){var k=[];for(var i=0;i<localStorage.length;i++){var n=localStorage.key(i);if(n.indexOf('\""
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Helpers\/SurveyWebDataStore.swift",
-      "kind": "StringLiteral",
-      "offset": 7941,
-      "length": 21,
-      "value": "\"')===0){k.push(n);}}k.forEach(function(n){localStorage.removeItem(n);});return true;})()\""
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Helpers\/SurveyWebDataStore.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9576,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Helpers\/SurveyWebDataStore.swift",
-      "kind": "StringLiteral",
-      "offset": 11258,
-      "length": 16,
-      "value": "\"PisanoCacher::\""
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Helpers\/SurveyWebDataStore.swift",
-      "kind": "IntegerLiteral",
-      "offset": 11322,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/SdkDetail.swift",
-      "kind": "StringLiteral",
-      "offset": 421,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/SdkDetail.swift",
-      "kind": "StringLiteral",
-      "offset": 452,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/SdkDetail.swift",
-      "kind": "StringLiteral",
-      "offset": 758,
-      "length": 9,
-      "value": "\"node_id\""
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/SdkDetail.swift",
-      "kind": "StringLiteral",
-      "offset": 810,
-      "length": 6,
-      "value": "\"code\""
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/SdkDetail.swift",
-      "kind": "StringLiteral",
-      "offset": 845,
-      "length": 14,
-      "value": "\"display_once\""
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/SdkDetail.swift",
-      "kind": "StringLiteral",
-      "offset": 899,
-      "length": 27,
-      "value": "\"display_once_delay_period\""
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/SdkDetail.swift",
-      "kind": "StringLiteral",
-      "offset": 955,
-      "length": 14,
-      "value": "\"display_rate\""
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/SdkDetail.swift",
-      "kind": "StringLiteral",
-      "offset": 1006,
-      "length": 24,
-      "value": "\"close_on_outside_click\""
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/SdkDetail.swift",
-      "kind": "StringLiteral",
-      "offset": 1059,
-      "length": 14,
-      "value": "\"disable_zoom\""
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/SdkDetail.swift",
-      "kind": "StringLiteral",
-      "offset": 1104,
-      "length": 16,
-      "value": "\"mobile_channel\""
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/SdkDetail.swift",
-      "kind": "StringLiteral",
-      "offset": 1286,
-      "length": 15,
-      "value": "\"primary_color\""
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/SdkDetail.swift",
-      "kind": "StringLiteral",
-      "offset": 1324,
-      "length": 8,
-      "value": "\"status\""
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 175,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 226,
-      "length": 6,
-      "value": "1"
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 292,
-      "length": 12,
-      "value": "2"
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 353,
-      "length": 7,
-      "value": "3"
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 401,
-      "length": 6,
-      "value": "4"
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 495,
-      "length": 11,
-      "value": "5"
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 628,
-      "length": 23,
-      "value": "6"
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 758,
-      "length": 20,
-      "value": "7"
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 832,
-      "length": 10,
-      "value": "8"
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 899,
-      "length": 10,
-      "value": "9"
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 974,
-      "length": 21,
-      "value": "10"
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1057,
-      "length": 17,
-      "value": "11"
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1148,
-      "length": 13,
-      "value": "12"
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/Model\/CloseStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1246,
-      "length": 18,
-      "value": "13"
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 669,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 709,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 745,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/UI\/Widget\/WidgetViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 779,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Helpers\/SurveyWebDataStore.swift",
       "kind": "BooleanLiteral",
-      "offset": 822,
+      "offset": 1824,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Helpers\/SurveyWebDataStore.swift",
       "kind": "Array",
-      "offset": 1089,
+      "offset": 1892,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/master\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Helpers\/SurveyWebDataStore.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2121,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Helpers\/SurveyWebDataStore.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2190,
+      "length": 2,
+      "value": "12"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Helpers\/SurveyWebDataStore.swift",
+      "kind": "StringLiteral",
+      "offset": 2406,
+      "length": 35,
+      "value": "\"PisanoPendingWebDataRemovalOrigin\""
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Helpers\/SurveyWebDataStore.swift",
+      "kind": "StringLiteral",
+      "offset": 2555,
+      "length": 16,
+      "value": "\"PisanoCacher::\""
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Helpers\/SurveyWebDataStore.swift",
+      "kind": "StringLiteral",
+      "offset": 7895,
+      "length": 238,
+      "value": "\"(function(){var k=[];for(var i=0;i<localStorage.length;i++){var n=localStorage.key(i);if(n.indexOf('\""
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Helpers\/SurveyWebDataStore.swift",
+      "kind": "StringLiteral",
+      "offset": 8031,
+      "length": 21,
+      "value": "\"')===0){k.push(n);}}k.forEach(function(n){localStorage.removeItem(n);});return true;})()\""
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Helpers\/SurveyWebDataStore.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9881,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Helpers\/SurveyWebDataStore.swift",
+      "kind": "StringLiteral",
+      "offset": 11603,
+      "length": 16,
+      "value": "\"PisanoCacher::\""
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Helpers\/SurveyWebDataStore.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11667,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "kind": "StringLiteral",
+      "offset": 432,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "kind": "StringLiteral",
+      "offset": 463,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "kind": "StringLiteral",
+      "offset": 769,
+      "length": 9,
+      "value": "\"node_id\""
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "kind": "StringLiteral",
+      "offset": 821,
+      "length": 6,
+      "value": "\"code\""
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "kind": "StringLiteral",
+      "offset": 856,
+      "length": 14,
+      "value": "\"display_once\""
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "kind": "StringLiteral",
+      "offset": 910,
+      "length": 27,
+      "value": "\"display_once_delay_period\""
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "kind": "StringLiteral",
+      "offset": 966,
+      "length": 14,
+      "value": "\"display_rate\""
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "kind": "StringLiteral",
+      "offset": 1017,
+      "length": 24,
+      "value": "\"close_on_outside_click\""
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "kind": "StringLiteral",
+      "offset": 1070,
+      "length": 14,
+      "value": "\"disable_zoom\""
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "kind": "StringLiteral",
+      "offset": 1115,
+      "length": 16,
+      "value": "\"mobile_channel\""
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "kind": "StringLiteral",
+      "offset": 1307,
+      "length": 15,
+      "value": "\"primary_color\""
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Model\/SdkDetail.swift",
+      "kind": "StringLiteral",
+      "offset": 1345,
+      "length": 8,
+      "value": "\"status\""
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "kind": "IntegerLiteral",
+      "offset": 791,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "kind": "IntegerLiteral",
+      "offset": 994,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1154,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1284,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1420,
+      "length": 1,
+      "value": "6"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1538,
+      "length": 1,
+      "value": "7"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1718,
+      "length": 2,
+      "value": "12"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/Model\/CloseStatus.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1813,
+      "length": 2,
+      "value": "13"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "Array",
+      "offset": 748,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 889,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1056,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1092,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
       "kind": "BooleanLiteral",
       "offset": 1251,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/rel110\/dd\/Build\/Intermediates.noindex\/ArchiveIntermediates\/Feedback\/IntermediateBuildFilesPath\/Feedback.build\/Release-iphonesimulator\/Feedback.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1370,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 12098,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/UI\/Widget\/WidgetViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 12178,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/UI\/Widget\/WidgetMessage.swift",
+      "kind": "StringLiteral",
+      "offset": 582,
+      "length": 10,
+      "value": "\"has_chat\""
+    },
+    {
+      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano\/0ca5582c-15d2-44a9-bacd-348cd80428ee\/scratchpad\/release\/feedback-ios\/Feedback\/UI\/Widget\/SurveyWebView.swift",
+      "kind": "StringLiteral",
+      "offset": 375,
+      "length": 14,
+      "value": "\"eventHandler\""
+    },
+    {
+      "filePath": "\/Users\/pisano\/Library\/Developer\/Xcode\/DerivedData\/Feedback-fnhojjtnevpscbezfkyegenxkcfk\/Build\/Intermediates.noindex\/ArchiveIntermediates\/Feedback\/IntermediateBuildFilesPath\/Feedback.build\/Release-iphonesimulator\/Feedback.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 733,
       "length": 12,
       "value": "\"PisanoLogo\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/rel110\/dd\/Build\/Intermediates.noindex\/ArchiveIntermediates\/Feedback\/IntermediateBuildFilesPath\/Feedback.build\/Release-iphonesimulator\/Feedback.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/pisano\/Library\/Developer\/Xcode\/DerivedData\/Feedback-fnhojjtnevpscbezfkyegenxkcfk\/Build\/Intermediates.noindex\/ArchiveIntermediates\/Feedback\/IntermediateBuildFilesPath\/Feedback.build\/Release-iphonesimulator\/Feedback.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 865,
       "length": 7,
       "value": "\"close\""
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-pisano-Documents-Pisano-IOS\/18e8251c-39cb-40ff-a005-754228b77080\/scratchpad\/rel110\/dd\/Build\/Intermediates.noindex\/ArchiveIntermediates\/Feedback\/IntermediateBuildFilesPath\/Feedback.build\/Release-iphonesimulator\/Feedback.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 992,
-      "length": 7,
-      "value": "\"minus\""
     }
   ]
 }

@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
-// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name PisanoFeedback
+// swift-compiler-version: Apple Swift version 6.1.2 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 6 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -module-name PisanoFeedback
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
 import DeveloperToolsSupport
 import Foundation
@@ -8,15 +8,13 @@ import Security
 import StoreKit
 import Swift
 import SwiftUI
-import SystemConfiguration
 import UIKit
 import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-@_hasMissingDesignatedInitializers public class ReachabilityService {
-  @objc deinit
-}
+import os.log
+import os
 @objc public enum ViewMode : Swift.Int, Swift.Sendable {
   case `default` = 0
   case bottomSheet
@@ -31,14 +29,18 @@ import _SwiftConcurrencyShims
     @objc get
     @objc set
   }
+  @objc public static var automaticStoreReview: Swift.Bool {
+    @objc get
+    @objc set
+  }
   @discardableResult
-  @objc public class func boot(appId: Swift.String, accessKey: Swift.String, code: Swift.String, apiUrl: Swift.String, feedbackUrl: Swift.String, eventUrl: Swift.String? = nil, completion: (@_Concurrency.MainActor (PisanoFeedback.CloseStatus) -> Swift.Void)? = nil) -> PisanoFeedback.PisanoTask
+  @objc public class func boot(appId: Swift.String, accessKey: Swift.String, code: Swift.String, apiUrl: Swift.String, feedbackUrl: Swift.String, eventUrl: Swift.String? = nil, completion: (@_Concurrency.MainActor @Sendable (Swift.Bool) -> Swift.Void)? = nil) -> PisanoFeedback.PisanoTask
   @discardableResult
-  @objc public class func healthCheck(language: Swift.String? = nil, customer: [Swift.String : Any]? = nil, payload: [Swift.String : Swift.String]? = nil, code: Swift.String? = nil, completion: @escaping @_Concurrency.MainActor (Swift.Bool) -> Swift.Void) -> PisanoFeedback.PisanoTask
+  @objc public class func healthCheck(language: Swift.String? = nil, pisanoCustomer: PisanoFeedback.PisanoCustomer? = nil, payload: [Swift.String : Swift.String]? = nil, code: Swift.String? = nil, completion: @escaping @_Concurrency.MainActor @Sendable (Swift.Bool) -> Swift.Void) -> PisanoFeedback.PisanoTask
   @discardableResult
-  @objc public class func show(mode: PisanoFeedback.ViewMode = .`default`, title: Foundation.NSAttributedString? = nil, language: Swift.String? = nil, customer: [Swift.String : Any]? = nil, payload: [Swift.String : Swift.String]? = nil, code: Swift.String? = nil, dismissOnDrag: Swift.Bool = false, completion: @escaping @_Concurrency.MainActor (PisanoFeedback.CloseStatus) -> Swift.Void) -> PisanoFeedback.PisanoTask
+  @objc public class func show(mode: PisanoFeedback.ViewMode = .`default`, title: Foundation.NSAttributedString? = nil, language: Swift.String? = nil, pisanoCustomer: PisanoFeedback.PisanoCustomer? = nil, payload: [Swift.String : Swift.String]? = nil, code: Swift.String? = nil, dismissOnDrag: Swift.Bool = false, completion: @escaping @_Concurrency.MainActor @Sendable (PisanoFeedback.CloseStatus) -> Swift.Void) -> PisanoFeedback.PisanoTask
   @discardableResult
-  @objc public class func track(event: Swift.String, payload: [Swift.String : Swift.String]? = nil, customer: [Swift.String : Any]? = nil, language: Swift.String? = nil, completion: @escaping @_Concurrency.MainActor (PisanoFeedback.CloseStatus) -> Swift.Void) -> PisanoFeedback.PisanoTask
+  @objc public class func track(event: Swift.String, payload: [Swift.String : Swift.String]? = nil, pisanoCustomer: PisanoFeedback.PisanoCustomer? = nil, language: Swift.String? = nil, completion: @escaping @_Concurrency.MainActor @Sendable (Swift.Bool) -> Swift.Void) -> PisanoFeedback.PisanoTask
   @objc open class func clear()
   @objc open class func debugMode(_ debug: Swift.Bool)
   @objc override dynamic public init()
@@ -51,6 +53,60 @@ import _SwiftConcurrencyShims
   @objc final public func cancel()
   @objc deinit
 }
+@objc public enum PisanoEventType : Swift.Int, Swift.Sendable {
+  case opened
+  case feedbackSubmitted
+  case redirectedToStore
+  case closed
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum PisanoCloseReason : Swift.Int, Swift.Sendable {
+  case none
+  case closeButton
+  case drag
+  case outside
+  case afterSubmit
+  case clear
+  case loadFailed
+  case hostDismissed
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @objc final public class PisanoEvent : ObjectiveC.NSObject, Swift.Sendable {
+  @objc final public let type: PisanoFeedback.PisanoEventType
+  @objc final public let code: Swift.String
+  @objc final public let hasChat: Swift.Bool
+  @objc final public let closeReason: PisanoFeedback.PisanoCloseReason
+  @objc final public let handledBySDK: Swift.Bool
+  @objc override final public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc final public class PisanoSubscription : ObjectiveC.NSObject, @unchecked Swift.Sendable {
+  @objc final public func cancel()
+  @objc deinit
+}
+extension PisanoFeedback.Pisano {
+  @discardableResult
+  @objc dynamic public class func subscribe(_ handler: @escaping @_Concurrency.MainActor @Sendable (PisanoFeedback.PisanoEvent) -> Swift.Void) -> PisanoFeedback.PisanoSubscription
+}
+@objc final public class PisanoCustomer : ObjectiveC.NSObject {
+  @objc final public var name: Swift.String?
+  @objc final public var email: Swift.String?
+  @objc final public var phoneNumber: Swift.String?
+  @objc final public var externalId: Swift.String?
+  @objc final public var customAttributes: [Swift.String : Any]?
+  @objc public init(name: Swift.String? = nil, email: Swift.String? = nil, phoneNumber: Swift.String? = nil, externalId: Swift.String? = nil, customAttributes: [Swift.String : Any]? = nil)
+  @objc deinit
+}
 @_inheritsConvenienceInitializers @objc public class CloseStatusHelper : ObjectiveC.NSObject {
   @objc public static func description(_ status: PisanoFeedback.CloseStatus) -> Swift.String
   @objc override dynamic public init()
@@ -58,19 +114,13 @@ import _SwiftConcurrencyShims
 }
 @objc public enum CloseStatus : Swift.Int, Swift.Sendable {
   case none = 0
-  case closed
-  case sendFeedback
-  case outside
-  case opened
-  case displayOnce
-  case preventMultipleFeedback
-  case channelQuotaExceeded
-  case initFailed
-  case initSucces
-  case healthCheckSuccessful
-  case healthCheckFailed
-  case surveyPassive
-  case displayRateLimited
+  case closed = 1
+  case sendFeedback = 2
+  case displayOnce = 5
+  case preventMultipleFeedback = 6
+  case channelQuotaExceeded = 7
+  @objc(CloseStatusSurveyPassive) case channelPassive = 12
+  case displayRateLimited = 13
   public var description: Swift.String {
     get
   }
@@ -80,9 +130,21 @@ import _SwiftConcurrencyShims
     get
   }
 }
+extension PisanoFeedback.CloseStatus {
+  @available(*, deprecated, renamed: "channelPassive")
+  public static var surveyPassive: PisanoFeedback.CloseStatus {
+    get
+  }
+}
 extension PisanoFeedback.ViewMode : Swift.Equatable {}
 extension PisanoFeedback.ViewMode : Swift.Hashable {}
 extension PisanoFeedback.ViewMode : Swift.RawRepresentable {}
+extension PisanoFeedback.PisanoEventType : Swift.Equatable {}
+extension PisanoFeedback.PisanoEventType : Swift.Hashable {}
+extension PisanoFeedback.PisanoEventType : Swift.RawRepresentable {}
+extension PisanoFeedback.PisanoCloseReason : Swift.Equatable {}
+extension PisanoFeedback.PisanoCloseReason : Swift.Hashable {}
+extension PisanoFeedback.PisanoCloseReason : Swift.RawRepresentable {}
 extension PisanoFeedback.CloseStatus : Swift.Equatable {}
 extension PisanoFeedback.CloseStatus : Swift.Hashable {}
 extension PisanoFeedback.CloseStatus : Swift.RawRepresentable {}
